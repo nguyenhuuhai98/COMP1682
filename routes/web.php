@@ -12,6 +12,6 @@
 */
 Route::prefix('/')->group(function()
 {
-    Route::get('/', 'pageController@index')->name('pages.index');
-    Route::get('/products', 'pageController@products')->name('pages.products');
+    Route::get('/', 'PageController@index')->name('pages.index');
+    Route::get('/products', 'PageController@products')->name('pages.products');
 });
