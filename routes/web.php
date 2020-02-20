@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('layouts.app');
+Route::prefix('/')->group(function()
+{
+    Route::get('/', 'pageController@index')->name('pages.index');
+    Route::get('/products', 'pageController@products')->name('pages.products');
 });

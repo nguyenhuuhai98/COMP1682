@@ -33,7 +33,7 @@ jobs:
           command: |
             if [[ true ]];  then
               curl -X POST -H "X-ChatWorkToken: $CHATWORK_TOKEN" -d \
-                "body=[To:4206540]Daddy Shark[info][title]Build $CIRCLE_BUILD_NUM - SUCCESS[/title]Repo: $CIRCLE_PROJECT_REPONAME
+                "body=[To:4206540]Daddy Shark[info][title]Build $CIRCLE_BUILD_NUM - FAIL[/title]Repo: $CIRCLE_PROJECT_REPONAME
             Author: $CIRCLE_USERNAME
             Branch: $CIRCLE_BRANCH
             Build link: https://circleci.com/gh/nguyenhuuhai98/deploy-with-ci-cd/$CIRCLE_BUILD_NUM[/info]" \
