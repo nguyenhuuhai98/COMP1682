@@ -1,19 +1,90 @@
 version: 2
 jobs:
- build:
-   docker:
-     - image: kenini1805/laravel-workspace
-   steps:
-     - checkout
-     - run: cp .env.example .env
-     - restore_cache:
-         keys:
-           - vendor-v1-{{ checksum "composer.lock" }}
-     - run: composer install
-     - save_cache:
-         key: endor-v1-{{ checksum "composer.lock" }}
-         paths:
-           - vendor
-     # run test
-     - run: php artisan key:generate
-     - run: framgia-ci run --local
+  build:
+    docker:
+      - image: kenini1805/laravel-workspace
+      - image: mysql:5.7
+        environment:
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_DATABASE: homestead
+          MYSQL_USER: homestead
+          MYSQL_PASSWORD: secret
+          MYSQL_ROOT_PASSWORD: root
+    steps:
+      - checkout
+      - run: cp .env.example .env
+      - restore_cache:
+          keys:
+            - vendor-v1-{{ checksum "composer.lock" }}
+      - run: composer install
+      - save_cache:
+          key: endor-v1-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+      # run test
+      - run: php artisan key:generate
+      - run: framgia-ci run --local
+      - run: framgia-ci test-connect 127.0.0.1 3306 60
+      - run: php artisan migrate
+      # Send notification to chatwork
+      - run:
+          name: Sending notification
+          when: on_fail
+          command: |
+            if [[ true ]];  then
+              curl -X POST -H "X-ChatWorkToken: $CHATWORK_TOKEN" -d \
+                "body=[To:4206540]Daddy Shark[info][title]Build $CIRCLE_BUILD_NUM - SUCCESS[/title]Repo: $CIRCLE_PROJECT_REPONAME
+            Author: $CIRCLE_USERNAME
+            Branch: $CIRCLE_BRANCH
+            Build link: https://circleci.com/gh/nguyenhuuhai98/deploy-with-ci-cd/$CIRCLE_BUILD_NUM[/info]" \
+                "https://api.chatwork.com/v2/rooms/$CHATWORK_ROOM/messages"
+            fi
+      - run:
+          name: Sending notification
+          when: on_success
+          command: |
+            if [[ true ]];  then
+              curl -X POST -H "X-ChatWorkToken: $CHATWORK_TOKEN" -d \
+                "body=[To:4206540]Daddy Shark[info][title]Build $CIRCLE_BUILD_NUM - SUCCESS[/title]Repo: $CIRCLE_PROJECT_REPONAME
+            Author: $CIRCLE_USERNAME
+            Branch: $CIRCLE_BRANCH
+            COMMIT/PULL REQUEST LINK: https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/commit/$CIRCLE_SHA1
+            Build link: https://circleci.com/gh/nguyenhuuhai98/deploy-with-ci-cd/$CIRCLE_BUILD_NUM[/info]" \
+                "https://api.chatwork.com/v2/rooms/$CHATWORK_ROOM/messages"
+            fi
+    environment:
+      - CIRCLE_COMPARE_URL: https://github.com/nguyenhuuhai98/deploy-with-ci-cd/compare/4446c5864d5c1514670e4f368b1f738f806eb71b...e0e1fceac4c1fed8d1198491b0082da934508100
+  deploy-heroku:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run:
+          name: Deploy to Heroku
+          command: |
+            git config --global push.default current
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git develop:master -f
+      - run:
+          name: Sending notification
+          when: on_success
+          command: |
+            if [[ true ]];  then
+              curl -X POST -H "X-ChatWorkToken: $CHATWORK_TOKEN" -d \
+                "body=[toall][info][title]Build $CIRCLE_BUILD_NUM - SUCCESS[/title]Repo: $CIRCLE_PROJECT_REPONAME
+            Author: $CIRCLE_USERNAME
+            Branch: $CIRCLE_BRANCH
+            Auto deploy status: Success[/info]" \
+                "https://api.chatwork.com/v2/rooms/$CHATWORK_ROOM/messages"
+            fi
+workflows:
+  version: 2
+  build-n-deploy:
+    jobs:
+      - build
+      - deploy-heroku:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - develop
