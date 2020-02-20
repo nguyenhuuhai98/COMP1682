@@ -1,0 +1,6 @@
+project_type: php
+test:
+ phpcs:
+   command: phpcs --standard=Framgia app
+ phpunit:
+   command: ./vendor/bin/phpunit

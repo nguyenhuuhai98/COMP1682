@@ -1,0 +1,19 @@
+version: 2
+jobs:
+ build:
+   docker:
+     - image: kenini1805/laravel-workspace
+   steps:
+     - checkout
+     - run: cp .env.example .env
+     - restore_cache:
+         keys:
+           - vendor-v1-{{ checksum "composer.lock" }}
+     - run: composer install
+     - save_cache:
+         key: endor-v1-{{ checksum "composer.lock" }}
+         paths:
+           - vendor
+     # run test
+     - run: php artisan key:generate
+     - run: framgia-ci run --local
