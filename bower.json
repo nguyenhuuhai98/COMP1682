@@ -1,0 +1,21 @@
+{
+  "name": "COMP1682",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Huu Hai <nguyenhuuhai98@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nguyenhuuhai98/COMP1682",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public/bower_components/"
+  ],
+  "dependencies": {
+    "supermarket-bower": "https://github.com/nguyenhuuhai98/supermarket-bower.git"
+  }
+}
