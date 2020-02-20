@@ -1,0 +1,14 @@
+{
+  "name": "supermarket-bower",
+  "homepage": "https://github.com/nguyenhuuhai98/supermarket-bower",
+  "_release": "50066e623a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "50066e623ac87e8093c37122b88f288c4b937246"
+  },
+  "_source": "https://github.com/nguyenhuuhai98/supermarket-bower.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/nguyenhuuhai98/supermarket-bower.git",
+  "_direct": true
+}
