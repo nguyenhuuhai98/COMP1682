@@ -52,39 +52,3 @@ jobs:
             Build link: https://circleci.com/gh/nguyenhuuhai98/deploy-with-ci-cd/$CIRCLE_BUILD_NUM[/info]" \
                 "https://api.chatwork.com/v2/rooms/$CHATWORK_ROOM/messages"
             fi
-    environment:
-      - CIRCLE_COMPARE_URL: https://github.com/nguyenhuuhai98/deploy-with-ci-cd/compare/4446c5864d5c1514670e4f368b1f738f806eb71b...e0e1fceac4c1fed8d1198491b0082da934508100
-  deploy-heroku:
-    docker:
-      - image: buildpack-deps:trusty
-    steps:
-      - checkout
-      - run:
-          name: Deploy to Heroku
-          command: |
-            git config --global push.default current
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git develop:master -f
-      - run:
-          name: Sending notification
-          when: on_success
-          command: |
-            if [[ true ]];  then
-              curl -X POST -H "X-ChatWorkToken: $CHATWORK_TOKEN" -d \
-                "body=[toall][info][title]Build $CIRCLE_BUILD_NUM - SUCCESS[/title]Repo: $CIRCLE_PROJECT_REPONAME
-            Author: $CIRCLE_USERNAME
-            Branch: $CIRCLE_BRANCH
-            Auto deploy status: Success[/info]" \
-                "https://api.chatwork.com/v2/rooms/$CHATWORK_ROOM/messages"
-            fi
-workflows:
-  version: 2
-  build-n-deploy:
-    jobs:
-      - build
-      - deploy-heroku:
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - develop
