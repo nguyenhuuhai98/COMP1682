@@ -10,7 +10,7 @@ set('application', 'COMP1682');
 set('repository', 'git@github-huuhai.com:nguyenhuuhai98/COMP1682.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true);
+set('git_tty', false);
 
 // Default branch
 set('branch', 'develop');
@@ -97,12 +97,12 @@ before('deploy:symlink', 'artisan:migrate');
 
 // Reload PHP-FPM
 
-task('reload:php-fpm', function () {
+task('reload:php-fpm7.3', function () {
     $stage = input()->hasArgument('stage') ? input()->getArgument('stage') : null;
 
     switch ($stage) {
         case 'staging':
-            run('sudo systemctl reload php-fpm');
+            run('sudo systemctl reload php-fpm7.3');
             break;
 
         default:
@@ -110,5 +110,5 @@ task('reload:php-fpm', function () {
     }
 })->desc('PHP7 FPM reloaded');
 
-after('cleanup', 'reload:php-fpm');
+after('cleanup', 'reload:php-fpm7.3');
 
