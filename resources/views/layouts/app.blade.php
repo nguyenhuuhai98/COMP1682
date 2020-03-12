@@ -1,1299 +1,556 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
+<!-- saved from url=(0061)http://landing.engotheme.com/html/megastore/demo/home_v3.html -->
+<html lang="en">
 <head>
-    <title>Grocery Shoppy an Ecommerce Category Bootstrap Responsive Web Template | Home :: w3layouts</title>
-    <!--/tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Grocery Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Home V3</title>
+    <meta name="format-detection" content="telephone=no">
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <!--//tags -->
-    <link href="bower_components/supermarket-bower/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="bower_components/supermarket-bower/css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="bower_components/supermarket-bower/css/font-awesome.css" rel="stylesheet">
-    <!--pop-up-box-->
-    <link href="bower_components/supermarket-bower/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-    <!--//pop-up-box-->
-    <!-- price range -->
-    <link rel="stylesheet" type="text/css" href="bower_components/supermarket-bower/css/jquery-ui1.css">
-    <!-- fonts -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:100,300,400,500,700,900%7CRoboto+Condensed:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/icon-font-linea.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/style.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/effect.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/home.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <!-- top-header -->
-    <div class="header-most-top">
-        <p>Grocery Offer Zone Top Deals & Discounts</p>
-    </div>
-    <!-- //top-header -->
-    <!-- header-bot-->
-    <div class="header-bot">
-        <div class="header-bot_inner_wthreeinfo_header_mid">
-            <!-- header-bot-->
-            <div class="col-md-4 logo_agile">
-                <h1>
-                    <a href="index.html">
-                        <span>G</span>rocery
-                        <span>S</span>hoppy
-                        <img src="bower_components/supermarket-bower/images/logo2.png" alt=" ">
-                    </a>
-                </h1>
-            </div>
-            <!-- header-bot -->
-            <div class="col-md-8 header">
-                <!-- header lists -->
-                <ul>
-                    <li>
-                        <a class="play-icon popup-with-zoom-anim" href="#small-dialog1">
-                            <span class="fa fa-map-marker" aria-hidden="true"></span> Shop Locator</a>
-                    </li>
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#myModal1">
-                            <span class="fa fa-truck" aria-hidden="true"></span>Track Order</a>
-                    </li>
-                    <li>
-                        <span class="fa fa-phone" aria-hidden="true"></span> 097 168 2462
-                    </li>
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#myModal1">
-                            <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In </a>
-                    </li>
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#myModal2">
-                            <span class="fa fa-pencil-square-o" aria-hidden="true"></span> Sign Up </a>
-                    </li>
-                </ul>
-                <!-- //header lists -->
-                <!-- search -->
-                <div class="agileits_search">
-                    <form action="#" method="post">
-                        <input name="Search" type="search" placeholder="How can we help you today?" required="">
-                        <button type="submit" class="btn btn-default" aria-label="Left Align">
-                            <span class="fa fa-search" aria-hidden="true"> </span>
-                        </button>
-                    </form>
-                </div>
-                <!-- //search -->
-                <!-- cart details -->
-                <div class="top_nav_right">
-                    <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                        <form action="#" method="post" class="last">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="display" value="1">
-                            <button class="w3view-cart" type="submit" name="submit" value="">
-                                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                <!-- //cart details -->
-                <div class="clearfix"></div>
-            </div>
+    <!-- push menu-->
+    <div class="pushmenu menu-home5">
+        <div class="menu-push">
+            <span class="close-left js-close"><i class="fa fa-times f-20"></i></span>
             <div class="clearfix"></div>
-        </div>
-    </div>
-    <!-- shop locator (popup) -->
-    <!-- Button trigger modal(shop-locator) -->
-    <div id="small-dialog1" class="mfp-hide">
-        <div class="select-city">
-            <h3>Please Select Your Location</h3>
-            <select class="list_of_cities">
-                <optgroup label="Popular Cities">
-                    <option selected style="display:none;color:#eee;">Select City</option>
-                    <option>Birmingham</option>
-                    <option>Anchorage</option>
-                    <option>Phoenix</option>
-                    <option>Little Rock</option>
-                    <option>Los Angeles</option>
-                    <option>Denver</option>
-                    <option>Bridgeport</option>
-                    <option>Wilmington</option>
-                    <option>Jacksonville</option>
-                    <option>Atlanta</option>
-                    <option>Honolulu</option>
-                    <option>Boise</option>
-                    <option>Chicago</option>
-                    <option>Indianapolis</option>
-                </optgroup>
-                <optgroup label="Alabama">
-                    <option>Birmingham</option>
-                    <option>Montgomery</option>
-                    <option>Mobile</option>
-                    <option>Huntsville</option>
-                    <option>Tuscaloosa</option>
-                </optgroup>
-                <optgroup label="Alaska">
-                    <option>Anchorage</option>
-                    <option>Fairbanks</option>
-                    <option>Juneau</option>
-                    <option>Sitka</option>
-                    <option>Ketchikan</option>
-                </optgroup>
-                <optgroup label="Arizona">
-                    <option>Phoenix</option>
-                    <option>Tucson</option>
-                    <option>Mesa</option>
-                    <option>Chandler</option>
-                    <option>Glendale</option>
-                </optgroup>
-                <optgroup label="Arkansas">
-                    <option>Little Rock</option>
-                    <option>Fort Smith</option>
-                    <option>Fayetteville</option>
-                    <option>Springdale</option>
-                    <option>Jonesboro</option>
-                </optgroup>
-                <optgroup label="California">
-                    <option>Los Angeles</option>
-                    <option>San Diego</option>
-                    <option>San Jose</option>
-                    <option>San Francisco</option>
-                    <option>Fresno</option>
-                </optgroup>
-                <optgroup label="Colorado">
-                    <option>Denver</option>
-                    <option>Colorado</option>
-                    <option>Aurora</option>
-                    <option>Fort Collins</option>
-                    <option>Lakewood</option>
-                </optgroup>
-                <optgroup label="Connecticut">
-                    <option>Bridgeport</option>
-                    <option>New Haven</option>
-                    <option>Hartford</option>
-                    <option>Stamford</option>
-                    <option>Waterbury</option>
-                </optgroup>
-                <optgroup label="Delaware">
-                    <option>Wilmington</option>
-                    <option>Dover</option>
-                    <option>Newark</option>
-                    <option>Bear</option>
-                    <option>Middletown</option>
-                </optgroup>
-                <optgroup label="Florida">
-                    <option>Jacksonville</option>
-                    <option>Miami</option>
-                    <option>Tampa</option>
-                    <option>St. Petersburg</option>
-                    <option>Orlando</option>
-                </optgroup>
-                <optgroup label="Georgia">
-                    <option>Atlanta</option>
-                    <option>Augusta</option>
-                    <option>Columbus</option>
-                    <option>Savannah</option>
-                    <option>Athens</option>
-                </optgroup>
-                <optgroup label="Hawaii">
-                    <option>Honolulu</option>
-                    <option>Pearl City</option>
-                    <option>Hilo</option>
-                    <option>Kailua</option>
-                    <option>Waipahu</option>
-                </optgroup>
-                <optgroup label="Idaho">
-                    <option>Boise</option>
-                    <option>Nampa</option>
-                    <option>Meridian</option>
-                    <option>Idaho Falls</option>
-                    <option>Pocatello</option>
-                </optgroup>
-                <optgroup label="Illinois">
-                    <option>Chicago</option>
-                    <option>Aurora</option>
-                    <option>Rockford</option>
-                    <option>Joliet</option>
-                    <option>Naperville</option>
-                </optgroup>
-                <optgroup label="Indiana">
-                    <option>Indianapolis</option>
-                    <option>Fort Wayne</option>
-                    <option>Evansville</option>
-                    <option>South Bend</option>
-                    <option>Hammond</option>
-                </optgroup>
-                <optgroup label="Iowa">
-                    <option>Des Moines</option>
-                    <option>Cedar Rapids</option>
-                    <option>Davenport</option>
-                    <option>Sioux City</option>
-                    <option>Waterloo</option>
-                </optgroup>
-                <optgroup label="Kansas">
-                    <option>Wichita</option>
-                    <option>Overland Park</option>
-                    <option>Kansas City</option>
-                    <option>Topeka</option>
-                    <option>Olathe  </option>
-                </optgroup>
-                <optgroup label="Kentucky">
-                    <option>Louisville</option>
-                    <option>Lexington</option>
-                    <option>Bowling Green</option>
-                    <option>Owensboro</option>
-                    <option>Covington</option>
-                </optgroup>
-                <optgroup label="Louisiana">
-                    <option>New Orleans</option>
-                    <option>Baton Rouge</option>
-                    <option>Shreveport</option>
-                    <option>Metairie</option>
-                    <option>Lafayette</option>
-                </optgroup>
-                <optgroup label="Maine">
-                    <option>Portland</option>
-                    <option>Lewiston</option>
-                    <option>Bangor</option>
-                    <option>South Portland</option>
-                    <option>Auburn</option>
-                </optgroup>
-                <optgroup label="Maryland">
-                    <option>Baltimore</option>
-                    <option>Frederick</option>
-                    <option>Rockville</option>
-                    <option>Gaithersburg</option>
-                    <option>Bowie</option>
-                </optgroup>
-                <optgroup label="Massachusetts">
-                    <option>Boston</option>
-                    <option>Worcester</option>
-                    <option>Springfield</option>
-                    <option>Lowell</option>
-                    <option>Cambridge</option>
-                </optgroup>
-                <optgroup label="Michigan">
-                    <option>Detroit</option>
-                    <option>Grand Rapids</option>
-                    <option>Warren</option>
-                    <option>Sterling Heights</option>
-                    <option>Lansing</option>
-                </optgroup>
-                <optgroup label="Minnesota">
-                    <option>Minneapolis</option>
-                    <option>St. Paul</option>
-                    <option>Rochester</option>
-                    <option>Duluth</option>
-                    <option>Bloomington</option>
-                </optgroup>
-                <optgroup label="Mississippi">
-                    <option>Jackson</option>
-                    <option>Gulfport</option>
-                    <option>Southaven</option>
-                    <option>Hattiesburg</option>
-                    <option>Biloxi</option>
-                </optgroup>
-                <optgroup label="Missouri">
-                    <option>Kansas City</option>
-                    <option>St. Louis</option>
-                    <option>Springfield</option>
-                    <option>Independence</option>
-                    <option>Columbia</option>
-                </optgroup>
-                <optgroup label="Montana">
-                    <option>Billings</option>
-                    <option>Missoula</option>
-                    <option>Great Falls</option>
-                    <option>Bozeman</option>
-                    <option>Butte-Silver Bow</option>
-                </optgroup>
-                <optgroup label="Nebraska">
-                    <option>Omaha</option>
-                    <option>Lincoln</option>
-                    <option>Bellevue</option>
-                    <option>Grand Island</option>
-                    <option>Kearney</option>
-                </optgroup>
-                <optgroup label="Nevada">
-                    <option>Las Vegas</option>
-                    <option>Henderson</option>
-                    <option>North Las Vegas</option>
-                    <option>Reno</option>
-                    <option>Sunrise Manor</option>
-                </optgroup>
-                <optgroup label="New Hampshire">
-                    <option>Manchesters</option>
-                    <option>Nashua</option>
-                    <option>Concord</option>
-                    <option>Dover</option>
-                    <option>Rochester</option>
-                </optgroup>
-                <optgroup label="New Jersey">
-                    <option>Newark</option>
-                    <option>Jersey City</option>
-                    <option>Paterson</option>
-                    <option>Elizabeth</option>
-                    <option>Edison</option>
-                </optgroup>
-                <optgroup label="New Mexico">
-                    <option>Albuquerque</option>
-                    <option>Las Cruces</option>
-                    <option>Rio Rancho</option>
-                    <option>Santa Fe</option>
-                    <option>Roswell</option>
-                </optgroup>
-                <optgroup label="New York">
-                    <option>New York</option>
-                    <option>Buffalo</option>
-                    <option>Rochester</option>
-                    <option>Yonkers</option>
-                    <option>Syracuse</option>
-                </optgroup>
-                <optgroup label="North Carolina">
-                    <option>Charlotte</option>
-                    <option>Raleigh</option>
-                    <option>Greensboro</option>
-                    <option>Winston-Salem</option>
-                    <option>Durham</option>
-                </optgroup>
-                <optgroup label="North Dakota">
-                    <option>Fargo</option>
-                    <option>Bismarck</option>
-                    <option>Grand Forks</option>
-                    <option>Minot</option>
-                    <option>West Fargo</option>
-                </optgroup>
-                <optgroup label="Ohio">
-                    <option>Columbus</option>
-                    <option>Cleveland</option>
-                    <option>Cincinnati</option>
-                    <option>Toledo</option>
-                    <option>Akron</option>
-                </optgroup>
-                <optgroup label="Oklahoma">
-                    <option>Oklahoma City</option>
-                    <option>Tulsa</option>
-                    <option>Norman</option>
-                    <option>Broken Arrow</option>
-                    <option>Lawton</option>
-                </optgroup>
-                <optgroup label="Oregon">
-                    <option>Portland</option>
-                    <option>Eugene</option>
-                    <option>Salem</option>
-                    <option>Gresham</option>
-                    <option>Hillsboro</option>
-                </optgroup>
-                <optgroup label="Pennsylvania">
-                    <option>Philadelphia</option>
-                    <option>Pittsburgh</option>
-                    <option>Allentown</option>
-                    <option>Erie</option>
-                    <option>Reading</option>
-                </optgroup>
-                <optgroup label="Rhode Island">
-                    <option>Providence</option>
-                    <option>Warwick</option>
-                    <option>Cranston</option>
-                    <option>Pawtucket</option>
-                    <option>East Providence</option>
-                </optgroup>
-                <optgroup label="South Carolina">
-                    <option>Columbia</option>
-                    <option>Charleston</option>
-                    <option>North Charleston</option>
-                    <option>Mount Pleasant</option>
-                    <option>Rock Hill</option>
-                </optgroup>
-                <optgroup label="South Dakota">
-                    <option>Sioux Falls</option>
-                    <option>Rapid City</option>
-                    <option>Aberdeen</option>
-                    <option>Brookings</option>
-                    <option>Watertown</option>
-                </optgroup>
-                <optgroup label="Tennessee">
-                    <option>Memphis</option>
-                    <option>Nashville</option>
-                    <option>Knoxville</option>
-                    <option>Chattanooga</option>
-                    <option>Clarksville</option>
-                </optgroup>
-                <optgroup label="Texas">
-                    <option>Houston</option>
-                    <option>San Antonio</option>
-                    <option>Dallas</option>
-                    <option>Austin</option>
-                    <option>Fort Worth</option>
-                </optgroup>
-                <optgroup label="Utah">
-                    <option>Salt Lake City</option>
-                    <option>West Valley City</option>
-                    <option>Provo</option>
-                    <option>West Jordan</option>
-                    <option>Orem</option>
-                </optgroup>
-                <optgroup label="Vermont">
-                    <option>Burlington</option>
-                    <option>Essex</option>
-                    <option>South Burlington</option>
-                    <option>Colchester</option>
-                    <option>Rutland</option>
-                </optgroup>
-                <optgroup label="Virginia">
-                    <option>Virginia Beach</option>
-                    <option>Norfolk</option>
-                    <option>Chesapeake</option>
-                    <option>Arlington</option>
-                    <option>Richmond</option>
-                </optgroup>
-                <optgroup label="Washington">
-                    <option>Seattle</option>
-                    <option>Spokane</option>
-                    <option>Tacoma</option>
-                    <option>Vancouver</option>
-                    <option>Bellevue</option>
-                </optgroup>
-                <optgroup label="West Virginia">
-                    <option>Charleston</option>
-                    <option>Huntington</option>
-                    <option>Parkersburg</option>
-                    <option>Morgantown</option>
-                    <option>Wheeling</option>
-                </optgroup>
-                <optgroup label="Wisconsin">
-                    <option>Milwaukee</option>
-                    <option>Madison</option>
-                    <option>Green Bay</option>
-                    <option>Kenosha</option>
-                    <option>Racine</option>
-                </optgroup>
-                <optgroup label="Wyoming">
-                    <option>Cheyenne</option>
-                    <option>Casper</option>
-                    <option>Laramie</option>
-                    <option>Gillette</option>
-                    <option>Rock Springs</option>
-                </optgroup>
-            </select>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <!-- //shop locator (popup) -->
-    <!-- signin Model -->
-    <!-- Modal1 -->
-    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <form role="search" method="get" id="searchform" class="searchform" action="http://landing.engotheme.com/search">
+                <div>
+                    <label class="screen-reader-text" for="q"></label>
+                    <input type="text" placeholder="Search for products" value="" name="q" id="q" autocomplete="off">
+                    <input type="hidden" name="type" value="product">
+                    <button type="submit" id="searchsubmit"><i class="ion-ios-search-strong"></i></button>
                 </div>
-                <div class="modal-body modal-body-sub_agile">
-                    <div class="main-mailposi">
-                        <span class="fa fa-envelope-o" aria-hidden="true"></span>
-                    </div>
-                    <div class="modal_body_left modal_body_left1">
-                        <h3 class="agileinfo_sign">Sign In </h3>
-                        <p>
-                            Sign In now, Let's start your Grocery Shopping. Don't have an account?
-                            <a href="#" data-toggle="modal" data-target="#myModal2">
-                                Sign Up Now</a>
-                        </p>
-                        <form action="#" method="post">
-                            <div class="styled-input agile-styled-input-top">
-                                <input type="text" placeholder="User Name" name="Name" required="">
-                            </div>
-                            <div class="styled-input">
-                                <input type="password" placeholder="Password" name="password" required="">
-                            </div>
-                            <input type="submit" value="Sign In">
-                        </form>
+            </form>
+            <ul class="nav-home5 js-menubar">
+                <li class="level1 active dropdown">
+                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Home</a>
+                    <span class="icon-sub-menu"></span>
+                    <ul class="menu-level1 js-open-menu">
+                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/home_v1.html" title="">Home 1</a></li>
+                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/home_v2.html" title="">Home 2</a></li>
+                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html" title="">Home 3</a></li>
+                    </ul>
+                </li>
+                <li class="level1 active dropdown"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Shop</a>
+                    <span class="icon-sub-menu"></span>
+                    <div class="menu-level1 js-open-menu">
+                        <ul class="level1">
+                            <li class="level2">
+                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Shop Type</a>
+                                <ul class="menu-level-2">
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v1.html" title="">Category V1</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v1_2.html" title="">Category V1.2</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v2.html" title="">Category V2</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v2_2.html" title="">Category V2.2</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v3.html" title="">Category V3</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v3_2.html" title="">Category V3.2</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v4.html" title="">Category V4</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v4_2.html" title="">Category V4.2</a></li>
+                                </ul>
+                            </li>
+                            <li class="level2">
+                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Single Product Type</a>
+                                <ul class="menu-level-2">
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/product_v1.html" title="">Product Single 1</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/product_v2.html" title="">Product Single 2</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/product_v3.html" title="">Product Single 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="level2">
+                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Order Page</a>
+                                <ul class="menu-level-2">
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/cartpage.html" title="">Cart Page</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/checkout.html" title="">Checkout</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/compare.html" title="">Compare</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/quickview.html" title="">Quickview</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/trackyourorder.html">Track Order</a></li>
+                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/wishlist.html">WishList</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <!-- //Modal content-->
+                </li>
+                <li class="level1">
+                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Pages</a>
+                    <span class="icon-sub-menu"></span>
+                    <ul class="menu-level1 js-open-menu">
+                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/about.html" title="About Us ">About Us </a></li>
+                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/contact.html" title="Contact">Contact</a></li>
+                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/404.html" title="404">404</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Blog</a>
+                    <span class="icon-sub-menu"></span>
+                    <ul class="menu-level1 js-open-menu">
+                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/blog.html" title="Blog Standar">Blog Category</a></li>
+                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/blogdetail.html" title="Blog Gird">Blog Detail</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
-    <!-- //Modal1 -->
-    <!-- //signin Model -->
-    <!-- signup Model -->
-    <!-- Modal2 -->
-    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body modal-body-sub_agile">
-                    <div class="main-mailposi">
-                        <span class="fa fa-envelope-o" aria-hidden="true"></span>
-                    </div>
-                    <div class="modal_body_left modal_body_left1">
-                        <h3 class="agileinfo_sign">Sign Up</h3>
-                        <p>
-                            Come join the Grocery Shoppy! Let's set up your Account.
-                        </p>
-                        <form action="#" method="post">
-                            <div class="styled-input agile-styled-input-top">
-                                <input type="text" placeholder="Name" name="Name" required="">
-                            </div>
-                            <div class="styled-input">
-                                <input type="email" placeholder="E-mail" name="Email" required="">
-                            </div>
-                            <div class="styled-input">
-                                <input type="password" placeholder="Password" name="password" id="password1" required="">
-                            </div>
-                            <div class="styled-input">
-                                <input type="password" placeholder="Confirm Password" name="Confirm Password" id="password2" required="">
-                            </div>
-                            <input type="submit" value="Sign Up">
-                        </form>
-                        <p>
-                            <a href="#">By clicking register, I agree to your terms</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- //Modal content-->
-        </div>
+    <!-- end push menu-->
+    <!-- Menu Mobile -->
+    <div class="menu-mobile-left-content menu-bg-white">
+        <ul>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_hot_gray.png" alt="Icon Hot Deals"> <p>Hot Deals</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_food_gray.png" alt="Icon Food"> <p>Food</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_mobile_gray.png" alt="Icon Mobile &amp; Tablet"> <p>Mobile &amp; Tablet</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_electric_gray.png" alt="Icon Electric Appliances"> <p>Electric Appliances</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_computer_gray.png" alt="Icon Electronics &amp; Technology"> <p>Electronics &amp; Technology</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_fashion_gray.png" alt="Icon Fashion"> <p>Fashion</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_health_gray.png" alt="Icon Health &amp; Beauty"> <p>Health &amp; Beauty</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_mother_gray.png" alt="Icon Mother &amp; Baby"> <p>Mother &amp; Baby</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_book_gray.png" alt="Icon Books &amp; Stationery"> <p>Books &amp; Stationery</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_home_gray.png" alt="Icon Home &amp; Life"> <p>Home &amp; Life</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_sport_gray.png" alt="Icon Sports &amp; Outdoors"> <p>Sports &amp; Outdoors</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_auto_gray.png" alt="Icon Auto &amp; Moto"> <p>Auto &amp; Moto</p></a></li>
+            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_voucher_gray.png" alt="Icon Voucher Service"> <p>Voucher Service</p></a></li>
+        </ul>
     </div>
-    <!-- //Modal2 -->
-    <!-- //signup Model -->
-    <!-- //header-bot -->
-    <!-- navigation -->
-    <div class="ban-top">
-        <div class="container">
-            <div class="agileits-navi_search">
-                <form action="#" method="post">
-                    <select id="agileinfo-nav_search" name="agileinfo_search" required="">
-                        <option value="">All Categories</option>
-                        <option value="Kitchen">Kitchen</option>
-                        <option value="Household">Household</option>
-                        <option value="Snacks &amp; Beverages">Snacks & Beverages</option>
-                        <option value="Personal Care">Personal Care</option>
-                        <option value="Gift Hampers">Gift Hampers</option>
-                        <option value="Fruits &amp; Vegetables">Fruits & Vegetables</option>
-                        <option value="Baby Care">Baby Care</option>
-                        <option value="Soft Drinks &amp; Juices">Soft Drinks & Juices</option>
-                        <option value="Frozen Food">Frozen Food</option>
-                        <option value="Bread &amp; Bakery">Bread & Bakery</option>
-                        <option value="Sweets">Sweets</option>
-                    </select>
-                </form>
-            </div>
-            <div class="top_nav_left">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                                aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
+    <!-- Header Box -->
+    <div class="wrappage">
+        <header class="relative full-width">
+            <div class=" container-web relative">
+                <div class=" container">
+                    <div class="row">
+                        <div class=" header-top">
+                            <p class="contact_us_header col-md-4 col-xs-12 col-sm-3 clear-margin">
+                                <img src="bower_components/comp1682-bower/Home V3_files/icon_phone_top.png" alt="Icon Phone Top Header"> Call us <span class="text-red bold">070-7782-7137</span>
+                            </p>
+                            <div class="menu-header-top text-right col-md-8 col-xs-12 col-sm-6 clear-padding">
+                                <ul class="clear-margin">
+                                    <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Account</a></li>
+                                    <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Wishlist</a></li>
+                                    <li class="relative">
+                                        <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">EN</a>
+                                        <ul>
+                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">JP</a></li>
+                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">EN</a></li>
+                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">CN</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative">
+                                        <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">USD</a>
+                                        <ul>
+                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">AUD</a></li>
+                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">USD</a></li>
+                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">CAD</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav menu__list">
-                                <li class="active">
-                                    <a class="nav-stylehead" href="index.html">Home
-                                        <span class="sr-only">(current)</span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a class="nav-stylehead" href="about.html">About Us</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle nav-stylehead" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kitchen
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu multi-column columns-3">
-                                        <div class="agile_inner_drop_nav_info">
-                                            <div class="col-sm-4 multi-gd-img">
-                                                <ul class="multi-column-dropdown">
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Bakery</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Baking Supplies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Coffee, Tea & Beverages</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Dried Fruits, Nuts</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Sweets, Chocolate</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Spices & Masalas</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Jams, Honey & Spreads</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-4 multi-gd-img">
-                                                <ul class="multi-column-dropdown">
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Pickles</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Pasta & Noodles</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Rice, Flour & Pulses</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Sauces & Cooking Pastes</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Snack Foods</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Oils, Vinegars</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('pages.products') }}">Meat, Poultry & Seafood</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-4 multi-gd-img">
-                                                <img src="bower_components/supermarket-bower/images/nav.png" alt="">
-                                            </div>
-                                            <div class="clearfix"></div>
+                    </div>
+                    <div class="row">
+                        <div class="clearfix header-content full-width relative">
+                            <div class="clearfix icon-menu-bar">
+                                <i class="data-icon data-icon-arrows icon-arrows-hamburger-2 icon-pushmenu js-push-menu"></i>
+                            </div>
+                            <div class="clearfix logo">
+                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img alt="Logo" src="bower_components/comp1682-bower/Home V3_files/logo.png"></a>
+                            </div>
+                            <div class="clearfix search-box relative float-left">
+                                <form method="GET" action="http://landing.engotheme.com/" class="">
+                                    <div class="clearfix category-box relative">
+                                        <select name="cate_search">
+                                            <option>All Category</option>
+                                            <option>Food</option>
+                                            <option>Mobile &amp; Tablet</option>
+                                            <option>Electric Appliances</option>
+                                            <option>Electronics &amp; Technology</option>
+                                            <option>Fashion</option>
+                                            <option>Health &amp; Beauty</option>
+                                            <option>Mother &amp; Baby</option>
+                                            <option>Books &amp; Stationery</option>
+                                            <option>Home &amp; Life</option>
+                                            <option>Sports &amp; Outdoors</option>
+                                            <option>Auto &amp; Moto</option>
+                                            <option>Voucher Service</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" name="s" placeholder="Enter keyword here . . .">
+                                    <button type="submit" class="animate-default button-hover-red">Search</button>
+                                </form>
+                            </div>
+                            <div class="clearfix icon-search-mobile absolute">
+                                <i onclick="showBoxSearchMobile()" class="data-icon data-icon-basic icon-basic-magnifier"></i>
+                            </div>
+                            <div class="clearfix cart-website absolute" onclick="showCartBoxDetail()">
+                                <img alt="Icon Cart" src="bower_components/comp1682-bower/Home V3_files/icon_cart.png">
+                                <p class="count-total-shopping absolute">2</p>
+                            </div>
+                            <div class="clearfix cart-website absolute" onclick="showCartBoxDetail()">
+                                <img alt="Icon Cart" src="bower_components/comp1682-bower/Home V3_files/icon_cart.png">
+                                <p class="count-total-shopping absolute">2</p>
+                            </div>
+                            <div class="cart-detail-header border">
+                                <div class="relative">
+                                    <div class="product-cart-son clearfix">
+                                        <div class="image-product-cart float-left center-vertical-image ">
+                                            <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/product_image_6-min.png" alt=""></a>
                                         </div>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle nav-stylehead" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Household
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu multi-column columns-3">
-                                        <div class="agile_inner_drop_nav_info">
-                                            <div class="col-sm-6 multi-gd-img">
-                                                <ul class="multi-column-dropdown">
-                                                    <li>
-                                                        <a href="product2.html">Kitchen & Dining</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Detergents</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Utensil Cleaners</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Floor & Other Cleaners</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Disposables, Garbage Bag</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Repellents & Fresheners</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html"> Dishwash</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-6 multi-gd-img">
-                                                <ul class="multi-column-dropdown">
-                                                    <li>
-                                                        <a href="product2.html">Pet Care</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Cleaning Accessories</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Pooja Needs</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Crackers</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Festive Decoratives</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Plasticware</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product2.html">Home Care</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="clearfix"></div>
+                                        <div class="info-product-cart float-left">
+                                            <p class="title-product title-hover-black"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">MH02-Black09</a></p>
+                                            <p class="clearfix price-product">$350 <span class="total-product-cart-son">(x1)</span></p>
                                         </div>
-                                    </ul>
-                                </li>
-                                <li class="">
-                                    <a class="nav-stylehead" href="faqs.html">Faqs</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a class="nav-stylehead dropdown-toggle" href="#" data-toggle="dropdown">Pages
-                                        <b class="caret"></b>
-                                    </a>
-                                    <ul class="dropdown-menu agile_short_dropdown">
-                                        <li>
-                                            <a href="icons.html">Web Icons</a>
+                                    </div>
+                                    <div class="product-cart-son">
+                                        <div class="image-product-cart float-left center-vertical-image">
+                                            <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/product_image_7-min.png" alt=""></a>
+                                        </div>
+                                        <div class="info-product-cart float-left">
+                                            <p class="title-product title-hover-black"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Voyage Yoga Bag</a></p>
+                                            <p class="clearfix price-product">$350 <span class="total-product-cart-son">(x1)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative border no-border-l no-border-r total-cart-header">
+                                    <p class="bold clear-margin">Subtotal:</p>
+                                    <p class=" clear-margin bold">$700</p>
+                                </div>
+                                <div class="relative btn-cart-header">
+                                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#" class="uppercase bold animate-default">view cart</a>
+                                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#" class="uppercase bold button-hover-red animate-default">checkout</a>
+                                </div>
+                            </div>
+                            <div class="mask-search absolute clearfix" onclick="hiddenBoxSearchMobile()"></div>
+                            <div class="clearfix box-search-mobile">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a class="menu-vertical hidden-md hidden-lg" onclick="showMenuMobie()">
+                            <span class="animate-default"><i class="fa fa-list" aria-hidden="true"></i> all categories</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-header-v3 hidden-ipx">
+                <div class="container">
+                    <div class="row">
+                        <!-- Menu Page -->
+                        <div class="menu-header full-width">
+                            <ul class="clear-margin">
+                                <li onclick="showMenuHomeV3()" style="left: 15px"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><i class="fa fa-list" aria-hidden="true"></i> all categories</a></li>
+                                <li class="title-hover-red">
+                                    <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">home</a>
+                                    <ul class="sub-menu mega-menu">
+                                        <li class="relative">
+                                            <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v1.html"><img src="bower_components/comp1682-bower/Home V3_files/home_1_menu-min.png" alt=""></a>
+                                            <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v1.html">Home 1</a></p>
                                         </li>
-                                        <li>
-                                            <a href="typography.html">Typography</a>
+                                        <li class="relative">
+                                            <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v2.html"><img src="bower_components/comp1682-bower/Home V3_files/home_2_menu-min.png" alt=""></a>
+                                            <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v2.html">Home 2</a></p>
+                                        </li>
+                                        <li class="relative">
+                                            <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html"><img src="bower_components/comp1682-bower/Home V3_files/home_3_menu-min.png" alt=""></a>
+                                            <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html">Home 3</a></p>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="">
-                                    <a class="nav-stylehead" href="contact.html">Contact</a>
+                                <li class="title-hover-red">
+                                    <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">shop</a>
+                                    <div class="sub-menu mega-menu-v2">
+                                        <ul>
+                                            <li>Catgory Type</li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v1.html">Category v1</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v1_2.html">Category v1.2</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v2.html">Category v2</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v2_2.html">Category v2.2</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v3.html">Category v3</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v3_2.html">Category v3.2</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v4.html">Category v4</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v4_2.html">Category v4.2</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li>Single Product Type</li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v1.html">Product Single 1</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v2.html">Product Single 2</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v3.html">Product Single 3</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li>Order Page</li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/cartpage.html">Cart Page</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/checkout.html">Checkout</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/compare.html">Compare</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/quickview.html">QuickView</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/trackyourorder.html">Track Order</a></li>
+                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/wishlist.html">WishList</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="title-hover-red">
+                                    <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">pages</a>
+                                    <ul>
+                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/about.html">About Us</a></li>
+                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/contact.html">Contact</a></li>
+                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/404.html">404</a></li>
+                                    </ul>
+                                </li>
+                                <li class="title-hover-red">
+                                    <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Blog</a>
+                                    <ul>
+                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/blog.html">Blog Category</a></li>
+                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/blogdetail.html">Blog Detail</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
+                        <!-- End Menu Page -->
                     </div>
-                </nav>
+                </div>
             </div>
-        </div>
+            <div class="clearfix menu_more_header menu-web menu-bg-white">
+                <ul>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_hot_gray.png" alt="Icon Hot Deals"> <p>Hot Deals</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_food_gray.png" alt="Icon Food"> <p>Food</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_mobile_gray.png" alt="Icon Mobile &amp; Tablet"> <p>Mobile &amp; Tablet</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_electric_gray.png" alt="Icon Electric Appliances"> <p>Electric Appliances</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_computer_gray.png" alt="Icon Electronics &amp; Technology"> <p>Electronics &amp; Technology</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_fashion_gray.png" alt="Icon Fashion"> <p>Fashion</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_health_gray.png" alt="Icon Health &amp; Beauty"> <p>Health &amp; Beauty</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_mother_gray.png" alt="Icon Mother &amp; Baby"> <p>Mother &amp; Baby</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_book_gray.png" alt="Icon Books &amp; Stationery"> <p>Books &amp; Stationery</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_home_gray.png" alt="Icon Home &amp; Life"> <p>Home &amp; Life</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_sport_gray.png" alt="Icon Sports &amp; Outdoors"> <p>Sports &amp; Outdoors</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_auto_gray.png" alt="Icon Auto &amp; Moto"> <p>Auto &amp; Moto</p></a></li>
+                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_voucher_gray.png" alt="Icon Voucher Service"> <p>Voucher Service</p></a></li>
+                </ul>
+            </div>
+            <div class="header-ontop">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="clearfix logo">
+                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img alt="Logo" src="bower_components/comp1682-bower/Home V3_files/logo.png"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="menu-header">
+                                <ul class="main__menu clear-margin">
+                                    <li class="title-hover-red">
+                                        <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">home</a>
+                                        <ul class="sub-menu mega-menu">
+                                            <li class="relative">
+                                                <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v1.html"><img src="bower_components/comp1682-bower/Home V3_files/home_1_menu-min.png" alt=""></a>
+                                                <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v1.html">Home 1</a></p>
+                                            </li>
+                                            <li class="relative">
+                                                <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v2.html"><img src="bower_components/comp1682-bower/Home V3_files/home_2_menu-min.png" alt=""></a>
+                                                <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v2.html">Home 2</a></p>
+                                            </li>
+                                            <li class="relative">
+                                                <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html"><img src="bower_components/comp1682-bower/Home V3_files/home_3_menu-min.png" alt=""></a>
+                                                <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html">Home 3</a></p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="title-hover-red">
+                                        <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">shop</a>
+                                        <div class="sub-menu mega-menu-v2">
+                                            <ul>
+                                                <li>Catgory Type</li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v1.html">Category v1</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v1_2.html">Category v1.2</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v2.html">Category v2</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v2_2.html">Category v2.2</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v3.html">Category v3</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v3_2.html">Category v3.2</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v4.html">Category v4</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v4_2.html">Category v4.2</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li>Single Product Type</li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v1.html">Product Single 1</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v2.html">Product Single 2</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v3.html">Product Single 3</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li>Order Page</li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/cartpage.html">Cart Page</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/checkout.html">Checkout</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/compare.html">Compare</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/quickview.html">QuickView</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/trackyourorder.html">Track Order</a></li>
+                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/wishlist.html">WishList</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="title-hover-red">
+                                        <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">pages</a>
+                                        <ul>
+                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/about.html">About Us</a></li>
+                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/contact.html">Contact</a></li>
+                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/404.html">404</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="title-hover-red">
+                                        <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Blog</a>
+                                        <ul>
+                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/blog.html">Blog Category</a></li>
+                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/blogdetail.html">Blog Detail</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header Box -->
+        <!-- Content Box -->
+        @yield('content')
+        <!-- End Content Box -->
+        <!-- Footer Box -->
+        <footer class=" bg-gray full-width border no-border-r no-border-l footer-v3 no-border-b">
+            <div class="clearfix container-web relative">
+                <div class=" container clear-padding">
+                    <div class="row">
+                        <!-- Support -->
+                        <div class="clearfix support-box support-box-v3 full-width">
+                            <div class="container-web clearfix">
+                                <div class=" container ">
+                                    <div class="row">
+                                        <div class=" support-box-info relative col-md-3 col-sm-3 col-xs-6">
+                                            <img src="bower_components/comp1682-bower/Home V3_files/icon_free_ship.png" alt="Icon Free Ship" class="float-left">
+                                            <p class="float-left">free shipping</p>
+                                            <p class="float-left">on order over $500</p>
+                                        </div>
+                                        <div class=" support-box-info relative col-md-3 col-sm-3 col-xs-6">
+                                            <img src="bower_components/comp1682-bower/Home V3_files/icon_support.png" alt="Icon Supports" class="float-left">
+                                            <p class="float-left">support</p>
+                                            <p class="float-left">life time support 24/7</p>
+                                        </div>
+                                        <div class=" support-box-info relative col-md-3 col-sm-3 col-xs-6">
+                                            <img src="bower_components/comp1682-bower/Home V3_files/icon_patner.png" alt="Icon partner" class="float-left">
+                                            <p class="float-left">help partner</p>
+                                            <p class="float-left">help all aspects</p>
+                                        </div>
+                                        <div class=" support-box-info relative col-md-3 col-sm-3 col-xs-6">
+                                            <img src="bower_components/comp1682-bower/Home V3_files/icon_phone_big.png" alt="Icon Phone Tablet" class="float-left">
+                                            <p class="float-left">contact with us</p>
+                                            <p class="float-left">+07 (0) 7782 9137</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Support Box -->
+                    </div>
+                    <div class="row">
+                        <div class="clearfix col-md-3 col-sm-6 col-xs-12 text-footer">
+                            <p>my account</p>
+                            <ul class="list-footer">
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Account</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Login</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Cart</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Wishlist</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Compare</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix col-md-3 col-sm-6 col-xs-12 text-footer">
+                            <p>information</p>
+                            <ul class="list-footer">
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Information</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Orders History</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Wishlist</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Privacy Policy</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Site Map</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix col-md-3 col-sm-6 col-xs-12 text-footer">
+                            <p>our services</p>
+                            <ul class="list-footer">
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Product Recall</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Gift Vouchers</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Returns And Exchanges</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Shipping Options</a></li>
+                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Terms Of Use</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix col-md-3 col-sm-6 col-xs-12 text-footer">
+                            <p>contact us</p>
+                            <ul class="icon-footer">
+                                <li><i class="fa fa-home" aria-hidden="true"></i> 262 Milacina Mrest, Behansed, Paris</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i> contact@yourcompany.com</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i> 070-7782-9137</li>
+                                <li><i class="fa fa-fax" aria-hidden="true"></i> 070-7782-9138</li>
+                                <li><i class="fa fa-clock-o" aria-hidden="true"></i> 09:00 AM - 18:00 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Box Social -->
+            <div class=" top-footer full-width">
+                <div class="clearfix container-web relative">
+                    <div class=" container">
+                        <div class="row">
+                            <div class="clearfix col-md-9 col-sm-12 clear-padding col-xs-12">
+                                <div class="clearfix text-subscribe">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <p>sign up for newsletter</p>
+                                    <p>Get updates on discount &amp; counpons.</p>
+                                </div>
+                                <div class="clearfix form-subscribe">
+                                    <input type="text" name="email-subscribe" placeholder="Enter your email . . .">
+                                    <button class="animate-default button-hover-red">subscribe</button>
+                                </div>
+                            </div>
+                            <div class="clearfix col-md-3 col-sm-12 col-xs-12 clear-padding social-box text-right">
+                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/social_tw-min.png" alt="Icon Social Twiter"></a>
+                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/social_fa-min.png" alt="Icon Social Facebook"></a>
+                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/social_int-min.png" alt="Icon Social Instagram"></a>
+                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/social_yt-min.png" alt="Icon Social Youtube"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Box Social -->
+            <div class=" bottom-footer full-width">
+                <div class="clearfix container-web">
+                    <div class=" container">
+                        <div class="row">
+                            <div class="clearfix col-md-7 clear-padding copyright">
+                                <p>Copyright © 2020 by HaiNH. All Rights Reserved.</p>
+                            </div>
+                            <div class="clearfix footer-icon-bottom col-md-5 float-right clear-padding">
+                                <div class="icon_logo_footer float-right">
+                                    <img src="bower_components/comp1682-bower/Home V3_files/image_payment_footer-min.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    <!-- //navigation -->
-    <!-- CONTENT-->
-    @yield('content')
-    <!-- newsletter -->
-    <div class="footer-top">
-        <div class="container-fluid">
-            <div class="col-xs-8 agile-leftmk">
-                <h2>Get your Groceries delivered from local stores</h2>
-                <p>Free Delivery on your first order!</p>
-                <form action="#" method="post">
-                    <input type="email" placeholder="E-mail" name="email" required="">
-                    <input type="submit" value="Subscribe">
-                </form>
-                <div class="newsform-w3l">
-                    <span class="fa fa-envelope-o" aria-hidden="true"></span>
-                </div>
-            </div>
-            <div class="col-xs-4 w3l-rightmk">
-                <img src="bower_components/supermarket-bower/images/tab3.png" alt=" ">
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <!-- //newsletter -->
-    <!-- footer -->
-    <footer>
-        <div class="container">
-            <!-- footer first section -->
-            <p class="footer-main">
-                <span>"Grocery Shoppy"</span> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                magni dolores eos qui ratione voluptatem sequi nesciunt.Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.</p>
-            <!-- //footer first section -->
-            <!-- footer second section -->
-            <div class="w3l-grids-footer">
-                <div class="col-xs-4 offer-footer">
-                    <div class="col-xs-4 icon-fot">
-                        <span class="fa fa-map-marker" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-xs-8 text-form-footer">
-                        <h3>Track Your Order</h3>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="col-xs-4 offer-footer">
-                    <div class="col-xs-4 icon-fot">
-                        <span class="fa fa-refresh" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-xs-8 text-form-footer">
-                        <h3>Free & Easy Returns</h3>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="col-xs-4 offer-footer">
-                    <div class="col-xs-4 icon-fot">
-                        <span class="fa fa-times" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-xs-8 text-form-footer">
-                        <h3>Online cancellation </h3>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <!-- //footer second section -->
-            <!-- footer third section -->
-            <div class="footer-info w3-agileits-info">
-                <!-- footer categories -->
-                <div class="col-sm-5 address-right">
-                    <div class="col-xs-6 footer-grids">
-                        <h3>Categories</h3>
-                        <ul>
-                            <li>
-                                <a href="product.html">Grocery</a>
-                            </li>
-                            <li>
-                                <a href="product.html">Fruits</a>
-                            </li>
-                            <li>
-                                <a href="product.html">Soft Drinks</a>
-                            </li>
-                            <li>
-                                <a href="product2.html">Dishwashers</a>
-                            </li>
-                            <li>
-                                <a href="product.html">Biscuits & Cookies</a>
-                            </li>
-                            <li>
-                                <a href="product2.html">Baby Diapers</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-6 footer-grids agile-secomk">
-                        <ul>
-                            <li>
-                                <a href="product.html">Snacks & Beverages</a>
-                            </li>
-                            <li>
-                                <a href="product.html">Bread & Bakery</a>
-                            </li>
-                            <li>
-                                <a href="product.html">Sweets</a>
-                            </li>
-                            <li>
-                                <a href="product.html">Chocolates & Biscuits</a>
-                            </li>
-                            <li>
-                                <a href="product2.html">Personal Care</a>
-                            </li>
-                            <li>
-                                <a href="product.html">Dried Fruits & Nuts</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <!-- //footer categories -->
-                <!-- quick links -->
-                <div class="col-sm-5 address-right">
-                    <div class="col-xs-6 footer-grids">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li>
-                                <a href="about.html">About Us</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="help.html">Help</a>
-                            </li>
-                            <li>
-                                <a href="faqs.html">Faqs</a>
-                            </li>
-                            <li>
-                                <a href="terms.html">Terms of use</a>
-                            </li>
-                            <li>
-                                <a href="privacy.html">Privacy Policy</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-6 footer-grids">
-                        <h3>Get in Touch</h3>
-                        <ul>
-                            <li>
-                                <i class="fa fa-map-marker"></i> 8th Ton That Thuyet Street, Hanoi, Vietnam.</li>
-                            <li>
-                                <i class="fa fa-mobile"></i> 097 168 2462 </li>
-                            <li>
-                                <i class="fa fa-phone"></i> +222 11 4444 </li>
-                            <li>
-                                <i class="fa fa-envelope-o"></i>
-                                <a href="mailto:hainhgch16440@fpt.edu.vn"> hainhgch16440@fpt.edu.vn</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- //quick links -->
-                <!-- social icons -->
-                <div class="col-sm-2 footer-grids  w3l-socialmk">
-                    <h3>Follow Us on</h3>
-                    <div class="social">
-                        <ul>
-                            <li>
-                                <a class="icon fb" href="#">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="icon tw" href="#">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="icon gp" href="#">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="agileits_app-devices">
-                        <h5>Download the App</h5>
-                        <a href="#">
-                            <img src="bower_components/supermarket-bower/images/1.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="bower_components/supermarket-bower/images/2.png" alt="">
-                        </a>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <!-- //social icons -->
-                <div class="clearfix"></div>
-            </div>
-            <!-- //footer third section -->
-            <!-- footer fourth section (text) -->
-            <div class="agile-sometext">
-                <div class="sub-some">
-                    <h5>Online Grocery Shopping</h5>
-                    <p>Order online. All your favourite products from the low price online supermarket for grocery home delivery in Delhi,
-                        Gurgaon, Bengaluru, Mumbai and other cities in India. Lowest prices guaranteed on Patanjali, Aashirvaad, Pampers, Maggi,
-                        Saffola, Huggies, Fortune, Nestle, Amul, MamyPoko Pants, Surf Excel, Ariel, Vim, Haldiram's and others.</p>
-                </div>
-                <div class="sub-some">
-                    <h5>Shop online with the best deals & offers</h5>
-                    <p>Now Get Upto 40% Off On Everyday Essential Products Shown On The Offer Page. The range includes Grocery, Personal Care,
-                        Baby Care, Pet Supplies, Healthcare and Other Daily Need Products. Discount May Vary From Product To Product.</p>
-                </div>
-                <!-- brands -->
-                <div class="sub-some">
-                    <h5>Popular Brands</h5>
-                    <ul>
-                        <li>
-                            <a href="product.html">Aashirvaad</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Amul</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Bingo</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Boost</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Durex</a>
-                        </li>
-                        <li>
-                            <a href="product.html"> Maggi</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Glucon-D</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Horlicks</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Head & Shoulders</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Dove</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Dettol</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Dabur</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Colgate</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Coca-Cola</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Closeup</a>
-                        </li>
-                        <li>
-                            <a href="product2.html"> Cinthol</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Cadbury</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Bru</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Bournvita</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Tang</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Pears</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Oreo</a>
-                        </li>
-                        <li>
-                            <a href="product.html"> Taj Mahal</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Sprite</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Thums Up</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Fair & Lovely</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Lakme</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Tata</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Sunfeast</a>
-                        </li>
-                        <li>
-                            <a href="product2.html">Sunsilk</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Patanjali</a>
-                        </li>
-                        <li>
-                            <a href="product.html">MTR</a>
-                        </li>
-                        <li>
-                            <a href="product.html">Kissan</a>
-                        </li>
-                        <li>
-                            <a href="product2.html"> Lipton</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- //brands -->
-                <!-- payment -->
-                <div class="sub-some child-momu">
-                    <h5>Payment Method</h5>
-                    <ul>
-                        <li>
-                            <img src="bower_components/supermarket-bower/images/pay2.png" alt="">
-                        </li>
-                        <li>
-                            <img src="bower_components/supermarket-bower/images/pay5.png" alt="">
-                        </li>
-                        <li>
-                            <img src="bower_components/supermarket-bower/images/pay1.png" alt="">
-                        </li>
-                        <li>
-                            <img src="bower_components/supermarket-bower/images/pay4.png" alt="">
-                        </li>
-                        <li>
-                            <img src="bower_components/supermarket-bower/images/pay6.png" alt="">
-                        </li>
-                        <li>
-                            <img src="bower_components/supermarket-bower/images/pay3.png" alt="">
-                        </li>
-                        <li>
-                            <img src="bower_components/supermarket-bower/images/pay7.png" alt="">
-                        </li>
-                        <li>
-                            <img src="bower_components/supermarket-bower/images/pay8.png" alt="">
-                        </li>
-                        <li>
-                            <img src="bower_components/supermarket-bower/images/pay9.png" alt="">
-                        </li>
-                    </ul>
-                </div>
-                <!-- //payment -->
-            </div>
-            <!-- //footer fourth section (text) -->
-        </div>
-    </footer>
-    <!-- //footer -->
-    <!-- copyright -->
-    <div class="copy-right">
-        <div class="container">
-            <p>© 2019 Grocery Shoppy. All rights reserved | Design by
-                <a href="#"> Hai Nguyen Huu</a>
-            </p>
-        </div>
-    </div>
-    <!-- //copyright -->
-
-    <!-- js-files -->
-    <!-- jquery -->
-    <script src="bower_components/supermarket-bower/js/jquery-2.1.4.min.js"></script>
-    <!-- //jquery -->
-
-    <!-- popup modal (for signin & signup)-->
-    <script src="bower_components/supermarket-bower/js/jquery.magnific-popup.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.popup-with-zoom-anim').magnificPopup({
-                type: 'inline',
-                fixedContentPos: false,
-                fixedBgPos: true,
-                overflowY: 'auto',
-                closeBtnInside: true,
-                preloader: false,
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-zoom-in'
-            });
-
-        });
-    </script>
-    <!-- Large modal -->
-    <!-- <script>
-        $('#').modal('show');
-    </script> -->
-    <!-- //popup modal (for signin & signup)-->
-
-    <!-- cart-js -->
-    <script src="bower_components/supermarket-bower/js/minicart.js"></script>
-    <script>
-        paypalm.minicartk.render(); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js
-
-        paypalm.minicartk.cart.on('checkout', function (evt) {
-            var items = this.items(),
-                len = items.length,
-                total = 0,
-                i;
-
-            // Count the number of each item in the cart
-            for (i = 0; i < len; i++) {
-                total += items[i].get('quantity');
-            }
-
-            if (total < 3) {
-                alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-                evt.preventDefault();
-            }
-        });
-    </script>
-    <!-- //cart-js -->
-
-    <!-- price range (top products) -->
-    <script src="bower_components/supermarket-bower/js/jquery-ui.js"></script>
-    <script>
-        //<![CDATA[
-        $(window).load(function () {
-            $("#slider-range").slider({
-                range: true,
-                min: 0,
-                max: 9000,
-                values: [50, 6000],
-                slide: function (event, ui) {
-                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-                }
-            });
-            $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-
-        }); //]]>
-    </script>
-    <!-- //price range (top products) -->
-
-    <!-- flexisel (for special offers) -->
-    <script src="bower_components/supermarket-bower/js/jquery.flexisel.js"></script>
-    <script>
-        $(window).load(function () {
-            $("#flexiselDemo1").flexisel({
-                visibleItems: 3,
-                animationSpeed: 1000,
-                autoPlay: true,
-                autoPlaySpeed: 3000,
-                pauseOnHover: true,
-                enableResponsiveBreakpoints: true,
-                responsiveBreakpoints: {
-                    portrait: {
-                        changePoint: 480,
-                        visibleItems: 1
-                    },
-                    landscape: {
-                        changePoint: 640,
-                        visibleItems: 2
-                    },
-                    tablet: {
-                        changePoint: 768,
-                        visibleItems: 2
-                    }
-                }
-            });
-
-        });
-    </script>
-    <!-- //flexisel (for special offers) -->
-
-    <!-- password-script -->
-    <script>
-        window.onload = function () {
-            document.getElementById("password1").onchange = validatePassword;
-            document.getElementById("password2").onchange = validatePassword;
-        }
-
-        function validatePassword() {
-            var pass2 = document.getElementById("password2").value;
-            var pass1 = document.getElementById("password1").value;
-            if (pass1 != pass2)
-                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-            else
-                document.getElementById("password2").setCustomValidity('');
-            //empty string means no validation error
-        }
-    </script>
-    <!-- //password-script -->
-
-    <!-- smoothscroll -->
-    <script src="bower_components/supermarket-bower/js/SmoothScroll.min.js"></script>
-    <!-- //smoothscroll -->
-
-    <!-- start-smooth-scrolling -->
-    <script src="bower_components/supermarket-bower/js/move-top.js"></script>
-    <script src="bower_components/supermarket-bower/js/easing.js"></script>
-    <script>
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            });
-        });
-    </script>
-    <!-- //end-smooth-scrolling -->
-
-    <!-- smooth-scrolling-of-move-up -->
-    <script>
-        $(document).ready(function () {
-            /*
-            var defaults = {
-                containerID: 'toTop', // fading element id
-                containerHoverID: 'toTopHover', // fading element hover id
-                scrollSpeed: 1200,
-                easingType: 'linear'
-            };
-            */
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
-
-        });
-    </script>
-    <!-- //smooth-scrolling-of-move-up -->
-
-    <!-- for bootstrap working -->
-    <script src="bower_components/supermarket-bower/js/bootstrap.js"></script>
-    <!-- //for bootstrap working -->
-    <!-- //js-files -->
+    <!-- End Footer Box -->
+    <script src="bower_components/comp1682-bower/Home V3_files/jquery-3.3.1.min.js" defer=""></script>
+    <script src="bower_components/comp1682-bower/Home V3_files/bootstrap.min.js" defer=""></script>
+    <script src="bower_components/comp1682-bower/Home V3_files/owl.carousel.min.js" defer=""></script>
+    <script src="bower_components/comp1682-bower/Home V3_files/scripts.js" defer=""></script>
 
 
-</body>
-
-</html>
+</body></html>
