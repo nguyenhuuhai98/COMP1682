@@ -110,5 +110,5 @@ task('reload:php-fpm7.3', function () {
     }
 })->desc('PHP7 FPM reloaded');
 
-after('cleanup', 'reload:php-fpm7.3');
+//after('cleanup', 'reload:php-fpm7.3');
 
