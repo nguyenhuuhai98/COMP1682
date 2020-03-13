@@ -17,21 +17,27 @@ class PageController extends Controller
     public function index()
     {
         try {
-            $f1Categories = $this->getAllCategories();
-
+            $parentId = [1, 2, 3, 4, 5];
+            $categories = $this->categoryRepository->getAll();
+            $f1Categories = $this->getAllCategories($parentId);
+            $f0Categories = $this->getAllCategories([0]);
+            $randomCategories = $f1Categories->random(5);
             return view('pages.index', [
-                'f1Categories' => $f1Categories
+                'categories' => $categories,
+                'f0Categories' => $f0Categories,
+                'f1Categories' => $f1Categories,
+                'randomCategories' => $randomCategories,
             ]);
         } catch (\Exception $ex) {
             report($ex);
-            dd($ex);
+
             return $ex;
         }
     }
 
-    public function getAllCategories()
+    public function getAllCategories($parentId)
     {
-        $categories = $this->categoryRepository->getCategoryWhereIn();
+        $categories = $this->categoryRepository->getCategoryWhereIn($parentId);
 
         return $categories;
     }

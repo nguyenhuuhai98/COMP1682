@@ -12,4 +12,4 @@ yarn-error.log
 /public/bower_components/
 /public/css/*
 /public/js/*
-
+.idea/

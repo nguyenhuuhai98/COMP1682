@@ -1,556 +1,527 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)http://landing.engotheme.com/html/megastore/demo/home_v3.html -->
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Home V3</title>
-    <meta name="format-detection" content="telephone=no">
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+    <meta name="robots" content="all">
+    <title>Supermarket</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:100,300,400,500,700,900%7CRoboto+Condensed:100,300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/icon-font-linea.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/style.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/effect.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/home.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/comp1682-bower/Home V3_files/responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="client/css/bootstrap.min.css">
+
+    <!-- Customizable CSS -->
+    <link rel="stylesheet" href="client/css/main.css">
+    <link rel="stylesheet" href="client/css/blue.css">
+    <link rel="stylesheet" href="client/css/owl.carousel.css">
+    <link rel="stylesheet" href="client/css/owl.transitions.css">
+    <link rel="stylesheet" href="client/css/animate.min.css">
+    <link rel="stylesheet" href="client/css/rateit.css">
+    <link rel="stylesheet" href="client/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons/Glyphs -->
+    <link rel="stylesheet" href="client/css/font-awesome.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
+<body class="cnt-home">
+<!-- ============================================== HEADER ============================================== -->
+<header class="header-style-1">
 
-<body>
-    <!-- push menu-->
-    <div class="pushmenu menu-home5">
-        <div class="menu-push">
-            <span class="close-left js-close"><i class="fa fa-times f-20"></i></span>
-            <div class="clearfix"></div>
-            <form role="search" method="get" id="searchform" class="searchform" action="http://landing.engotheme.com/search">
-                <div>
-                    <label class="screen-reader-text" for="q"></label>
-                    <input type="text" placeholder="Search for products" value="" name="q" id="q" autocomplete="off">
-                    <input type="hidden" name="type" value="product">
-                    <button type="submit" id="searchsubmit"><i class="ion-ios-search-strong"></i></button>
-                </div>
-            </form>
-            <ul class="nav-home5 js-menubar">
-                <li class="level1 active dropdown">
-                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Home</a>
-                    <span class="icon-sub-menu"></span>
-                    <ul class="menu-level1 js-open-menu">
-                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/home_v1.html" title="">Home 1</a></li>
-                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/home_v2.html" title="">Home 2</a></li>
-                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html" title="">Home 3</a></li>
+    <!-- ============================================== TOP MENU ============================================== -->
+    <div class="top-bar animate-dropdown">
+        <div class="container">
+            <div class="header-top-inner">
+                <div class="cnt-account">
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
+                        <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
+                        <li><a href="#"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
+                        <li><a href="#"><i class="icon fa fa-check"></i>Checkout</a></li>
+                        <li><a href="#"><i class="icon fa fa-lock"></i>Login</a></li>
                     </ul>
-                </li>
-                <li class="level1 active dropdown"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Shop</a>
-                    <span class="icon-sub-menu"></span>
-                    <div class="menu-level1 js-open-menu">
-                        <ul class="level1">
-                            <li class="level2">
-                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Shop Type</a>
-                                <ul class="menu-level-2">
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v1.html" title="">Category V1</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v1_2.html" title="">Category V1.2</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v2.html" title="">Category V2</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v2_2.html" title="">Category V2.2</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v3.html" title="">Category V3</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v3_2.html" title="">Category V3.2</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v4.html" title="">Category V4</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/category_v4_2.html" title="">Category V4.2</a></li>
+                </div>
+                <!-- /.cnt-account -->
+
+                <div class="cnt-block">
+                    <ul class="list-unstyled list-inline">
+                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">USD </span><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">USD</a></li>
+                                <li><a href="#">INR</a></li>
+                                <li><a href="#">GBP</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">English </span><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">French</a></li>
+                                <li><a href="#">German</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- /.list-unstyled -->
+                </div>
+                <!-- /.cnt-cart -->
+                <div class="clearfix"></div>
+            </div>
+            <!-- /.header-top-inner -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.header-top -->
+    <!-- ============================================== TOP MENU : END ============================================== -->
+    <div class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+                    <!-- ============================================================= LOGO ============================================================= -->
+                    <div class="logo"> <a href="home.html"> <img src="client/images/logo.png" alt="logo"> </a> </div>
+                    <!-- /.logo -->
+                    <!-- ============================================================= LOGO : END ============================================================= --> </div>
+                <!-- /.logo-holder -->
+
+                <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
+                    <!-- /.contact-row -->
+                    <!-- ============================================================= SEARCH AREA ============================================================= -->
+                    <div class="search-area">
+                        <form>
+                            <div class="control-group">
+                                <ul class="categories-filter animate-dropdown">
+                                    <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
+                                        <ul class="dropdown-menu" role="menu" >
+                                            <li class="menu-header">Computer</li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Clothing</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Electronics</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Shoes</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Watches</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
-                            </li>
-                            <li class="level2">
-                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Single Product Type</a>
-                                <ul class="menu-level-2">
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/product_v1.html" title="">Product Single 1</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/product_v2.html" title="">Product Single 2</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/product_v3.html" title="">Product Single 3</a></li>
-                                </ul>
-                            </li>
-                            <li class="level2">
-                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Order Page</a>
-                                <ul class="menu-level-2">
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/cartpage.html" title="">Cart Page</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/checkout.html" title="">Checkout</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/compare.html" title="">Compare</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/quickview.html" title="">Quickview</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/trackyourorder.html">Track Order</a></li>
-                                    <li class="level3"><a href="http://landing.engotheme.com/html/megastore/demo/wishlist.html">WishList</a></li>
-                                </ul>
+                                <input class="search-field" placeholder="Search here..." />
+                                <a class="search-button" href="#" ></a> </div>
+                        </form>
+                    </div>
+                    <!-- /.search-area -->
+                    <!-- ============================================================= SEARCH AREA : END ============================================================= --> </div>
+                <!-- /.top-search-holder -->
+
+                <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
+                    <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+
+                    <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+                            <div class="items-cart-inner">
+                                <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
+                                <div class="basket-item-count"><span class="count">2</span></div>
+                                <div class="total-price-basket"> <span class="lbl">cart -</span> <span class="total-price"> <span class="sign">$</span><span class="value">600.00</span> </span> </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="cart-item product-summary">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="image"> <a href="detail.html"><img src="client/images/cart.jpg" alt=""></a> </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            <h3 class="name"><a href="index.php?page-detail">Simple Product</a></h3>
+                                            <div class="price">$600.00</div>
+                                        </div>
+                                        <div class="col-xs-1 action"> <a href="#"><i class="fa fa-trash"></i></a> </div>
+                                    </div>
+                                </div>
+                                <!-- /.cart-item -->
+                                <div class="clearfix"></div>
+                                <hr>
+                                <div class="clearfix cart-total">
+                                    <div class="pull-right"> <span class="text">Sub Total :</span><span class='price'>$600.00</span> </div>
+                                    <div class="clearfix"></div>
+                                    <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a> </div>
+                                <!-- /.cart-total-->
+
                             </li>
                         </ul>
-                        <div class="clearfix"></div>
+                        <!-- /.dropdown-menu-->
                     </div>
-                </li>
-                <li class="level1">
-                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Pages</a>
-                    <span class="icon-sub-menu"></span>
-                    <ul class="menu-level1 js-open-menu">
-                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/about.html" title="About Us ">About Us </a></li>
-                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/contact.html" title="Contact">Contact</a></li>
-                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/404.html" title="404">404</a></li>
-                    </ul>
-                </li>
-                <li class="level1">
-                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Blog</a>
-                    <span class="icon-sub-menu"></span>
-                    <ul class="menu-level1 js-open-menu">
-                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/blog.html" title="Blog Standar">Blog Category</a></li>
-                        <li class="level2"><a href="http://landing.engotheme.com/html/megastore/demo/blogdetail.html" title="Blog Gird">Blog Detail</a></li>
-                    </ul>
-                </li>
-            </ul>
+                    <!-- /.dropdown-cart -->
+
+                    <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= --> </div>
+                <!-- /.top-cart-row -->
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.main-header -->
+
+    <!-- ============================================== NAVBAR ============================================== -->
+    <div class="header-nav animate-dropdown">
+        <div class="container">
+            <div class="yamm navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+                <div class="nav-bg-class">
+                    <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
+                        <div class="nav-outer">
+                            <ul class="nav navbar-nav">
+                                <li class="active dropdown yamm-fw"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a> </li>
+                                <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Clothing</a>
+                                    <ul class="dropdown-menu container">
+                                        <li>
+                                            <div class="yamm-content ">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                                                        <h2 class="title">Men</h2>
+                                                        <ul class="links">
+                                                            <li><a href="#">Dresses</a></li>
+                                                            <li><a href="#">Shoes </a></li>
+                                                            <li><a href="#">Jackets</a></li>
+                                                            <li><a href="#">Sunglasses</a></li>
+                                                            <li><a href="#">Sport Wear</a></li>
+                                                            <li><a href="#">Blazers</a></li>
+                                                            <li><a href="#">Shirts</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /.col -->
+
+                                                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                                                        <h2 class="title">Women</h2>
+                                                        <ul class="links">
+                                                            <li><a href="#">Handbags</a></li>
+                                                            <li><a href="#">Jwellery</a></li>
+                                                            <li><a href="#">Swimwear </a></li>
+                                                            <li><a href="#">Tops</a></li>
+                                                            <li><a href="#">Flats</a></li>
+                                                            <li><a href="#">Shoes</a></li>
+                                                            <li><a href="#">Winter Wear</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /.col -->
+
+                                                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                                                        <h2 class="title">Boys</h2>
+                                                        <ul class="links">
+                                                            <li><a href="#">Toys & Games</a></li>
+                                                            <li><a href="#">Jeans</a></li>
+                                                            <li><a href="#">Shirts</a></li>
+                                                            <li><a href="#">Shoes</a></li>
+                                                            <li><a href="#">School Bags</a></li>
+                                                            <li><a href="#">Lunch Box</a></li>
+                                                            <li><a href="#">Footwear</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /.col -->
+
+                                                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                                                        <h2 class="title">Girls</h2>
+                                                        <ul class="links">
+                                                            <li><a href="#">Sandals </a></li>
+                                                            <li><a href="#">Shorts</a></li>
+                                                            <li><a href="#">Dresses</a></li>
+                                                            <li><a href="#">Jwellery</a></li>
+                                                            <li><a href="#">Bags</a></li>
+                                                            <li><a href="#">Night Dress</a></li>
+                                                            <li><a href="#">Swim Wear</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /.col -->
+
+                                                    <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="client/images/banners/top-menu-banner.jpg" alt=""> </div>
+                                                    <!-- /.yamm-content -->
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown mega-menu">
+                                    <a href="category.html"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Electronics <span class="menu-label hot-menu hidden-xs">hot</span> </a>
+                                    <ul class="dropdown-menu container">
+                                        <li>
+                                            <div class="yamm-content">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                                                        <h2 class="title">Laptops</h2>
+                                                        <ul class="links">
+                                                            <li><a href="#">Gaming</a></li>
+                                                            <li><a href="#">Laptop Skins</a></li>
+                                                            <li><a href="#">Apple</a></li>
+                                                            <li><a href="#">Dell</a></li>
+                                                            <li><a href="#">Lenovo</a></li>
+                                                            <li><a href="#">Microsoft</a></li>
+                                                            <li><a href="#">Asus</a></li>
+                                                            <li><a href="#">Adapters</a></li>
+                                                            <li><a href="#">Batteries</a></li>
+                                                            <li><a href="#">Cooling Pads</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /.col -->
+
+                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                                                        <h2 class="title">Desktops</h2>
+                                                        <ul class="links">
+                                                            <li><a href="#">Routers & Modems</a></li>
+                                                            <li><a href="#">CPUs, Processors</a></li>
+                                                            <li><a href="#">PC Gaming Store</a></li>
+                                                            <li><a href="#">Graphics Cards</a></li>
+                                                            <li><a href="#">Components</a></li>
+                                                            <li><a href="#">Webcam</a></li>
+                                                            <li><a href="#">Memory (RAM)</a></li>
+                                                            <li><a href="#">Motherboards</a></li>
+                                                            <li><a href="#">Keyboards</a></li>
+                                                            <li><a href="#">Headphones</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /.col -->
+
+                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                                                        <h2 class="title">Cameras</h2>
+                                                        <ul class="links">
+                                                            <li><a href="#">Accessories</a></li>
+                                                            <li><a href="#">Binoculars</a></li>
+                                                            <li><a href="#">Telescopes</a></li>
+                                                            <li><a href="#">Camcorders</a></li>
+                                                            <li><a href="#">Digital</a></li>
+                                                            <li><a href="#">Film Cameras</a></li>
+                                                            <li><a href="#">Flashes</a></li>
+                                                            <li><a href="#">Lenses</a></li>
+                                                            <li><a href="#">Surveillance</a></li>
+                                                            <li><a href="#">Tripods</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /.col -->
+                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                                                        <h2 class="title">Mobile Phones</h2>
+                                                        <ul class="links">
+                                                            <li><a href="#">Apple</a></li>
+                                                            <li><a href="#">Samsung</a></li>
+                                                            <li><a href="#">Lenovo</a></li>
+                                                            <li><a href="#">Motorola</a></li>
+                                                            <li><a href="#">LeEco</a></li>
+                                                            <li><a href="#">Asus</a></li>
+                                                            <li><a href="#">Acer</a></li>
+                                                            <li><a href="#">Accessories</a></li>
+                                                            <li><a href="#">Headphones</a></li>
+                                                            <li><a href="#">Memory Cards</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner"> <a href="#"><img alt="" src="client/images/banners/banner-side.png"></a> </div>
+                                                </div>
+                                                <!-- /.row -->
+                                            </div>
+                                            <!-- /.yamm-content --> </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown hidden-sm"> <a href="category.html">Health & Beauty <span class="menu-label new-menu hidden-xs">new</span> </a> </li>
+                                <li class="dropdown hidden-sm"> <a href="category.html">Watches</a> </li>
+                                <li class="dropdown"> <a href="contact.html">Jewellery</a> </li>
+                                <li class="dropdown"> <a href="contact.html">Shoes</a> </li>
+                                <li class="dropdown"> <a href="contact.html">Kids & Girls</a> </li>
+                                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Pages</a>
+                                    <ul class="dropdown-menu pages">
+                                        <li>
+                                            <div class="yamm-content">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-menu">
+                                                        <ul class="links">
+                                                            <li><a href="home.html">Home</a></li>
+                                                            <li><a href="category.html">Category</a></li>
+                                                            <li><a href="detail.html">Detail</a></li>
+                                                            <li><a href="shopping-cart.html">Shopping Cart Summary</a></li>
+                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                            <li><a href="blog.html">Blog</a></li>
+                                                            <li><a href="blog-details.html">Blog Detail</a></li>
+                                                            <li><a href="contact.html">Contact</a></li>
+                                                            <li><a href="sign-in.html">Sign In</a></li>
+                                                            <li><a href="my-wishlist.html">Wishlist</a></li>
+                                                            <li><a href="terms-conditions.html">Terms and Condition</a></li>
+                                                            <li><a href="track-orders.html">Track Orders</a></li>
+                                                            <li><a href="product-comparison.html">Product-Comparison</a></li>
+                                                            <li><a href="faq.html">FAQ</a></li>
+                                                            <li><a href="404.html">404</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li>
+                            </ul>
+                            <!-- /.navbar-nav -->
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- /.nav-outer -->
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                </div>
+                <!-- /.nav-bg-class -->
+            </div>
+            <!-- /.navbar-default -->
+        </div>
+        <!-- /.container-class -->
+
+    </div>
+    <!-- /.header-nav -->
+    <!-- ============================================== NAVBAR : END ============================================== -->
+
+</header>
+
+<!-- ============================================== HEADER : END ============================================== -->
+@yield('content')
+
+<!-- ============================================================= FOOTER ============================================================= -->
+<footer id="footer" class="footer color-bg">
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading">
+                        <h4 class="module-title">Contact Us</h4>
+                    </div>
+                    <!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class="toggle-footer" style="">
+                            <li class="media">
+                                <div class="pull-left"> <span class="icon fa-stack fa-lg"> <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i> </span> </div>
+                                <div class="media-body">
+                                    <p>ThemesGround, 789 Main rd, Anytown, CA 12345 USA</p>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <div class="pull-left"> <span class="icon fa-stack fa-lg"> <i class="fa fa-mobile fa-stack-1x fa-inverse"></i> </span> </div>
+                                <div class="media-body">
+                                    <p>+(888) 123-4567<br>
+                                        +(888) 456-7890</p>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <div class="pull-left"> <span class="icon fa-stack fa-lg"> <i class="fa fa-envelope fa-stack-1x fa-inverse"></i> </span> </div>
+                                <div class="media-body"> <span><a href="#">flipmart@themesground.com</a></span> </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.module-body -->
+                </div>
+                <!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading">
+                        <h4 class="module-title">Customer Service</h4>
+                    </div>
+                    <!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li class="first"><a href="#" title="Contact us">My Account</a></li>
+                            <li><a href="#" title="About us">Order History</a></li>
+                            <li><a href="#" title="faq">FAQ</a></li>
+                            <li><a href="#" title="Popular Searches">Specials</a></li>
+                            <li class="last"><a href="#" title="Where is my order?">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.module-body -->
+                </div>
+                <!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading">
+                        <h4 class="module-title">Corporation</h4>
+                    </div>
+                    <!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li class="first"><a title="Your Account" href="#">About us</a></li>
+                            <li><a title="Information" href="#">Customer Service</a></li>
+                            <li><a title="Addresses" href="#">Company</a></li>
+                            <li><a title="Addresses" href="#">Investor Relations</a></li>
+                            <li class="last"><a title="Orders History" href="#">Advanced Search</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.module-body -->
+                </div>
+                <!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading">
+                        <h4 class="module-title">Why Choose Us</h4>
+                    </div>
+                    <!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li class="first"><a href="#" title="About us">Shopping Guide</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="#" title="Company">Company</a></li>
+                            <li><a href="#" title="Investor Relations">Investor Relations</a></li>
+                            <li class=" last"><a href="contact-us.html" title="Suppliers">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.module-body -->
+                </div>
+            </div>
         </div>
     </div>
-    <!-- end push menu-->
-    <!-- Menu Mobile -->
-    <div class="menu-mobile-left-content menu-bg-white">
-        <ul>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_hot_gray.png" alt="Icon Hot Deals"> <p>Hot Deals</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_food_gray.png" alt="Icon Food"> <p>Food</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_mobile_gray.png" alt="Icon Mobile &amp; Tablet"> <p>Mobile &amp; Tablet</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_electric_gray.png" alt="Icon Electric Appliances"> <p>Electric Appliances</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_computer_gray.png" alt="Icon Electronics &amp; Technology"> <p>Electronics &amp; Technology</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_fashion_gray.png" alt="Icon Fashion"> <p>Fashion</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_health_gray.png" alt="Icon Health &amp; Beauty"> <p>Health &amp; Beauty</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_mother_gray.png" alt="Icon Mother &amp; Baby"> <p>Mother &amp; Baby</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_book_gray.png" alt="Icon Books &amp; Stationery"> <p>Books &amp; Stationery</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_home_gray.png" alt="Icon Home &amp; Life"> <p>Home &amp; Life</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_sport_gray.png" alt="Icon Sports &amp; Outdoors"> <p>Sports &amp; Outdoors</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_auto_gray.png" alt="Icon Auto &amp; Moto"> <p>Auto &amp; Moto</p></a></li>
-            <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_voucher_gray.png" alt="Icon Voucher Service"> <p>Voucher Service</p></a></li>
-        </ul>
-    </div>
-    <!-- Header Box -->
-    <div class="wrappage">
-        <header class="relative full-width">
-            <div class=" container-web relative">
-                <div class=" container">
-                    <div class="row">
-                        <div class=" header-top">
-                            <p class="contact_us_header col-md-4 col-xs-12 col-sm-3 clear-margin">
-                                <img src="bower_components/comp1682-bower/Home V3_files/icon_phone_top.png" alt="Icon Phone Top Header"> Call us <span class="text-red bold">070-7782-7137</span>
-                            </p>
-                            <div class="menu-header-top text-right col-md-8 col-xs-12 col-sm-6 clear-padding">
-                                <ul class="clear-margin">
-                                    <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Account</a></li>
-                                    <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Wishlist</a></li>
-                                    <li class="relative">
-                                        <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">EN</a>
-                                        <ul>
-                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">JP</a></li>
-                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">EN</a></li>
-                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">CN</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="relative">
-                                        <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">USD</a>
-                                        <ul>
-                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">AUD</a></li>
-                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">USD</a></li>
-                                            <li class="relative"><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">CAD</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="clearfix header-content full-width relative">
-                            <div class="clearfix icon-menu-bar">
-                                <i class="data-icon data-icon-arrows icon-arrows-hamburger-2 icon-pushmenu js-push-menu"></i>
-                            </div>
-                            <div class="clearfix logo">
-                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img alt="Logo" src="bower_components/comp1682-bower/Home V3_files/logo.png"></a>
-                            </div>
-                            <div class="clearfix search-box relative float-left">
-                                <form method="GET" action="http://landing.engotheme.com/" class="">
-                                    <div class="clearfix category-box relative">
-                                        <select name="cate_search">
-                                            <option>All Category</option>
-                                            <option>Food</option>
-                                            <option>Mobile &amp; Tablet</option>
-                                            <option>Electric Appliances</option>
-                                            <option>Electronics &amp; Technology</option>
-                                            <option>Fashion</option>
-                                            <option>Health &amp; Beauty</option>
-                                            <option>Mother &amp; Baby</option>
-                                            <option>Books &amp; Stationery</option>
-                                            <option>Home &amp; Life</option>
-                                            <option>Sports &amp; Outdoors</option>
-                                            <option>Auto &amp; Moto</option>
-                                            <option>Voucher Service</option>
-                                        </select>
-                                    </div>
-                                    <input type="text" name="s" placeholder="Enter keyword here . . .">
-                                    <button type="submit" class="animate-default button-hover-red">Search</button>
-                                </form>
-                            </div>
-                            <div class="clearfix icon-search-mobile absolute">
-                                <i onclick="showBoxSearchMobile()" class="data-icon data-icon-basic icon-basic-magnifier"></i>
-                            </div>
-                            <div class="clearfix cart-website absolute" onclick="showCartBoxDetail()">
-                                <img alt="Icon Cart" src="bower_components/comp1682-bower/Home V3_files/icon_cart.png">
-                                <p class="count-total-shopping absolute">2</p>
-                            </div>
-                            <div class="clearfix cart-website absolute" onclick="showCartBoxDetail()">
-                                <img alt="Icon Cart" src="bower_components/comp1682-bower/Home V3_files/icon_cart.png">
-                                <p class="count-total-shopping absolute">2</p>
-                            </div>
-                            <div class="cart-detail-header border">
-                                <div class="relative">
-                                    <div class="product-cart-son clearfix">
-                                        <div class="image-product-cart float-left center-vertical-image ">
-                                            <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/product_image_6-min.png" alt=""></a>
-                                        </div>
-                                        <div class="info-product-cart float-left">
-                                            <p class="title-product title-hover-black"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">MH02-Black09</a></p>
-                                            <p class="clearfix price-product">$350 <span class="total-product-cart-son">(x1)</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="product-cart-son">
-                                        <div class="image-product-cart float-left center-vertical-image">
-                                            <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/product_image_7-min.png" alt=""></a>
-                                        </div>
-                                        <div class="info-product-cart float-left">
-                                            <p class="title-product title-hover-black"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Voyage Yoga Bag</a></p>
-                                            <p class="clearfix price-product">$350 <span class="total-product-cart-son">(x1)</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="relative border no-border-l no-border-r total-cart-header">
-                                    <p class="bold clear-margin">Subtotal:</p>
-                                    <p class=" clear-margin bold">$700</p>
-                                </div>
-                                <div class="relative btn-cart-header">
-                                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#" class="uppercase bold animate-default">view cart</a>
-                                    <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#" class="uppercase bold button-hover-red animate-default">checkout</a>
-                                </div>
-                            </div>
-                            <div class="mask-search absolute clearfix" onclick="hiddenBoxSearchMobile()"></div>
-                            <div class="clearfix box-search-mobile">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <a class="menu-vertical hidden-md hidden-lg" onclick="showMenuMobie()">
-                            <span class="animate-default"><i class="fa fa-list" aria-hidden="true"></i> all categories</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-header-v3 hidden-ipx">
-                <div class="container">
-                    <div class="row">
-                        <!-- Menu Page -->
-                        <div class="menu-header full-width">
-                            <ul class="clear-margin">
-                                <li onclick="showMenuHomeV3()" style="left: 15px"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><i class="fa fa-list" aria-hidden="true"></i> all categories</a></li>
-                                <li class="title-hover-red">
-                                    <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">home</a>
-                                    <ul class="sub-menu mega-menu">
-                                        <li class="relative">
-                                            <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v1.html"><img src="bower_components/comp1682-bower/Home V3_files/home_1_menu-min.png" alt=""></a>
-                                            <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v1.html">Home 1</a></p>
-                                        </li>
-                                        <li class="relative">
-                                            <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v2.html"><img src="bower_components/comp1682-bower/Home V3_files/home_2_menu-min.png" alt=""></a>
-                                            <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v2.html">Home 2</a></p>
-                                        </li>
-                                        <li class="relative">
-                                            <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html"><img src="bower_components/comp1682-bower/Home V3_files/home_3_menu-min.png" alt=""></a>
-                                            <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html">Home 3</a></p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="title-hover-red">
-                                    <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">shop</a>
-                                    <div class="sub-menu mega-menu-v2">
-                                        <ul>
-                                            <li>Catgory Type</li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v1.html">Category v1</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v1_2.html">Category v1.2</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v2.html">Category v2</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v2_2.html">Category v2.2</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v3.html">Category v3</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v3_2.html">Category v3.2</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v4.html">Category v4</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v4_2.html">Category v4.2</a></li>
-                                        </ul>
-                                        <ul>
-                                            <li>Single Product Type</li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v1.html">Product Single 1</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v2.html">Product Single 2</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v3.html">Product Single 3</a></li>
-                                        </ul>
-                                        <ul>
-                                            <li>Order Page</li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/cartpage.html">Cart Page</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/checkout.html">Checkout</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/compare.html">Compare</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/quickview.html">QuickView</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/trackyourorder.html">Track Order</a></li>
-                                            <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/wishlist.html">WishList</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="title-hover-red">
-                                    <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">pages</a>
-                                    <ul>
-                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/about.html">About Us</a></li>
-                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/contact.html">Contact</a></li>
-                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/404.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li class="title-hover-red">
-                                    <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Blog</a>
-                                    <ul>
-                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/blog.html">Blog Category</a></li>
-                                        <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/blogdetail.html">Blog Detail</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- End Menu Page -->
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix menu_more_header menu-web menu-bg-white">
-                <ul>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_hot_gray.png" alt="Icon Hot Deals"> <p>Hot Deals</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_food_gray.png" alt="Icon Food"> <p>Food</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_mobile_gray.png" alt="Icon Mobile &amp; Tablet"> <p>Mobile &amp; Tablet</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_electric_gray.png" alt="Icon Electric Appliances"> <p>Electric Appliances</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_computer_gray.png" alt="Icon Electronics &amp; Technology"> <p>Electronics &amp; Technology</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_fashion_gray.png" alt="Icon Fashion"> <p>Fashion</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_health_gray.png" alt="Icon Health &amp; Beauty"> <p>Health &amp; Beauty</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_mother_gray.png" alt="Icon Mother &amp; Baby"> <p>Mother &amp; Baby</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_book_gray.png" alt="Icon Books &amp; Stationery"> <p>Books &amp; Stationery</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_home_gray.png" alt="Icon Home &amp; Life"> <p>Home &amp; Life</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_sport_gray.png" alt="Icon Sports &amp; Outdoors"> <p>Sports &amp; Outdoors</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_auto_gray.png" alt="Icon Auto &amp; Moto"> <p>Auto &amp; Moto</p></a></li>
-                    <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/icon_voucher_gray.png" alt="Icon Voucher Service"> <p>Voucher Service</p></a></li>
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 no-padding social">
+                <ul class="link">
+                    <li class="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
+                    <li class="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li>
+                    <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
+                    <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
+                    <li class="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li>
+                    <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li>
+                    <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a></li>
                 </ul>
             </div>
-            <div class="header-ontop">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="clearfix logo">
-                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img alt="Logo" src="bower_components/comp1682-bower/Home V3_files/logo.png"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-9">
-                            <div class="menu-header">
-                                <ul class="main__menu clear-margin">
-                                    <li class="title-hover-red">
-                                        <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">home</a>
-                                        <ul class="sub-menu mega-menu">
-                                            <li class="relative">
-                                                <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v1.html"><img src="bower_components/comp1682-bower/Home V3_files/home_1_menu-min.png" alt=""></a>
-                                                <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v1.html">Home 1</a></p>
-                                            </li>
-                                            <li class="relative">
-                                                <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v2.html"><img src="bower_components/comp1682-bower/Home V3_files/home_2_menu-min.png" alt=""></a>
-                                                <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v2.html">Home 2</a></p>
-                                            </li>
-                                            <li class="relative">
-                                                <a class="animate-default center-vertical-image" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html"><img src="bower_components/comp1682-bower/Home V3_files/home_3_menu-min.png" alt=""></a>
-                                                <p><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html">Home 3</a></p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="title-hover-red">
-                                        <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">shop</a>
-                                        <div class="sub-menu mega-menu-v2">
-                                            <ul>
-                                                <li>Catgory Type</li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v1.html">Category v1</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v1_2.html">Category v1.2</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v2.html">Category v2</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v2_2.html">Category v2.2</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v3.html">Category v3</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v3_2.html">Category v3.2</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v4.html">Category v4</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/category_v4_2.html">Category v4.2</a></li>
-                                            </ul>
-                                            <ul>
-                                                <li>Single Product Type</li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v1.html">Product Single 1</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v2.html">Product Single 2</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/product_v3.html">Product Single 3</a></li>
-                                            </ul>
-                                            <ul>
-                                                <li>Order Page</li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/cartpage.html">Cart Page</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/checkout.html">Checkout</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/compare.html">Compare</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/quickview.html">QuickView</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/trackyourorder.html">Track Order</a></li>
-                                                <li class="title-hover-red"><a class="animate-default clear-padding" href="http://landing.engotheme.com/html/megastore/demo/wishlist.html">WishList</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="title-hover-red">
-                                        <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">pages</a>
-                                        <ul>
-                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/about.html">About Us</a></li>
-                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/contact.html">Contact</a></li>
-                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/404.html">404</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="title-hover-red">
-                                        <a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Blog</a>
-                                        <ul>
-                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/blog.html">Blog Category</a></li>
-                                            <li class="title-hover-red"><a class="animate-default" href="http://landing.engotheme.com/html/megastore/demo/blogdetail.html">Blog Detail</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-xs-12 col-sm-6 no-padding">
+                <div class="clearfix payment-methods">
+                    <ul>
+                        <li><img src="client/images/payments/1.png" alt=""></li>
+                        <li><img src="client/images/payments/2.png" alt=""></li>
+                        <li><img src="client/images/payments/3.png" alt=""></li>
+                        <li><img src="client/images/payments/4.png" alt=""></li>
+                        <li><img src="client/images/payments/5.png" alt=""></li>
+                    </ul>
                 </div>
+                <!-- /.payment-methods -->
             </div>
-        </header>
-        <!-- End Header Box -->
-        <!-- Content Box -->
-        @yield('content')
-        <!-- End Content Box -->
-        <!-- Footer Box -->
-        <footer class=" bg-gray full-width border no-border-r no-border-l footer-v3 no-border-b">
-            <div class="clearfix container-web relative">
-                <div class=" container clear-padding">
-                    <div class="row">
-                        <!-- Support -->
-                        <div class="clearfix support-box support-box-v3 full-width">
-                            <div class="container-web clearfix">
-                                <div class=" container ">
-                                    <div class="row">
-                                        <div class=" support-box-info relative col-md-3 col-sm-3 col-xs-6">
-                                            <img src="bower_components/comp1682-bower/Home V3_files/icon_free_ship.png" alt="Icon Free Ship" class="float-left">
-                                            <p class="float-left">free shipping</p>
-                                            <p class="float-left">on order over $500</p>
-                                        </div>
-                                        <div class=" support-box-info relative col-md-3 col-sm-3 col-xs-6">
-                                            <img src="bower_components/comp1682-bower/Home V3_files/icon_support.png" alt="Icon Supports" class="float-left">
-                                            <p class="float-left">support</p>
-                                            <p class="float-left">life time support 24/7</p>
-                                        </div>
-                                        <div class=" support-box-info relative col-md-3 col-sm-3 col-xs-6">
-                                            <img src="bower_components/comp1682-bower/Home V3_files/icon_patner.png" alt="Icon partner" class="float-left">
-                                            <p class="float-left">help partner</p>
-                                            <p class="float-left">help all aspects</p>
-                                        </div>
-                                        <div class=" support-box-info relative col-md-3 col-sm-3 col-xs-6">
-                                            <img src="bower_components/comp1682-bower/Home V3_files/icon_phone_big.png" alt="Icon Phone Tablet" class="float-left">
-                                            <p class="float-left">contact with us</p>
-                                            <p class="float-left">+07 (0) 7782 9137</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Support Box -->
-                    </div>
-                    <div class="row">
-                        <div class="clearfix col-md-3 col-sm-6 col-xs-12 text-footer">
-                            <p>my account</p>
-                            <ul class="list-footer">
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Account</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Login</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Cart</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Wishlist</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Compare</a></li>
-                            </ul>
-                        </div>
-                        <div class="clearfix col-md-3 col-sm-6 col-xs-12 text-footer">
-                            <p>information</p>
-                            <ul class="list-footer">
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Information</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Orders History</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">My Wishlist</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Privacy Policy</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Site Map</a></li>
-                            </ul>
-                        </div>
-                        <div class="clearfix col-md-3 col-sm-6 col-xs-12 text-footer">
-                            <p>our services</p>
-                            <ul class="list-footer">
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Product Recall</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Gift Vouchers</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Returns And Exchanges</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Shipping Options</a></li>
-                                <li><a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#">Terms Of Use</a></li>
-                            </ul>
-                        </div>
-                        <div class="clearfix col-md-3 col-sm-6 col-xs-12 text-footer">
-                            <p>contact us</p>
-                            <ul class="icon-footer">
-                                <li><i class="fa fa-home" aria-hidden="true"></i> 262 Milacina Mrest, Behansed, Paris</li>
-                                <li><i class="fa fa-envelope" aria-hidden="true"></i> contact@yourcompany.com</li>
-                                <li><i class="fa fa-phone" aria-hidden="true"></i> 070-7782-9137</li>
-                                <li><i class="fa fa-fax" aria-hidden="true"></i> 070-7782-9138</li>
-                                <li><i class="fa fa-clock-o" aria-hidden="true"></i> 09:00 AM - 18:00 PM</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Box Social -->
-            <div class=" top-footer full-width">
-                <div class="clearfix container-web relative">
-                    <div class=" container">
-                        <div class="row">
-                            <div class="clearfix col-md-9 col-sm-12 clear-padding col-xs-12">
-                                <div class="clearfix text-subscribe">
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <p>sign up for newsletter</p>
-                                    <p>Get updates on discount &amp; counpons.</p>
-                                </div>
-                                <div class="clearfix form-subscribe">
-                                    <input type="text" name="email-subscribe" placeholder="Enter your email . . .">
-                                    <button class="animate-default button-hover-red">subscribe</button>
-                                </div>
-                            </div>
-                            <div class="clearfix col-md-3 col-sm-12 col-xs-12 clear-padding social-box text-right">
-                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/social_tw-min.png" alt="Icon Social Twiter"></a>
-                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/social_fa-min.png" alt="Icon Social Facebook"></a>
-                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/social_int-min.png" alt="Icon Social Instagram"></a>
-                                <a href="http://landing.engotheme.com/html/megastore/demo/home_v3.html#"><img src="bower_components/comp1682-bower/Home V3_files/social_yt-min.png" alt="Icon Social Youtube"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Box Social -->
-            <div class=" bottom-footer full-width">
-                <div class="clearfix container-web">
-                    <div class=" container">
-                        <div class="row">
-                            <div class="clearfix col-md-7 clear-padding copyright">
-                                <p>Copyright © 2020 by HaiNH. All Rights Reserved.</p>
-                            </div>
-                            <div class="clearfix footer-icon-bottom col-md-5 float-right clear-padding">
-                                <div class="icon_logo_footer float-right">
-                                    <img src="bower_components/comp1682-bower/Home V3_files/image_payment_footer-min.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        </div>
     </div>
-    <!-- End Footer Box -->
-    <script src="bower_components/comp1682-bower/Home V3_files/jquery-3.3.1.min.js" defer=""></script>
-    <script src="bower_components/comp1682-bower/Home V3_files/bootstrap.min.js" defer=""></script>
-    <script src="bower_components/comp1682-bower/Home V3_files/owl.carousel.min.js" defer=""></script>
-    <script src="bower_components/comp1682-bower/Home V3_files/scripts.js" defer=""></script>
+</footer>
+<!-- ============================================================= FOOTER : END============================================================= -->
 
+<!-- For demo purposes – can be removed on production -->
 
-</body></html>
+<!-- For demo purposes – can be removed on production : End -->
+
+<!-- JavaScripts placed at the end of the document so the pages load faster -->
+<script src="client/js/jquery-1.11.1.min.js"></script>
+<script src="client/js/bootstrap.min.js"></script>
+<script src="client/js/bootstrap-hover-dropdown.min.js"></script>
+<script src="client/js/owl.carousel.min.js"></script>
+<script src="client/js/echo.min.js"></script>
+<script src="client/js/jquery.easing-1.3.min.js"></script>
+<script src="client/js/bootstrap-slider.min.js"></script>
+<script src="client/js/jquery.rateit.min.js"></script>
+<script type="text/javascript" src="client/js/lightbox.min.js"></script>
+<script src="client/js/bootstrap-select.min.js"></script>
+<script src="client/js/wow.min.js"></script>
+<script src="client/js/scripts.js"></script>
+</body>
+</html>

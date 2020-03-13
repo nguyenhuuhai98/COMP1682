@@ -196,13 +196,14 @@ class CategoriesTableSeeder extends Seeder
                 'Bathroom equipment',
             ],
         ];
-
+        $images = ['logo' => 'null', 'image'=>'null'];
         foreach ($categories as $category) {
             DB::table('categories')->insert([
                 'parent_id' => 0,
                 'name' => str_replace(['Of', 'For', 'And'], ['of', 'for', 'and'], ucwords($category)),
                 'description' => $category,
                 'slug' => Str::slug($category),
+                'images' => json_encode($images),
                 'created_at' => Carbon::now(),
             ]);
         }
@@ -214,6 +215,7 @@ class CategoriesTableSeeder extends Seeder
                     'name' => str_replace(['Of', 'For'], ['of', 'for'], ucwords($data)),
                     'description' => $data,
                     'slug' => Str::slug($data),
+                    'images' => json_encode($images),
                     'created_at' => Carbon::now(),
                 ]);
             }

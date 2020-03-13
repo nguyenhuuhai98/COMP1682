@@ -1,15 +1,21 @@
 <?php
-
-function multilevelMenu($categories, $parentId)
+function handleCategory($categories, $str = " ")
 {
     foreach ($categories as $category) {
-        if ($category->parent_id == $parentId) {
-            echo "<li class='dropdown'>";
-            echo "<a href='#'' class='dropdown-padding' data-toggle='dropdown' role='button' aria-expanded='false'>$category->name <span class='caret'></span></a>";
-            echo "<ul class='dropdown-menu' role='menu'>";
-            multilevelMenu($categories, $category->id);
-            echo "</ul>";
-            echo "</li>";
+        if ($category['parent_id'] == 0) {
+            echo "<optgroup label='$category[name]'>";
+            multilevelCategory($categories, $category['id'], $str);
+            echo "</optgroup>";
+        }
+    }
+}
+
+function multilevelCategory($categories, $parentId, $str)
+{
+    foreach ($categories as $category) {
+        if ($category['parent_id'] == $parentId) {
+            echo "<option value='$category[id]'>$str $category[name]</option>";
+            multilevelCategory($categories, $category['id'], $str . "- - ");
         }
     }
 }

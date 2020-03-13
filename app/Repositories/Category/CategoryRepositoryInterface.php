@@ -5,5 +5,7 @@ interface CategoryRepositoryInterface
 {
     public function getModel();
 
-    public function getCategoryWhereIn();
+    public function getCategoryWhereIn($parentId);
+
+    public function getAllCategoriesDESC();
 }

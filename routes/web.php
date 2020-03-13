@@ -10,8 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::prefix('/')->group(function()
-{
+Route::prefix('/')->group(function() {
     Route::get('/', 'PageController@index')->name('pages.index');
     // Route::get('/products', 'PageController@products')->name('pages.products');
+});
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin'], function() {
+    Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
+    Route::resource('categories', 'CategoryController');
 });

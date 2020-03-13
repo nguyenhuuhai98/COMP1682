@@ -9,14 +9,20 @@ class CategoryRepository extends EloquentRepository implements CategoryRepositor
 
     public function getModel()
     {
+
         return Category::class;
     }
 
-    public function getCategoryWhereIn()
+    public function getCategoryWhereIn($parentId)
     {
-        $parentId = [1, 2, 3, 4, 5];
 
         return $this->_model->whereIn('parent_id', $parentId)->get();
+    }
+
+    public function getAllCategoriesDESC()
+    {
+
+        return $this->_model->orderBy('id', 'DESC');
     }
 
 }
