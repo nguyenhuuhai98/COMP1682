@@ -1,0 +1,27 @@
+.sidebar .side-menu nav .nav > li > a:after {
+    content: none !important;
+}
+
+.limit-character-category {
+    display:block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.field-error {
+    border-color: red !important;
+}
+
+.block-error {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+.message-error {
+    font-size: 12px;
+    list-style: none;
+    color: #f16c69;
+    margin-top: 5px;
+}
+
