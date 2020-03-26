@@ -16,6 +16,7 @@
     "public/bower_components/"
   ],
   "dependencies": {
-    "supermarket-bower": "https://github.com/nguyenhuuhai98/supermarket-bower.git"
+    "bootstrap": "^4.4.1",
+    "comp1682-bower": "https://github.com/nguyenhuuhai98/comp1682-bower.git"
   }
 }
