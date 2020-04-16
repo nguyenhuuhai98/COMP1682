@@ -1,527 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="MediaCenter, Template, eCommerce">
-    <meta name="robots" content="all">
-    <title>Supermarket</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="client/css/bootstrap.min.css">
-
-    <!-- Customizable CSS -->
-    <link rel="stylesheet" href="client/css/main.css">
-    <link rel="stylesheet" href="client/css/blue.css">
-    <link rel="stylesheet" href="client/css/owl.carousel.css">
-    <link rel="stylesheet" href="client/css/owl.transitions.css">
-    <link rel="stylesheet" href="client/css/animate.min.css">
-    <link rel="stylesheet" href="client/css/rateit.css">
-    <link rel="stylesheet" href="client/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Icons/Glyphs -->
-    <link rel="stylesheet" href="client/css/font-awesome.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
-
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    @yield('title')
+    <base href="{{ asset('') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="client/images/icons/favicon.png"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/fonts/themify/themify-icons.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/fonts/elegant-font/html-css/style.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/vendor/lightbox2/css/lightbox.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="client/css/util.css">
+    <link rel="stylesheet" type="text/css" href="client/css/main.css">
+    <!--===============================================================================================-->
 </head>
-<body class="cnt-home">
-<!-- ============================================== HEADER ============================================== -->
-<header class="header-style-1">
 
-    <!-- ============================================== TOP MENU ============================================== -->
-    <div class="top-bar animate-dropdown">
-        <div class="container">
-            <div class="header-top-inner">
-                <div class="cnt-account">
-                    <ul class="list-unstyled">
-                        <li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
-                        <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
-                        <li><a href="#"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
-                        <li><a href="#"><i class="icon fa fa-check"></i>Checkout</a></li>
-                        <li><a href="#"><i class="icon fa fa-lock"></i>Login</a></li>
-                    </ul>
-                </div>
-                <!-- /.cnt-account -->
+<body class="animsition">
 
-                <div class="cnt-block">
-                    <ul class="list-unstyled list-inline">
-                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">USD </span><b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">USD</a></li>
-                                <li><a href="#">INR</a></li>
-                                <li><a href="#">GBP</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">English </span><b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">English</a></li>
-                                <li><a href="#">French</a></li>
-                                <li><a href="#">German</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <!-- /.list-unstyled -->
-                </div>
-                <!-- /.cnt-cart -->
-                <div class="clearfix"></div>
+<!-- Header -->
+<header class="header1">
+    <!-- Header desktop -->
+    <div class="container-menu-header">
+        <div class="topbar">
+            <div class="topbar-social">
+                <a href="https://www.facebook.com/huuhai.nguyen24" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+                <a href="https://www.instagram.com/haing__/" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
             </div>
-            <!-- /.header-top-inner -->
+
+            <span class="topbar-child1">
+					Free shipping for standard order over $100
+				</span>
+
+            <div class="topbar-child2">
+                <span class="topbar-email">
+                    hainhgch16440@fpt.edu.vn
+                </span>
+            </div>
         </div>
-        <!-- /.container -->
-    </div>
-    <!-- /.header-top -->
-    <!-- ============================================== TOP MENU : END ============================================== -->
-    <div class="main-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
-                    <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo"> <a href="home.html"> <img src="client/images/logo.png" alt="logo"> </a> </div>
-                    <!-- /.logo -->
-                    <!-- ============================================================= LOGO : END ============================================================= --> </div>
-                <!-- /.logo-holder -->
 
-                <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
-                    <!-- /.contact-row -->
-                    <!-- ============================================================= SEARCH AREA ============================================================= -->
-                    <div class="search-area">
-                        <form>
-                            <div class="control-group">
-                                <ul class="categories-filter animate-dropdown">
-                                    <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
-                                        <ul class="dropdown-menu" role="menu" >
-                                            <li class="menu-header">Computer</li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Clothing</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Electronics</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Shoes</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Watches</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <input class="search-field" placeholder="Search here..." />
-                                <a class="search-button" href="#" ></a> </div>
-                        </form>
-                    </div>
-                    <!-- /.search-area -->
-                    <!-- ============================================================= SEARCH AREA : END ============================================================= --> </div>
-                <!-- /.top-search-holder -->
+        <div class="wrap_header">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="client/images/icons/logo.png" alt="IMG-LOGO">
+            </a>
 
-                <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
-                    <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+            <!-- Menu -->
+            <div class="wrap_menu">
+                <nav class="menu">
+                    <ul class="main_menu">
+                        <li>
+                            <a href="{{ route('pages.index') }}">Home</a>
+                        </li>
 
-                    <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
-                            <div class="items-cart-inner">
-                                <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
-                                <div class="basket-item-count"><span class="count">2</span></div>
-                                <div class="total-price-basket"> <span class="lbl">cart -</span> <span class="total-price"> <span class="sign">$</span><span class="value">600.00</span> </span> </div>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="cart-item product-summary">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="image"> <a href="detail.html"><img src="client/images/cart.jpg" alt=""></a> </div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <h3 class="name"><a href="index.php?page-detail">Simple Product</a></h3>
-                                            <div class="price">$600.00</div>
-                                        </div>
-                                        <div class="col-xs-1 action"> <a href="#"><i class="fa fa-trash"></i></a> </div>
-                                    </div>
+                        <li>
+                            <a href="{{ route('get.all.products') }}">Shop</a>
+                        </li>
+
+                        <li class="sale-noti">
+                            <a href="product.html">Sale</a>
+                        </li>
+
+                        <li>
+                            <a href="cart.html">Features</a>
+                        </li>
+
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Header Icon -->
+            <div class="header-icons">
+                <a href="#" class="header-wrapicon1 dis-block">
+                    <img src="client/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+                </a>
+
+                <span class="linedivide1"></span>
+
+                <div class="header-wrapicon2">
+                    <img src="client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                    <span class="header-icons-noti">0</span>
+
+                    <!-- Header cart noti -->
+                    <div class="header-cart header-dropdown">
+                        <ul class="header-cart-wrapitem">
+                            <li class="header-cart-item">
+                                <div class="header-cart-item-img">
+                                    <img src="client/images/item-cart-01.jpg" alt="IMG">
                                 </div>
-                                <!-- /.cart-item -->
-                                <div class="clearfix"></div>
-                                <hr>
-                                <div class="clearfix cart-total">
-                                    <div class="pull-right"> <span class="text">Sub Total :</span><span class='price'>$600.00</span> </div>
-                                    <div class="clearfix"></div>
-                                    <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a> </div>
-                                <!-- /.cart-total-->
 
+                                <div class="header-cart-item-txt">
+                                    <a href="#" class="header-cart-item-name">
+                                        White Shirt With Pleat Detail Back
+                                    </a>
+
+                                    <span class="header-cart-item-info">
+											1 x $19.00
+										</span>
+                                </div>
+                            </li>
+
+                            <li class="header-cart-item">
+                                <div class="header-cart-item-img">
+                                    <img src="client/images/item-cart-02.jpg" alt="IMG">
+                                </div>
+
+                                <div class="header-cart-item-txt">
+                                    <a href="#" class="header-cart-item-name">
+                                        Converse All Star Hi Black Canvas
+                                    </a>
+
+                                    <span class="header-cart-item-info">
+											1 x $39.00
+										</span>
+                                </div>
+                            </li>
+
+                            <li class="header-cart-item">
+                                <div class="header-cart-item-img">
+                                    <img src="client/images/item-cart-03.jpg" alt="IMG">
+                                </div>
+
+                                <div class="header-cart-item-txt">
+                                    <a href="#" class="header-cart-item-name">
+                                        Nixon Porter Leather Watch In Tan
+                                    </a>
+
+                                    <span class="header-cart-item-info">
+											1 x $17.00
+										</span>
+                                </div>
                             </li>
                         </ul>
-                        <!-- /.dropdown-menu-->
-                    </div>
-                    <!-- /.dropdown-cart -->
 
-                    <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= --> </div>
-                <!-- /.top-cart-row -->
-            </div>
-            <!-- /.row -->
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.main-header -->
-
-    <!-- ============================================== NAVBAR ============================================== -->
-    <div class="header-nav animate-dropdown">
-        <div class="container">
-            <div class="yamm navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                </div>
-                <div class="nav-bg-class">
-                    <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
-                        <div class="nav-outer">
-                            <ul class="nav navbar-nav">
-                                <li class="active dropdown yamm-fw"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a> </li>
-                                <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Clothing</a>
-                                    <ul class="dropdown-menu container">
-                                        <li>
-                                            <div class="yamm-content ">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                                                        <h2 class="title">Men</h2>
-                                                        <ul class="links">
-                                                            <li><a href="#">Dresses</a></li>
-                                                            <li><a href="#">Shoes </a></li>
-                                                            <li><a href="#">Jackets</a></li>
-                                                            <li><a href="#">Sunglasses</a></li>
-                                                            <li><a href="#">Sport Wear</a></li>
-                                                            <li><a href="#">Blazers</a></li>
-                                                            <li><a href="#">Shirts</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.col -->
-
-                                                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                                                        <h2 class="title">Women</h2>
-                                                        <ul class="links">
-                                                            <li><a href="#">Handbags</a></li>
-                                                            <li><a href="#">Jwellery</a></li>
-                                                            <li><a href="#">Swimwear </a></li>
-                                                            <li><a href="#">Tops</a></li>
-                                                            <li><a href="#">Flats</a></li>
-                                                            <li><a href="#">Shoes</a></li>
-                                                            <li><a href="#">Winter Wear</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.col -->
-
-                                                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                                                        <h2 class="title">Boys</h2>
-                                                        <ul class="links">
-                                                            <li><a href="#">Toys & Games</a></li>
-                                                            <li><a href="#">Jeans</a></li>
-                                                            <li><a href="#">Shirts</a></li>
-                                                            <li><a href="#">Shoes</a></li>
-                                                            <li><a href="#">School Bags</a></li>
-                                                            <li><a href="#">Lunch Box</a></li>
-                                                            <li><a href="#">Footwear</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.col -->
-
-                                                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                                                        <h2 class="title">Girls</h2>
-                                                        <ul class="links">
-                                                            <li><a href="#">Sandals </a></li>
-                                                            <li><a href="#">Shorts</a></li>
-                                                            <li><a href="#">Dresses</a></li>
-                                                            <li><a href="#">Jwellery</a></li>
-                                                            <li><a href="#">Bags</a></li>
-                                                            <li><a href="#">Night Dress</a></li>
-                                                            <li><a href="#">Swim Wear</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.col -->
-
-                                                    <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="client/images/banners/top-menu-banner.jpg" alt=""> </div>
-                                                    <!-- /.yamm-content -->
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown mega-menu">
-                                    <a href="category.html"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Electronics <span class="menu-label hot-menu hidden-xs">hot</span> </a>
-                                    <ul class="dropdown-menu container">
-                                        <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                                                        <h2 class="title">Laptops</h2>
-                                                        <ul class="links">
-                                                            <li><a href="#">Gaming</a></li>
-                                                            <li><a href="#">Laptop Skins</a></li>
-                                                            <li><a href="#">Apple</a></li>
-                                                            <li><a href="#">Dell</a></li>
-                                                            <li><a href="#">Lenovo</a></li>
-                                                            <li><a href="#">Microsoft</a></li>
-                                                            <li><a href="#">Asus</a></li>
-                                                            <li><a href="#">Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Cooling Pads</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.col -->
-
-                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                                                        <h2 class="title">Desktops</h2>
-                                                        <ul class="links">
-                                                            <li><a href="#">Routers & Modems</a></li>
-                                                            <li><a href="#">CPUs, Processors</a></li>
-                                                            <li><a href="#">PC Gaming Store</a></li>
-                                                            <li><a href="#">Graphics Cards</a></li>
-                                                            <li><a href="#">Components</a></li>
-                                                            <li><a href="#">Webcam</a></li>
-                                                            <li><a href="#">Memory (RAM)</a></li>
-                                                            <li><a href="#">Motherboards</a></li>
-                                                            <li><a href="#">Keyboards</a></li>
-                                                            <li><a href="#">Headphones</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.col -->
-
-                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                                                        <h2 class="title">Cameras</h2>
-                                                        <ul class="links">
-                                                            <li><a href="#">Accessories</a></li>
-                                                            <li><a href="#">Binoculars</a></li>
-                                                            <li><a href="#">Telescopes</a></li>
-                                                            <li><a href="#">Camcorders</a></li>
-                                                            <li><a href="#">Digital</a></li>
-                                                            <li><a href="#">Film Cameras</a></li>
-                                                            <li><a href="#">Flashes</a></li>
-                                                            <li><a href="#">Lenses</a></li>
-                                                            <li><a href="#">Surveillance</a></li>
-                                                            <li><a href="#">Tripods</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.col -->
-                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                                                        <h2 class="title">Mobile Phones</h2>
-                                                        <ul class="links">
-                                                            <li><a href="#">Apple</a></li>
-                                                            <li><a href="#">Samsung</a></li>
-                                                            <li><a href="#">Lenovo</a></li>
-                                                            <li><a href="#">Motorola</a></li>
-                                                            <li><a href="#">LeEco</a></li>
-                                                            <li><a href="#">Asus</a></li>
-                                                            <li><a href="#">Acer</a></li>
-                                                            <li><a href="#">Accessories</a></li>
-                                                            <li><a href="#">Headphones</a></li>
-                                                            <li><a href="#">Memory Cards</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner"> <a href="#"><img alt="" src="client/images/banners/banner-side.png"></a> </div>
-                                                </div>
-                                                <!-- /.row -->
-                                            </div>
-                                            <!-- /.yamm-content --> </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown hidden-sm"> <a href="category.html">Health & Beauty <span class="menu-label new-menu hidden-xs">new</span> </a> </li>
-                                <li class="dropdown hidden-sm"> <a href="category.html">Watches</a> </li>
-                                <li class="dropdown"> <a href="contact.html">Jewellery</a> </li>
-                                <li class="dropdown"> <a href="contact.html">Shoes</a> </li>
-                                <li class="dropdown"> <a href="contact.html">Kids & Girls</a> </li>
-                                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Pages</a>
-                                    <ul class="dropdown-menu pages">
-                                        <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-menu">
-                                                        <ul class="links">
-                                                            <li><a href="home.html">Home</a></li>
-                                                            <li><a href="category.html">Category</a></li>
-                                                            <li><a href="detail.html">Detail</a></li>
-                                                            <li><a href="shopping-cart.html">Shopping Cart Summary</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
-                                                            <li><a href="blog.html">Blog</a></li>
-                                                            <li><a href="blog-details.html">Blog Detail</a></li>
-                                                            <li><a href="contact.html">Contact</a></li>
-                                                            <li><a href="sign-in.html">Sign In</a></li>
-                                                            <li><a href="my-wishlist.html">Wishlist</a></li>
-                                                            <li><a href="terms-conditions.html">Terms and Condition</a></li>
-                                                            <li><a href="track-orders.html">Track Orders</a></li>
-                                                            <li><a href="product-comparison.html">Product-Comparison</a></li>
-                                                            <li><a href="faq.html">FAQ</a></li>
-                                                            <li><a href="404.html">404</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li>
-                            </ul>
-                            <!-- /.navbar-nav -->
-                            <div class="clearfix"></div>
+                        <div class="header-cart-total">
+                            Total: $75.00
                         </div>
-                        <!-- /.nav-outer -->
+
+                        <div class="header-cart-buttons">
+                            <div class="header-cart-wrapbtn">
+                                <!-- Button -->
+                                <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                    View Cart
+                                </a>
+                            </div>
+
+                            <div class="header-cart-wrapbtn">
+                                <!-- Button -->
+                                <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                    Check Out
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- /.navbar-collapse -->
-
                 </div>
-                <!-- /.nav-bg-class -->
             </div>
-            <!-- /.navbar-default -->
         </div>
-        <!-- /.container-class -->
-
     </div>
-    <!-- /.header-nav -->
-    <!-- ============================================== NAVBAR : END ============================================== -->
 
+    <!-- Header Mobile -->
+    <div class="wrap_header_mobile">
+        <!-- Logo moblie -->
+        <a href="index.html" class="logo-mobile">
+            <img src="client/images/icons/logo.png" alt="IMG-LOGO">
+        </a>
+
+        <!-- Button show menu -->
+        <div class="btn-show-menu">
+            <!-- Header Icon mobile -->
+            <div class="header-icons-mobile">
+                <a href="#" class="header-wrapicon1 dis-block">
+                    <img src="client/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+                </a>
+
+                <span class="linedivide2"></span>
+
+                <div class="header-wrapicon2">
+                    <img src="client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                    <span class="header-icons-noti">0</span>
+
+                    <!-- Header cart noti -->
+                    <div class="header-cart header-dropdown">
+                        <ul class="header-cart-wrapitem">
+                            <li class="header-cart-item">
+                                <div class="header-cart-item-img">
+                                    <img src="client/images/item-cart-01.jpg" alt="IMG">
+                                </div>
+
+                                <div class="header-cart-item-txt">
+                                    <a href="#" class="header-cart-item-name">
+                                        White Shirt With Pleat Detail Back
+                                    </a>
+
+                                    <span class="header-cart-item-info">
+											1 x $19.00
+										</span>
+                                </div>
+                            </li>
+
+                            <li class="header-cart-item">
+                                <div class="header-cart-item-img">
+                                    <img src="client/images/item-cart-02.jpg" alt="IMG">
+                                </div>
+
+                                <div class="header-cart-item-txt">
+                                    <a href="#" class="header-cart-item-name">
+                                        Converse All Star Hi Black Canvas
+                                    </a>
+
+                                    <span class="header-cart-item-info">
+											1 x $39.00
+										</span>
+                                </div>
+                            </li>
+
+                            <li class="header-cart-item">
+                                <div class="header-cart-item-img">
+                                    <img src="client/images/item-cart-03.jpg" alt="IMG">
+                                </div>
+
+                                <div class="header-cart-item-txt">
+                                    <a href="#" class="header-cart-item-name">
+                                        Nixon Porter Leather Watch In Tan
+                                    </a>
+
+                                    <span class="header-cart-item-info">
+											1 x $17.00
+										</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="header-cart-total">
+                            Total: $75.00
+                        </div>
+
+                        <div class="header-cart-buttons">
+                            <div class="header-cart-wrapbtn">
+                                <!-- Button -->
+                                <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                    View Cart
+                                </a>
+                            </div>
+
+                            <div class="header-cart-wrapbtn">
+                                <!-- Button -->
+                                <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                    Check Out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div class="wrap-side-menu" >
+        <nav class="side-menu">
+            <ul class="main-menu">
+                <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<span class="topbar-child1">
+							Free shipping for standard order over $100
+						</span>
+                </li>
+
+                <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+                    <div class="topbar-child2-mobile">
+							<span class="topbar-email">
+								hainhgch16440@fpt.edu.vn
+							</span>
+                    </div>
+                </li>
+
+                <li class="item-topbar-mobile p-l-10">
+                    <div class="topbar-social-mobile">
+                        <a href="https://www.facebook.com/huuhai.nguyen24" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+                        <a href="https://www.instagram.com/haing__/" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+                    </div>
+                </li>
+
+                <li class="item-menu-mobile">
+                    <a href="{{ route('pages.index') }}">Home</a>
+                </li>
+
+                <li class="item-menu-mobile">
+                    <a href="{{ route('get.all.products') }}">Shop</a>
+                </li>
+
+                <li class="item-menu-mobile">
+                    <a href="product.html">Sale</a>
+                </li>
+
+                <li class="item-menu-mobile">
+                    <a href="cart.html">Features</a>
+                </li>
+
+                <li class="item-menu-mobile">
+                    <a href="blog.html">Blog</a>
+                </li>
+
+                <li class="item-menu-mobile">
+                    <a href="about.html">About</a>
+                </li>
+
+                <li class="item-menu-mobile">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<!-- ============================================== HEADER : END ============================================== -->
 @yield('content')
 
-<!-- ============================================================= FOOTER ============================================================= -->
-<footer id="footer" class="footer color-bg">
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="module-heading">
-                        <h4 class="module-title">Contact Us</h4>
-                    </div>
-                    <!-- /.module-heading -->
+<!-- Footer -->
+<footer class="bg6 p-t-45 p-b-43 p-l-65 p-r-65 p-lr-0-xl1">
+    <div class="flex-w p-b-90">
+        <div class="w-size6 p-t-30 p-l-15 p-r-15 respon6">
+            <h4 class="s-text12 p-b-30">
+                GET IN TOUCH
+            </h4>
 
-                    <div class="module-body">
-                        <ul class="toggle-footer" style="">
-                            <li class="media">
-                                <div class="pull-left"> <span class="icon fa-stack fa-lg"> <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i> </span> </div>
-                                <div class="media-body">
-                                    <p>ThemesGround, 789 Main rd, Anytown, CA 12345 USA</p>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="pull-left"> <span class="icon fa-stack fa-lg"> <i class="fa fa-mobile fa-stack-1x fa-inverse"></i> </span> </div>
-                                <div class="media-body">
-                                    <p>+(888) 123-4567<br>
-                                        +(888) 456-7890</p>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="pull-left"> <span class="icon fa-stack fa-lg"> <i class="fa fa-envelope fa-stack-1x fa-inverse"></i> </span> </div>
-                                <div class="media-body"> <span><a href="#">flipmart@themesground.com</a></span> </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.module-body -->
-                </div>
-                <!-- /.col -->
+            <div>
+                <p class="s-text7 w-size26">
+                    Any questions? Let us know in office at 8th Ton That Thuyet St, Nam Tu Liem, Hanoi or call us on (+84) 971 682 462
+                </p>
 
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="module-heading">
-                        <h4 class="module-title">Customer Service</h4>
-                    </div>
-                    <!-- /.module-heading -->
-
-                    <div class="module-body">
-                        <ul class='list-unstyled'>
-                            <li class="first"><a href="#" title="Contact us">My Account</a></li>
-                            <li><a href="#" title="About us">Order History</a></li>
-                            <li><a href="#" title="faq">FAQ</a></li>
-                            <li><a href="#" title="Popular Searches">Specials</a></li>
-                            <li class="last"><a href="#" title="Where is my order?">Help Center</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.module-body -->
-                </div>
-                <!-- /.col -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="module-heading">
-                        <h4 class="module-title">Corporation</h4>
-                    </div>
-                    <!-- /.module-heading -->
-
-                    <div class="module-body">
-                        <ul class='list-unstyled'>
-                            <li class="first"><a title="Your Account" href="#">About us</a></li>
-                            <li><a title="Information" href="#">Customer Service</a></li>
-                            <li><a title="Addresses" href="#">Company</a></li>
-                            <li><a title="Addresses" href="#">Investor Relations</a></li>
-                            <li class="last"><a title="Orders History" href="#">Advanced Search</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.module-body -->
-                </div>
-                <!-- /.col -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="module-heading">
-                        <h4 class="module-title">Why Choose Us</h4>
-                    </div>
-                    <!-- /.module-heading -->
-
-                    <div class="module-body">
-                        <ul class='list-unstyled'>
-                            <li class="first"><a href="#" title="About us">Shopping Guide</a></li>
-                            <li><a href="#" title="Blog">Blog</a></li>
-                            <li><a href="#" title="Company">Company</a></li>
-                            <li><a href="#" title="Investor Relations">Investor Relations</a></li>
-                            <li class=" last"><a href="contact-us.html" title="Suppliers">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.module-body -->
+                <div class="flex-m p-t-30">
+                    <a href="https://www.facebook.com/huuhai.nguyen24" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/haing__/" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="copyright-bar">
-        <div class="container">
-            <div class="col-xs-12 col-sm-6 no-padding social">
-                <ul class="link">
-                    <li class="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
-                    <li class="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li>
-                    <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
-                    <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
-                    <li class="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li>
-                    <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li>
-                    <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a></li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-6 no-padding">
-                <div class="clearfix payment-methods">
-                    <ul>
-                        <li><img src="client/images/payments/1.png" alt=""></li>
-                        <li><img src="client/images/payments/2.png" alt=""></li>
-                        <li><img src="client/images/payments/3.png" alt=""></li>
-                        <li><img src="client/images/payments/4.png" alt=""></li>
-                        <li><img src="client/images/payments/5.png" alt=""></li>
-                    </ul>
+
+        <div class="w-size7 p-t-30 p-l-15 p-r-15 respon7">
+            <h4 class="s-text12 p-b-30">
+                Categories
+            </h4>
+
+            <ul>
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Men
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Women
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Dresses
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Sunglasses
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-size7 p-t-30 p-l-15 p-r-15 respon7">
+            <h4 class="s-text12 p-b-30">
+                Links
+            </h4>
+
+            <ul>
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Search
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        About Us
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Returns
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-size7 p-t-30 p-l-15 p-r-15 respon7">
+            <h4 class="s-text12 p-b-30">
+                Help
+            </h4>
+
+            <ul>
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Track Order
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Returns
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        Shipping
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="#" class="s-text7">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-size8 p-t-30 p-l-15 p-r-15 respon6">
+            <h4 class="s-text12 p-b-30">
+                Newsletter
+            </h4>
+
+            <form>
+                <div class="effect1 w-size9">
+                    <input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
+                    <span class="effect1-line"></span>
                 </div>
-                <!-- /.payment-methods -->
-            </div>
+
+                <div class="w-size2 p-t-20">
+                    <!-- Button -->
+                    <button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                        Subscribe
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="t-center p-l-15 p-r-15">
+        <a href="#">
+            <img class="h-size2" src="client/images/icons/paypal.png" alt="IMG-PAYPAL">
+        </a>
+
+        <a href="#">
+            <img class="h-size2" src="client/images/icons/visa.png" alt="IMG-VISA">
+        </a>
+
+        <a href="#">
+            <img class="h-size2" src="client/images/icons/mastercard.png" alt="IMG-MASTERCARD">
+        </a>
+
+        <a href="#">
+            <img class="h-size2" src="client/images/icons/express.png" alt="IMG-EXPRESS">
+        </a>
+
+        <a href="#">
+            <img class="h-size2" src="client/images/icons/discover.png" alt="IMG-DISCOVER">
+        </a>
+
+        <div class="t-center s-text8 p-t-20">
+            Copyright © 2020 All rights reserved. | From HaiNH with <i class="fa fa-heart" style="color: red" aria-hidden="true"></i></a>
         </div>
     </div>
 </footer>
-<!-- ============================================================= FOOTER : END============================================================= -->
 
-<!-- For demo purposes – can be removed on production -->
 
-<!-- For demo purposes – can be removed on production : End -->
 
-<!-- JavaScripts placed at the end of the document so the pages load faster -->
-<script src="client/js/jquery-1.11.1.min.js"></script>
-<script src="client/js/bootstrap.min.js"></script>
-<script src="client/js/bootstrap-hover-dropdown.min.js"></script>
-<script src="client/js/owl.carousel.min.js"></script>
-<script src="client/js/echo.min.js"></script>
-<script src="client/js/jquery.easing-1.3.min.js"></script>
-<script src="client/js/bootstrap-slider.min.js"></script>
-<script src="client/js/jquery.rateit.min.js"></script>
-<script type="text/javascript" src="client/js/lightbox.min.js"></script>
-<script src="client/js/bootstrap-select.min.js"></script>
-<script src="client/js/wow.min.js"></script>
-<script src="client/js/scripts.js"></script>
+<!-- Back to top -->
+<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+</div>
+
+<!-- Container Selection1 -->
+<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+<script type="text/javascript" src="client/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="client/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="client/vendor/bootstrap/js/popper.js"></script>
+<script type="text/javascript" src="client/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="client/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="client/js/main.js"></script>
+
+@yield('script')
+
 </body>
 </html>

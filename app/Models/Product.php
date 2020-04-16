@@ -14,7 +14,13 @@ class Product extends Model
         'stock',
         'price',
         'sale_price',
-        'active',
+        'status',
+        'images',
+        'description',
+        'short_description',
+        'discount',
+        'point',
+        'calculate_unit',
     ];
 
     public function category()

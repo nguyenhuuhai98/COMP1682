@@ -1,5 +1,9 @@
 @extends('admin.layouts.app')
 
+@section('title')
+    <title>Admin Dashboard</title>
+@stop
+
 @section('content')
     <div class="content-page">
         <!-- Start content -->
@@ -605,4 +609,14 @@
         </footer>
 
     </div>
+@stop
+
+@section('script')
+    <!-- Peity JS -->
+    <script src="peity/jquery.peity.min.js"></script>
+
+    <script src="morris/morris.min.js"></script>
+    <script src="raphael/raphael-min.js"></script>
+
+    <script src="pages/dashboard.js"></script>
 @stop

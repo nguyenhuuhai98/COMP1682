@@ -1,5 +1,9 @@
 @extends('admin.layouts.app')
 
+@section('title')
+    <title>Manage Categories</title>
+@stop
+
 @section('content')
     <div class="content-page">
         <!-- Start content -->
@@ -36,7 +40,7 @@
                                                     <th scope="col" width="30%">Name</th>
                                                     <th scope="col" width="20%">Description</th>
                                                     <th scope="col" width="10%">Image</th>
-                                                    <th scope="col" width="10%">Parent Id</th>
+                                                    <th scope="col" width="10%">Parent</th>
                                                     <th scope="col" style="padding: 0px; width: 1%"></th>
                                                     <th scope="col" style="padding: 0px; width: 1%"></th>
                                                 </tr>
@@ -92,4 +96,37 @@
         @include('admin.pages.category.form')
 
     </div>
+@stop
+
+@section('script')
+    <!-- Required datatable js -->
+    <script src="datatables/jquery.dataTables.min.js"></script>
+    <script src="datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Buttons examples -->
+    <script src="datatables/dataTables.buttons.min.js"></script>
+    <script src="datatables/buttons.bootstrap4.min.js"></script>
+    <script src="datatables/jszip.min.js"></script>
+    <script src="datatables/pdfmake.min.js"></script>
+    <script src="datatables/vfs_fonts.js"></script>
+    <script src="datatables/buttons.html5.min.js"></script>
+    <script src="datatables/buttons.print.min.js"></script>
+    <script src="datatables/buttons.colVis.min.js"></script>
+
+    <script src="select2/js/select2.min.js"></script>
+    <script src="bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+    <script src="bootstrap-filestyle/js/bootstrap-filestyle.min.js"></script>
+    <script src="bootstrap-md-datetimepicker/js/moment-with-locales.min.js"></script>
+    <script src="bootstrap-md-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <script src="bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="pages/form-advanced.js"></script>
+
+    <!-- Responsive examples -->
+    <script src="datatables/dataTables.responsive.min.js"></script>
+    <script src="datatables/responsive.bootstrap4.min.js"></script>
+
+
+    <!-- Datatable init js -->
+    <script src="pages/datatables.init.js"></script>
 @stop

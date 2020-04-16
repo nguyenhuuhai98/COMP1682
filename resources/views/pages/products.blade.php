@@ -1,1093 +1,172 @@
 @extends('layouts.app')
 
+@section('title')
+    <title>
+        @isset ($category)
+            {{ $category->name }}
+        @else
+            All Products
+        @endif
+    </title>
+@stop
 @section('content')
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l">
+    <!-- Title Page -->
+    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(client/images/heading-pages-02.jpg);">
+        <h2 class="l-text2 t-center">
+            Women
+        </h2>
+        <p class="m-text13 t-center">
+            New Arrivals Women Collection 2018
+        </p>
+    </section>
 
-    </div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="index.html">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>Kitchen Products</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
-    <!-- top Products -->
-    <div class="ads-grid">
+
+    <!-- Content page -->
+    <section class="bgwhite p-t-55 p-b-65">
         <div class="container">
-            <!-- tittle heading -->
-            <h3 class="tittle-w3l">Kitchen Products
-                <span class="heading-style">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </span>
-            </h3>
-            <!-- //tittle heading -->
-            <!-- product left -->
-            <div class="side-bar col-md-3">
-                <div class="search-hotel">
-                    <h3 class="agileits-sear-head">Search Here..</h3>
-                    <form action="#" method="post">
-                        <input type="search" placeholder="Product name..." name="search" required="">
-                        <input type="submit" value=" ">
-                    </form>
-                </div>
-                <!-- price range -->
-                <div class="range">
-                    <h3 class="agileits-sear-head">Price range</h3>
-                    <ul class="dropdown-menu6">
-                        <li>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+                    <div class="leftbar p-r-20 p-r-0-sm">
+                        <!--  -->
+                        <h4 class="m-text14 p-b-7">
+                            @isset ($category)
+                                {{ $category->name }}
+                            @else
+                                All Categories
+                            @endif
+                        </h4>
 
-                            <div id="slider-range"></div>
-                            <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
-                        </li>
-                    </ul>
-                </div>
-                <!-- //price range -->
-                <!-- food preference -->
-                <div class="left-side">
-                    <h3 class="agileits-sear-head">Food Preference</h3>
-                    <ul>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">Vegetarian</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">Non-Vegetarian</span>
-                        </li>
-                    </ul>
-                </div>
-                <!-- //food preference -->
-                <!-- discounts -->
-                <div class="left-side">
-                    <h3 class="agileits-sear-head">Discount</h3>
-                    <ul>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">5% or More</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">10% or More</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">20% or More</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">30% or More</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">50% or More</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">60% or More</span>
-                        </li>
-                    </ul>
-                </div>
-                <!-- //discounts -->
-                <!-- reviews -->
-                <div class="customer-rev left-side">
-                    <h3 class="agileits-sear-head">Customer Review</h3>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <span>5.0</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span>4.0</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span>3.5</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span>3.0</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span>2.5</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- //reviews -->
-                <!-- cuisine -->
-                <div class="left-side">
-                    <h3 class="agileits-sear-head">Cuisine</h3>
-                    <ul>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">South American</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">French</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">Greek</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">Chinese</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">Japanese</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">Italian</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">Mexican</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">Thai</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span">Indian</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked">
-                            <span class="span"> Spanish </span>
-                        </li>
-                    </ul>
-                </div>
-                <!-- //cuisine -->
-                <!-- deals -->
-                <div class="deal-leftmk left-side">
-                    <h3 class="agileits-sear-head">Special Deals</h3>
-                    <div class="special-sec1">
-                        <div class="col-xs-4 img-deals">
-                            <img src="bower_components/supermarket-bower/images/d2.jpg" alt="">
-                        </div>
-                        <div class="col-xs-8 img-deal1">
-                            <h3>Lay's Potato Chips</h3>
-                            <a href="">$18.00</a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="special-sec1">
-                        <div class="col-xs-4 img-deals">
-                            <img src="bower_components/supermarket-bower/images/d1.jpg" alt="">
-                        </div>
-                        <div class="col-xs-8 img-deal1">
-                            <h3>Bingo Mad Angles</h3>
-                            <a href="">$9.00</a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="special-sec1">
-                        <div class="col-xs-4 img-deals">
-                            <img src="bower_components/supermarket-bower/images/d4.jpg" alt="">
-                        </div>
-                        <div class="col-xs-8 img-deal1">
-                            <h3>Tata Salt</h3>
-                            <a href="">$15.00</a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="special-sec1">
-                        <div class="col-xs-4 img-deals">
-                            <img src="bower_components/supermarket-bower/images/d5.jpg" alt="">
-                        </div>
-                        <div class="col-xs-8 img-deal1">
-                            <h3>Gujarat Dry Fruit</h3>
-                            <a href="">$525.00</a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="special-sec1">
-                        <div class="col-xs-4 img-deals">
-                            <img src="bower_components/supermarket-bower/images/d3.jpg" alt="">
-                        </div>
-                        <div class="col-xs-8 img-deal1">
-                            <h3>Cadbury Dairy Milk</h3>
-                            <a href="">$149.00</a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-                <!-- //deals -->
-            </div>
-            <!-- //product left -->
-            <!-- product right -->
-            <div class="agileinfo-ads-display col-md-9 w3l-rightpro">
-                <div class="wrapper">
-                    <!-- first section -->
-                    <div class="product-sec1">
-                        <div class="col-xs-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k1.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Zeeba Basmati Rice</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$950.00</span>
-                                        <del>$1020.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Zeeba Basmati Rice - 5 KG" />
-                                                <input type="hidden" name="amount" value="950.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k2.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Maiyas Gulab Jamun</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$137.00</span>
-                                        <del>$420.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Maiyas Gulab Jamun, 500g" />
-                                                <input type="hidden" name="amount" value="137.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k3.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Lipton Green Tea</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$384.00</span>
-                                        <del>$480.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Lipton Green Tea, 100 Pieces" />
-                                                <input type="hidden" name="amount" value="384.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- //first section -->
-                    <!-- 2nd section) -->
-                    <div class="product-sec1">
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k4.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Organicana Red Chilli</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$70.00</span>
-                                        <del>$90.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Organicana Red Chilli Powder, 100g" />
-                                                <input type="hidden" name="amount" value="70.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k5.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">MTR Black Pepper</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$85.00</span>
-                                        <del>$90.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="MTR Black Pepper Powder, 50g" />
-                                                <input type="hidden" name="amount" value="85.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k6.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Chataka - Elaichi</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$299.99</span>
-                                        <del>$425.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Chataka-Elaichi (100 GM)" />
-                                                <input type="hidden" name="amount" value="299.99" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- //2nd section  -->
-                    <!-- 3rd section -->
-                    <div class="product-sec1">
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k7.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Narulag, Less Sugar</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$220.00</span>
-                                        <del>$250.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Narulag, Less Sugar, 400g" />
-                                                <input type="hidden" name="amount" value="220.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k8.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Kellogg's Chocos Fills</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$175.75</span>
-                                        <del>$195.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Kellogg's Chocos Fills, 250g" />
-                                                <input type="hidden" name="amount" value="175.75" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k9.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Amul's India</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$134.00</span>
-                                        <del>$150.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Amul's India" />
-                                                <input type="hidden" name="amount" value="134.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- //3rd section -->
-                    <!-- 4th section -->
-                    <div class="product-sec1">
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k10.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Snickers Chocolates</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$140.00</span>
-                                        <del>$150.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Snickers Chocolates - 150 Gms" />
-                                                <input type="hidden" name="amount" value="140.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k11.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">Kissan Fruit Jam</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$123.00</span>
-                                        <del>$150.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="Kissan Fruit Jam, 500g Jar" />
-                                                <input type="hidden" name="amount" value="123.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="bower_components/supermarket-bower/images/k12.jpg" alt="">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                        </div>
-                                    </div>
-                                    <span class="product-new-top">New</span>
-
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4>
-                                        <a href="single.html">MTR Vegetable Pickle</a>
-                                    </h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">$104.00</span>
-                                        <del>$120.00</del>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart" />
-                                                <input type="hidden" name="add" value="1" />
-                                                <input type="hidden" name="business" value=" " />
-                                                <input type="hidden" name="item_name" value="MTR Vegetable Pickle, 500g" />
-                                                <input type="hidden" name="amount" value="104.00" />
-                                                <input type="hidden" name="discount_amount" value="1.00" />
-                                                <input type="hidden" name="currency_code" value="USD" />
-                                                <input type="hidden" name="return" value=" " />
-                                                <input type="hidden" name="cancel_return" value=" " />
-                                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                                            </fieldset>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <nav class="text-center">
-                        <ul class="pagination">
-                            <li class="disabled">
-                                <a href="#" aria-label="Previous">
-                                    <span aria-hidden="true">«</span>
+                        <ul class="p-b-54">
+                            @foreach ($categories as $key => $cat)
+                            <li class="p-t-4">
+                                <a href="{{ route('get.products.by.category', $cat->id) }}" class="s-text13 active1">
+                                    {{ $cat->name }}
                                 </a>
                             </li>
-                            <li class="active">
-                                <a href="#">1
-                                    <span class="sr-only">(current)</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">2</a>
-                            </li>
-                            <li>
-                                <a href="#">3</a>
-                            </li>
-                            <li>
-                                <a href="#">4</a>
-                            </li>
-                            <li>
-                                <a href="#">5</a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="Next">
-                                    <span aria-hidden="true">»</span>
-                                </a>
-                            </li>
+                            @endforeach
                         </ul>
-                    </nav>
-                    <!-- //4th section  -->
 
+                        <div class="search-product pos-relative bo4 of-hidden">
+                            <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
+
+                            <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+                                <i class="fs-12 fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
+                    <!--  -->
+                    <div class="flex-sb-m flex-w p-b-35">
+                        <div class="flex-w">
+                            <div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
+                                <select class="selection-2" name="sorting">
+                                    <option>Default Sorting</option>
+                                    <option>Popularity</option>
+                                    <option>Price: low to high</option>
+                                    <option>Price: high to low</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <span class="s-text8 p-t-5 p-b-5">
+							Showing 1–12 of 16 results
+						</span>
+                    </div>
+
+                    <!-- Product -->
+                    <div class="row">
+                        @foreach ($products as $key => $product)
+                        <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+                            <!-- Block2 -->
+                            <div class="block2">
+                                <div class="block2-img wrap-pic-w of-hidden pos-relative @if ($product['discount'] != 0) block2-labelsale @endif">
+                                    <img src="https://link.sun-asterisk.vn/wZKKsb" alt="IMG-PRODUCT">
+
+                                    <div class="block2-overlay trans-0-4">
+                                        <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                            <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                            <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                        </a>
+
+                                        <div class="block2-btn-addcart w-size1 trans-0-4">
+                                            <!-- Button -->
+                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="block2-txt p-t-20">
+                                    <a href="{{ route('get.product.by.id', $product['id']) }}" class="block2-name dis-block s-text3 p-b-5">
+                                        {{ $product['name'] }}
+                                    </a>
+                                    @if ($product['discount'] == 0)
+                                        <span class="block2-price m-text6 p-r-5">
+                                            ${{ $product['price'] }}
+									    </span>
+                                    @else
+                                        <span class="block2-oldprice m-text7 p-r-5">
+                                            ${{ $product['price'] }}
+										</span>
+
+                                        <span class="block2-newprice m-text8 p-r-5">
+                                            ${{ $product['price'] - $product['price'] * $product['discount'] / 100 }}
+										</span>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                    <!-- Pagination -->
+                    <div class="text-center">
+                        {{ $products->links() }}
+                        {{--@for ($i = 1; $i <= count($prods); $i++)
+                            <a href="{{ route('get.products.by.category.paginate', [$category->id, $i]) }}" class="item-pagination flex-c-m trans-0-4 @if ($i == $page) active-pagination @endif">{{ $i }}</a>
+                        @endfor--}}
+                    </div>
                 </div>
             </div>
-            <!-- //product right -->
         </div>
-    </div>
-    <!-- //top products -->
-    <!-- special offers -->
-    <div class="featured-section" id="projects">
-        <div class="container">
-            <!-- tittle heading -->
-            <h3 class="tittle-w3l">Special Offers
-                <span class="heading-style">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </span>
-            </h3>
-            <!-- //tittle heading -->
-            <div class="content-bottom-in">
-                <ul id="flexiselDemo1">
-                    <li>
-                        <div class="w3l-specilamk">
-                            <div class="speioffer-agile">
-                                <a href="single.html">
-                                    <img src="bower_components/supermarket-bower/images/s1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="product-name-w3l">
-                                <h4>
-                                    <a href="single.html">Aashirvaad, 5g</a>
-                                </h4>
-                                <div class="w3l-pricehkj">
-                                    <h6>$220.00</h6>
-                                    <p>Save $40.00</p>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Aashirvaad, 5g" />
-                                            <input type="hidden" name="amount" value="220.00" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w3l-specilamk">
-                            <div class="speioffer-agile">
-                                <a href="single.html">
-                                    <img src="bower_components/supermarket-bower/images/s4.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="product-name-w3l">
-                                <h4>
-                                    <a href="single.html">Kissan Tomato Ketchup, 950g</a>
-                                </h4>
-                                <div class="w3l-pricehkj">
-                                    <h6>$99.00</h6>
-                                    <p>Save $20.00</p>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Kissan Tomato Ketchup, 950g" />
-                                            <input type="hidden" name="amount" value="99.00" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w3l-specilamk">
-                            <div class="speioffer-agile">
-                                <a href="single.html">
-                                    <img src="bower_components/supermarket-bower/images/s2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="product-name-w3l">
-                                <h4>
-                                    <a href="single.html">Madhur Pure Sugar, 1g</a>
-                                </h4>
-                                <div class="w3l-pricehkj">
-                                    <h6>$69.00</h6>
-                                    <p>Save $20.00</p>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Madhur Pure Sugar, 1g" />
-                                            <input type="hidden" name="amount" value="69.00" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w3l-specilamk">
-                            <div class="speioffer-agile">
-                                <a href="single2.html">
-                                    <img src="bower_components/supermarket-bower/images/s3.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="product-name-w3l">
-                                <h4>
-                                    <a href="single2.html">Surf Excel Liquid, 1.02L</a>
-                                </h4>
-                                <div class="w3l-pricehkj">
-                                    <h6>$187.00</h6>
-                                    <p>Save $30.00</p>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Surf Excel Liquid, 1.02L" />
-                                            <input type="hidden" name="amount" value="187.00" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w3l-specilamk">
-                            <div class="speioffer-agile">
-                                <a href="single.html">
-                                    <img src="bower_components/supermarket-bower/images/s8.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="product-name-w3l">
-                                <h4>
-                                    <a href="single.html">Cadbury Choclairs, 655.5g</a>
-                                </h4>
-                                <div class="w3l-pricehkj">
-                                    <h6>$160.00</h6>
-                                    <p>Save $60.00</p>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Cadbury Choclairs, 655.5g" />
-                                            <input type="hidden" name="amount" value="160.00" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w3l-specilamk">
-                            <div class="speioffer-agile">
-                                <a href="single2.html">
-                                    <img src="bower_components/supermarket-bower/images/s6.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="product-name-w3l">
-                                <h4>
-                                    <a href="single2.html">Fair & Lovely, 80 g</a>
-                                </h4>
-                                <div class="w3l-pricehkj">
-                                    <h6>$121.60</h6>
-                                    <p>Save $30.00</p>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Fair & Lovely, 80 g" />
-                                            <input type="hidden" name="amount" value="121.60" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w3l-specilamk">
-                            <div class="speioffer-agile">
-                                <a href="single.html">
-                                    <img src="bower_components/supermarket-bower/images/s5.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="product-name-w3l">
-                                <h4>
-                                    <a href="single.html">Sprite, 2.25L (Pack of 2)</a>
-                                </h4>
-                                <div class="w3l-pricehkj">
-                                    <h6>$180.00</h6>
-                                    <p>Save $30.00</p>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Sprite, 2.25L (Pack of 2)" />
-                                            <input type="hidden" name="amount" value="180.00" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w3l-specilamk">
-                            <div class="speioffer-agile">
-                                <a href="single2.html">
-                                    <img src="bower_components/supermarket-bower/images/s9.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="product-name-w3l">
-                                <h4>
-                                    <a href="single2.html">Lakme Eyeconic Kajal, 0.35 g</a>
-                                </h4>
-                                <div class="w3l-pricehkj">
-                                    <h6>$153.00</h6>
-                                    <p>Save $40.00</p>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Lakme Eyeconic Kajal, 0.35 g" />
-                                            <input type="hidden" name="amount" value="153.00" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //special offers -->
+    </section>
+    <div id="dropDownSelect1"></div>
+    <div id="dropDownSelect2"></div>
+@stop
+
+@section('script')
+    <script type="text/javascript">
+        $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect2')
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="client/vendor/daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="client/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="client/vendor/slick/slick.min.js"></script>
+    <script type="text/javascript" src="client/js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="client/vendor/sweetalert/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        $('.block2-btn-addcart').each(function(){
+            var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+            $(this).on('click', function(){
+                swal(nameProduct, "is added to cart !", "success");
+            });
+        });
+
+        $('.block2-btn-addwishlist').each(function(){
+            var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+            $(this).on('click', function(){
+                swal(nameProduct, "is added to wishlist !", "success");
+            });
+        });
+    </script>
+
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="client/vendor/noui/nouislider.min.js"></script>
 @stop

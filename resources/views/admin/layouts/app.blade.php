@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Admin Dashboard</title>
+    @yield('title')
     <meta content="Admin Dashboard" name="description" />
     <meta content="Themesbrand" name="author" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -20,6 +20,7 @@
 
     <!-- DataTables-->
     <link href="datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <!-- Responsive datatable examples -->
     <link href="datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
@@ -56,15 +57,6 @@
         <nav class="navbar-custom">
 
             <ul class="navbar-right d-flex list-inline float-right mb-0">
-                <li class="dropdown notification-list d-none d-sm-block">
-                    <form role="search" class="app-search">
-                        <div class="form-group mb-0">
-                            <input type="text" class="form-control" placeholder="Search..">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </div>
-                    </form>
-                </li>
-
                 <li class="dropdown notification-list">
                     <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <i class="mdi mdi-bell noti-icon"></i>
@@ -133,21 +125,6 @@
                         <i class="mdi mdi-menu"></i>
                     </button>
                 </li>
-                <li class="d-none d-sm-block">
-                    <div class="dropdown pt-3 d-inline-block">
-                        <a class="btn btn-header waves-effect waves-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Create New
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </div>
-                </li>
             </ul>
 
         </nav>
@@ -165,7 +142,7 @@
                 <ul class="metismenu" id="side-menu">
                     <li class="menu-title">Main</li>
                     <li>
-                        <a href="index.html" class="waves-effect">
+                        <a href="{{ route('adminadmin.dashboard') }}" class="waves-effect">
                             <i class="mdi mdi-home"></i><span class="badge badge-primary float-right">3</span> <span> Dashboard </span>
                         </a>
                     </li>
@@ -180,7 +157,43 @@
                     <li>
                         <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/ultraviolet/15/000000/new-product.png"/><span> Products <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
                         <ul class="submenu">
-                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Products</a></li>
+                            <li><a href="{{ route('adminproducts.index') }}"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Products</a></li>
+                            <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/windows/15/000000/user-male-circle.png"/><span> Users <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
+                        <ul class="submenu">
+                            <li><a href="{{ route('adminusers.index') }}"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Users</a></li>
+                            <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/cotton/15/000000/bill--v1.png"/><span> Billing <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
+                        <ul class="submenu">
+                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Bills</a></li>
+                            <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-title">Extras</li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/cotton/15/000000/report-file--v1.png"/><span> Reports <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
+                        <ul class="submenu">
+                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Bills</a></li>
+                            <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/ultraviolet/15/000000/starred-ticket.png"/><span> Vouchers <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
+                        <ul class="submenu">
+                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Bills</a></li>
+                            <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/nolan/15/event-accepted.png"/><span> Promotions <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
+                        <ul class="submenu">
+                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Bills</a></li>
                             <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
                         </ul>
                     </li>
@@ -209,7 +222,6 @@
 </div>
 <!-- END wrapper -->
 
-
 <!-- jQuery  -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
@@ -218,36 +230,12 @@
 <script src="js/waves.min.js"></script>
 
 <script src="jquery-sparkline/jquery.sparkline.min.js"></script>
-
-<!-- Peity JS -->
-<script src="peity/jquery.peity.min.js"></script>
-<script src="bootstrap-md-datetimepicker/js/moment-with-locales.min.js"></script>
-<script src="bootstrap-md-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
-
-<script type="text/javascript" src="morris/morris.min.js"></script>
-<script src="select2/js/select2.min.js"></script>
-<script src="raphael/raphael-min.js"></script>
-<script src="bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-
-<script src="bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
-<script src="bootstrap-filestyle/js/bootstrap-filestyle.min.js"></script>
-<script src="bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
-
-<script src="pages/dashboard.js"></script>
-<script src="pages/form-advanced.js"></script>
-
 <!-- App js -->
 <script src="js/app.js"></script>
+
 <script src="{{ asset('js/admin/app.js') }}"></script>
-
-<!-- Required datatable js -->
-<script src="datatables/jquery.dataTables.min.js"></script>
-<script src="datatables/dataTables.bootstrap4.min.js"></script>
-<script src="datatables/dataTables.responsive.min.js"></script>
-<script src="datatables/responsive.bootstrap4.min.js"></script>
-
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+@yield('script')
 </body>
 
 </html>
