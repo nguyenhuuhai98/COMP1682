@@ -8,4 +8,6 @@ interface CategoryRepositoryInterface
     public function getCategoryWhereIn($parentId);
 
     public function getAllCategoriesDESC();
+
+    public function getCategoryByParentId($parentId);
 }

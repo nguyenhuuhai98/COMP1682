@@ -63,11 +63,6 @@ class CategoryController extends Controller
         }
     }
 
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
         $category = $this->categoryRepository->find($id);

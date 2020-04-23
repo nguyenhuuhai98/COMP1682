@@ -7,14 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Staff extends Model
 {
     protected $fillable = [
-        'name',
-        'phone',
-        'email',
-        'birthday',
-        'gender',
-        'address',
         'staff_code',
+        'user_id',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function shift()
     {

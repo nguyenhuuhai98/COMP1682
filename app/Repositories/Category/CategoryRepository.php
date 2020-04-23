@@ -21,4 +21,9 @@ class CategoryRepository extends EloquentRepository implements CategoryRepositor
     {
         return $this->model->whereNull('deleted_at')->orderBy('id')->get();
     }
+
+    public function getCategoryByParentId($parentId)
+    {
+        return $this->model->where('parent_id', $parentId)->with('categories')->get();
+    }
 }

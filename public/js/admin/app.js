@@ -15,6 +15,21 @@ $(document).ready(function() {
         "stripeClasses": []
     } );
 
+    $('#products-table').DataTable({
+        dom: 'Bfrtip',
+        columnDefs: [
+            { targets: [0, 2, 3, 5, 6, 13, 15, 16], visible: true},
+            { targets: '_all', visible: false },
+        ],
+        buttons: [
+            'excelHtml5',
+            'pdfHtml5',
+            {
+                extend: 'colvis',
+                columns: ':not(.noVis)'
+            }
+        ],
+    } );
 } );
 
 $('.category-edit').on('click' ,function() {
@@ -39,8 +54,8 @@ $('.category-edit').on('click' ,function() {
 $('.category-add').on('click', function() {
     clearCategoryData();
     clearCategoryErrorData();
-    $('#myModalLabel').text('Add Category');
-    $('#myModal').modal('show');
+    $('.categoryModalLabel').text('Add Category');
+    $('.categoryModal').modal('show');
     $('.formCategory').attr('action', 'categories');
     $('.formCategory').attr('method', 'post');
     $('.formCategory').attr('_method', 'post');
@@ -193,7 +208,6 @@ function showCategoryErrorMessage(data) {
         }
     }
 }
-
 $('#cat-name').on('input', function (){
     $('#cat-name').removeClass('field-error');
     $('#category-name-error').text('');
@@ -207,4 +221,58 @@ $('#cat-description').on('input', function (){
 $('#parent-category').on('change', function (){
     $('#select2-parent-category-container').parent('.select2-selection').removeClass('field-error');
     $('#category-parent-error').text('');
+});
+
+$('.product-add').on('click', function() {
+    $('.productModalLabel').text('Add Product');
+    $('.productModal').modal('show');
+    $('.formProduct').attr('action', 'products');
+    $('.formProduct').attr('method', 'post');
+    $('.formProduct').attr('_method', 'post');
+});
+
+$('.formProduct').on('submit', function(e) {
+    e.preventDefault();
+    swal({
+        title: 'Save change?',
+        text: "All data will save!",
+        icon: 'warning',
+        buttons: true,
+        dangerMode: true,
+    }).then((save) => {
+        if (save) {
+            let category = $('.category option:selected').val();
+            let calculate_unit = $('.calculate-unit option:selected').val();
+            let name = $('.formProduct input[name=name]').val();
+            let barcode = $('.formProduct input[name=barcode]').val();
+            let price = $('.formProduct input[name=price]').val();
+            let shortDescription = $('#prod-short-description').val();
+            let description = $('#prod-description').val();
+            let _method = $('.formProduct').attr('_method');
+            let method = $('.formProduct').attr('method');
+            let url = $('.formProduct').attr('action');
+            let form_data = new FormData();
+            form_data.append('category', category);
+            form_data.append('calculateUnit', calculate_unit);
+            form_data.append('name', name);
+            form_data.append('shortDescription', shortDescription);
+            form_data.append('description', description);
+            form_data.append('barcode', barcode);
+            form_data.append('price', price);
+            form_data.append('_method', _method);
+            $.ajax({
+                type: method,
+                url: url,
+                dataType: 'JSON',
+                processData: false,
+                contentType: false,
+                data: form_data,
+                success: function(data) {
+                },
+                error: function(data) {
+                    showCategoryErrorMessage(data);
+                }
+            });
+        }
+    });
 });

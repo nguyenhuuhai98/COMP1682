@@ -7,16 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 {
     protected $fillable = [
-        'name',
-        'phone',
-        'email',
-        'birthday',
-        'gender',
-        'address',
-        'passwords',
+        'user_id',
         'customer_code',
         'accumulated_points',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function bills()
     {

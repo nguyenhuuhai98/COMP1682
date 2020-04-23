@@ -3,15 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\Category\CategoryRepositoryInterface;
+use App\Repositories\Product\ProductRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class PageController extends Controller
 {
     protected $categoryRepository;
+    protected $productRepository;
 
-    public function __construct(CategoryRepositoryInterface $categoryRepository)
-    {
+    public function __construct(
+        CategoryRepositoryInterface $categoryRepository,
+        ProductRepositoryInterface $productRepository
+    ) {
         $this->categoryRepository = $categoryRepository;
+        $this->productRepository = $productRepository;
     }
 
     public function index()
@@ -40,5 +46,66 @@ class PageController extends Controller
         $categories = $this->categoryRepository->getCategoryWhereIn($parentId);
 
         return $categories;
+    }
+
+    public function getProductsByCategory($id, Request $request)
+    {
+        if (!$request->page) {
+            $page = 1;
+        } else {
+            $page = $request->page;
+        }
+        $products = [];
+        $category = $this->categoryRepository->find($id);
+        $categories = $this->categoryRepository->getCategoryByParentId($id);
+        if (count($categories) > 0) {
+            foreach ($categories as $key => $cate) {
+                if (count($cate->categories) > 0) {
+                    foreach ($cate->categories as $cat) {
+                        $products = array_merge($products, $cat->products->toArray());
+                    }
+                } else {
+                    $products = $cate->products;
+                }
+            }
+        } else {
+            $products = $category->products;
+        }
+        $prods = new LengthAwarePaginator(
+            collect($products)->forPage($page, 9),
+            count($products),
+            9,
+            $page,
+            [
+                'path' => url('/products/'. $id . '/'),
+                'pageName' => 'page',
+            ]
+        );
+
+        return view('pages.products', [
+            'category' => $category,
+            'categories' => $categories,
+            'products' => $prods,
+        ]);
+    }
+
+    public function getProductById($id)
+    {
+        $product = $this->productRepository->find($id);
+
+        return view('pages.product', [
+            'product' => $product,
+        ]);
+    }
+
+    public function getAllProducts()
+    {
+        $products = $this->productRepository->getAllProductsPaginate();
+        $categories = $this->categoryRepository->getCategoryByParentId(0);
+
+        return view('pages.products', [
+            'products' => $products,
+            'categories' => $categories,
+        ]);
     }
 }
