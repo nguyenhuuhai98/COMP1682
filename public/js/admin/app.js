@@ -9,18 +9,20 @@ $(document).ready(function() {
     $('.categories-table').DataTable( {
         "order": [[ 0, "desc" ]],
         "columnDefs": [
+            { "orderable": false, "targets": 4 },
             { "orderable": false, "targets": 5 },
-            { "orderable": false, "targets": 6 },
         ],
         "stripeClasses": []
-    } );
+    });
 
     $('#products-table').DataTable({
-        dom: 'Bfrtip',
-        columnDefs: [
-            { targets: [0, 2, 3, 5, 6, 13, 15, 16], visible: true},
-            { targets: '_all', visible: false },
+        "order": [[ 0, "desc" ]],
+        "columnDefs": [
+            { "orderable": false, "targets": 6 },
+            { "orderable": false, "targets": 5 },
         ],
+        "stripeClasses": [],
+        dom: 'Bfrtip',
         buttons: [
             'excelHtml5',
             'pdfHtml5',
@@ -32,7 +34,7 @@ $(document).ready(function() {
     } );
 } );
 
-$('.category-edit').on('click' ,function() {
+$(document).on('click', '.category-edit', function() {
     $('#myModalLabel').text('Update Category')
     $('#myModal').modal('show');
     let id = $(this).data('id');
@@ -51,7 +53,7 @@ $('.category-edit').on('click' ,function() {
     });
 });
 
-$('.category-add').on('click', function() {
+$(document).on('click', '.category-add', function() {
     clearCategoryData();
     clearCategoryErrorData();
     $('.categoryModalLabel').text('Add Category');
@@ -61,7 +63,7 @@ $('.category-add').on('click', function() {
     $('.formCategory').attr('_method', 'post');
 });
 
-$('.category-delete').on('click', function(e) {
+$(document).on('click', '.category-delete', function(e) {
     e.preventDefault();
     let _this = $(this);
     swal({
@@ -96,7 +98,7 @@ $('.category-delete').on('click', function(e) {
     });
 });
 
-$('.formCategory').on('submit', function(e) {
+$(document).on('submit', '.formCategory', function(e) {
     e.preventDefault();
     swal({
         title: 'Save change?',
@@ -132,10 +134,9 @@ $('.formCategory').on('submit', function(e) {
                     let image = images.image == 'null' ? "images/users/user-2.jpg" : images.image;
                     let row = [
                         data.id,
-                        '<div><img src="' + logo + '" alt="" class="thumb-md rounded-circle mr-2">'+ data.name +'</div>',
+                        '<div><img src="' + image + '" alt="" class="thumb-md rounded-circle mr-2">'+ data.name +'</div>',
                         data.description,
-                        '<img src="'+ image +'" alt="" class="thumb-md rounded-circle mr-2">',
-                        data.parent_id,
+                        data.category,
                         '<div><button class="btn btn-outline-primary category-edit" data-id="' + data.id + '"><i class="far fa-edit"></i></button></div>',
                         '<div><button href="#" class="btn btn-outline-danger" data-id="' + data.id + '"><i class="far fa-trash-alt"></i></button></div>',
                     ];
@@ -208,22 +209,22 @@ function showCategoryErrorMessage(data) {
         }
     }
 }
-$('#cat-name').on('input', function (){
+$(document).on('input', '#cat-name', function () {
     $('#cat-name').removeClass('field-error');
     $('#category-name-error').text('');
 });
 
-$('#cat-description').on('input', function (){
+$(document).on('input', '#cat-description', function () {
     $('#cat-description').removeClass('field-error');
     $('#category-description-error').text('');
 });
 
-$('#parent-category').on('change', function (){
+$(document).on('change', '#parent-category', function () {
     $('#select2-parent-category-container').parent('.select2-selection').removeClass('field-error');
     $('#category-parent-error').text('');
 });
 
-$('.product-add').on('click', function() {
+$(document).on('click', '.product-add', function() {
     $('.productModalLabel').text('Add Product');
     $('.productModal').modal('show');
     $('.formProduct').attr('action', 'products');
@@ -231,7 +232,7 @@ $('.product-add').on('click', function() {
     $('.formProduct').attr('_method', 'post');
 });
 
-$('.formProduct').on('submit', function(e) {
+$(document).on('submit', '.formProduct', function(e) {
     e.preventDefault();
     swal({
         title: 'Save change?',

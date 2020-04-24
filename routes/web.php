@@ -15,6 +15,14 @@ Route::prefix('/')->group(function() {
     Route::get('/products/{category}', 'PageController@getProductsByCategory')->name('get.products.by.category');
     Route::get('/product/{product}', 'PageController@getProductById')->name('get.product.by.id');
     Route::get('products', 'PageController@getAllProducts')->name('get.all.products');
+    Route::get('products-search', 'PageController@searchProducts')->name('search.product.by.name');
+    Route::prefix('cart')->group(function () {
+        Route::get('/', 'ShoppingCartController@index')->name('get.cart');
+        Route::get('/add-cart/{product}', 'ShoppingCartController@addCart')->name('add.product.to.cart');
+        Route::get('/delete-cart-product/{product}', 'ShoppingCartController@deleteCart')->name('delete.product.from.cart');
+        Route::get('/delete-list-cart/{product}', 'ShoppingCartController@deleteListCart')->name('delete.product.from.list.cart');
+        Route::get('/update-cart/{product}', 'ShoppingCartController@updateCart')->name('update.cart');
+    });
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin'], function() {

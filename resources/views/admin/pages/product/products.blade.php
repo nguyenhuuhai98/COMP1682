@@ -32,61 +32,75 @@
                                             <button type="button" class="btn btn-outline-success product-add">Add Product <img src="https://img.icons8.com/ultraviolet/24/000000/plus.png"/></button>
                                         </div>
                                     </div>
-
-                                    <table id="products-table" class="table table-striped table-bordered dt-responsive" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                        <thead>
-                                        <tr>
-                                            <th>(#) Id</th>
-                                            <th>Category</th>
-                                            <th>Name</th>
-                                            <th>Barcode</th>
-                                            <th>Slug</th>
-                                            <th>Stock</th>
-                                            <th>Price</th>
-                                            <th>Sale Price</th>
-                                            <th>Status</th>
-                                            <th>Discount</th>
-                                            <th>Point</th>
-                                            <th>Calculate Unit</th>
-                                            <th>Images</th>
-                                            <th>Short Description</th>
-                                            <th>Description</th>
-                                            <th style="padding: 0px; width: 1%"></th>
-                                            <th style="padding: 0px; width: 1%"></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach ($products as $key => $product)
+                                    <div class="table-responsive">
+                                        <table id="products-table" class="table table-striped table-bordered dt-responsive"
+                                               style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                            <thead>
                                             <tr>
-                                                <th>{{ $product['id'] }}</th>
-                                                <td>{{ $product->category->name }}</td>
-                                                <td>{{ $product['name'] }}</td>
-                                                <td>{{ $product['barcode'] }}</td>
-                                                <td>{{ $product['slug'] }}</td>
-                                                <td>{{ $product['stock'] }}</td>
-                                                <td>$ {{ $product['price'] }}</td>
-                                                <td>$ {{ $product['sale_price'] }}</td>
-                                                <td><span class="badge badge-success">{{ $product['status'] }}</span></td>
-                                                <td>{{ $product['discount'] }}</td>
-                                                <td>{{ $product['point'] }}</td>
-                                                <td>{{ $product['calculate_unit'] }}</td>
-                                                <td></td>
-                                                <td>{!! $product['short_description'] !!}</td>
-                                                <td>{!! $product['description'] !!}</td>
-                                                <td>
-                                                    <div>
-                                                        <button class="btn btn-outline-primary product-edit" data-id="{{ $product['id'] }}"><i class="far fa-edit"></i></button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <button href="#" class="btn btn-outline-danger product-delete" data-id="{{ $product['id'] }}"><i class="far fa-trash-alt"></i></button>
-                                                    </div>
-                                                </td>
+                                                <th width="5%">(#) Id</th>
+                                                <th width="25%">Name</th>
+                                                <th width="20%">Images</th>
+                                                <th width="10%">Properties</th>
+                                                <th width="10%">Price</th>
+                                                <th width="10%">Other information</th>
+                                                <th width="5%">Description</th>
+                                                <th style="padding: 0px" width="7%"></th>
                                             </tr>
-                                        @endforeach
-                                        </tbody>
-                                    </table>
+                                            </thead>
+                                            <tbody>
+                                            @foreach ($products as $key => $product)
+                                                <tr>
+                                                    <th>{{ $product['id'] }}</th>
+                                                    <td>
+                                                        <ul>
+                                                            <li>Name: {{ $product['name'] }}</li>
+                                                            <li>Barcode: {{ $product['barcode'] }}</li>
+                                                            <li>Category: <span class="badge badge-primary">{{ $product->category->name }}</span></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <div style="padding: 0px 30px">
+                                                            <img class="align-self-start shadow rounded mr-4"
+                                                                 src="{{ json_decode($product->images)->image1 == null ? '' : json_decode($product->images)->image1 }}"
+                                                                 alt="Generic placeholder image" height="100">
+                                                            <img class="align-self-start shadow rounded"
+                                                                 src="{{ json_decode($product->images)->image2 ? json_decode($product->images)->image2 : json_decode($product->images)->image1 }}"
+                                                                 alt="Generic placeholder image" height="100">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>Status: <span class="badge badge-warning">{{ $product['status'] }}</span></li>
+                                                            <li>Hot: <span class="badge badge-danger">Hot</span></li>
+                                                            <li>Featured: <span class="badge badge-success">None</span></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>Price: $ {{ $product['price'] }}</li>
+                                                            <li>Discount: {{ $product['discount'] }} %</li>
+                                                            <li>Sale price: $ {{ $product['sale_price'] }}</li>
+                                                        </ul></td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>In stocks: {{ $product['stock'] }}</li>
+                                                            <li>Point: {{ $product['point'] }}</li>
+                                                            <li>Unit: {{ $product['calculate_unit'] }}</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn btn-outline-info waves-effect waves-light">Short Description</div>
+                                                        <div class="btn btn-outline-info waves-effect waves-light">Description</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn btn-outline-primary product-edit" data-id="{{ $product['id'] }}"><i class="far fa-edit"></i></div>
+                                                        <div href="#" class="btn btn-outline-danger product-delete" data-id="{{ $product['id'] }}"><i class="far fa-trash-alt"></i></div>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div> <!-- end col -->
