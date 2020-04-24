@@ -34,9 +34,9 @@
                     <div class="wrap-slick3-dots"></div>
 
                     <div class="slick3">
-                        <div class="item-slick3" data-thumb="https://link.sun-asterisk.vn/wZKKsb">
+                        <div class="item-slick3" data-thumb="upload/banh-gao.jpeg">
                             <div class="wrap-pic-w">
-                                <img src="https://link.sun-asterisk.vn/wZKKsb" alt="IMG-PRODUCT">
+                                <img src="upload/banh-gao.jpeg" alt="IMG-PRODUCT">
                             </div>
                         </div>
 
@@ -70,40 +70,28 @@
                                     <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
                                 </button>
 
-                                <input class="size8 m-text18 t-center num-product" type="number" name="num-product" value="1">
+                                <input class="size8 m-text18 t-center num-product quantity-items" type="number" name="num-product" value="1">
 
                                 <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
                                     <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
                                 </button>
                             </div>
 
-                            <div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
+                            <div class="size9 trans-0-4 m-t-10 m-b-10">
                                 <!-- Button -->
-                                <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+                                <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 add-items-cart" data-id="{{ $product['id'] }}">
                                     Add to Cart
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <p class="m-b-10">
+                    {!! $product->short_description !!}
+                </p>
 
                 <div class="p-b-30">
-                    <span class="s-text8 m-r-35">Barcode: {{ $product->barcode }}</span>
-                </div>
-
-                <!--  -->
-                <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
-                    <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-                        Short Description
-                        <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
-                        <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
-                    </h5>
-
-                    <div class="dropdown-content dis-none p-t-15 p-b-23">
-                        <p class="s-text8">
-                            {!! $product->short_description !!}
-                        </p>
-                    </div>
+                    <span class="s-text8 m-r-35"><b>Barcode</b>: {{ $product->barcode }}</span>
                 </div>
 
                 <div class="wrap-dropdown-content bo7 p-t-15 p-b-14">

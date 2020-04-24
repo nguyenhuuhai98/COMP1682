@@ -11,13 +11,14 @@
 @stop
 @section('content')
     <!-- Title Page -->
-    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(client/images/heading-pages-02.jpg);">
+    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(upload/food-banner.jpg);">
         <h2 class="l-text2 t-center">
-            Women
+            @isset ($category)
+                {{ $category->name }}
+            @else
+                All Products
+            @endif
         </h2>
-        <p class="m-text13 t-center">
-            New Arrivals Women Collection 2018
-        </p>
     </section>
 
 
@@ -78,11 +79,11 @@
                     <!-- Product -->
                     <div class="row">
                         @foreach ($products as $key => $product)
-                        <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+                        <div class="col-sm-12 col-md-6 col-lg-3 p-b-50">
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-img wrap-pic-w of-hidden pos-relative @if ($product['discount'] != 0) block2-labelsale @endif">
-                                    <img src="https://link.sun-asterisk.vn/wZKKsb" alt="IMG-PRODUCT">
+                                    <img src="upload/banh-gao.jpeg" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
                                         <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -90,9 +91,9 @@
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
 
-                                        <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        <div class="w-size1 trans-0-4" style="position: absolute;left: 50%;transform: translateX(-50%);bottom: 10px;">
                                             <!-- Button -->
-                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4 add-to-cart" data-quantity="1" data-id="{{ $product['id'] }}">
                                                 Add to Cart
                                             </button>
                                         </div>

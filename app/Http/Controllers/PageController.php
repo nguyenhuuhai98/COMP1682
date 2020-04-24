@@ -72,9 +72,9 @@ class PageController extends Controller
             $products = $category->products;
         }
         $prods = new LengthAwarePaginator(
-            collect($products)->forPage($page, 9),
+            collect($products)->forPage($page, 12),
             count($products),
-            9,
+            12,
             $page,
             [
                 'path' => url('/products/'. $id . '/'),
@@ -100,7 +100,7 @@ class PageController extends Controller
 
     public function getAllProducts()
     {
-        $products = $this->productRepository->getAllProductsPaginate();
+        $products = $this->productRepository->getAllProductsPaginate(12);
         $categories = $this->categoryRepository->getCategoryByParentId(0);
 
         return view('pages.products', [

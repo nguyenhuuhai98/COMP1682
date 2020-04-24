@@ -12,8 +12,8 @@ class ProductRepository extends EloquentRepository implements ProductRepositoryI
         return Product::class;
     }
 
-    public function getAllProductsPaginate()
+    public function getAllProductsPaginate($perPage)
     {
-        return $this->model->paginate(9);
+        return $this->model->orderBy('id', 'DESC')->paginate($perPage);
     }
 }
