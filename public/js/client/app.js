@@ -23,6 +23,8 @@ $('.change-items-cart').on('click', '.delete-cart', function() {
         url: 'cart/delete-cart-product/' + id,
 
     }).done( function(response) {
+        renderCart(response);
+        renderMiniCart(response);
         renderMiniCart(response);
         alertify.success('Delete products successfully!');
     });

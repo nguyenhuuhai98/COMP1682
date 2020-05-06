@@ -32,7 +32,6 @@
                         <tbody class="body-cart">
                             @if (session('Cart'))
                                 @foreach (session('Cart')->products as $product)
-{{--                                                                    {{ dd(json_decode($product['productInfo']->images)->image1) }}--}}
                                     <tr class="table-row">
                                         <td class="column-1">
                                             <div class="mini-cart-img b-rad-4 o-f-hidden">
