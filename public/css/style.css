@@ -25,3 +25,31 @@
     margin-top: 5px;
 }
 
+.mini-cart-img {
+    width: 80px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.mini-cart-img img {
+    width: 100%;
+}
+.cart-shop-now {
+    background-color: black;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    color: white;
+}
+.cart-shop-now:hover {
+    background-color: #985f0d;
+    color: white;
+}
+
+tbody ul {
+    padding-left: 10px;
+}
+
+tbody li {
+    list-style: none;
+}

@@ -72,9 +72,9 @@ class PageController extends Controller
             $products = $category->products;
         }
         $prods = new LengthAwarePaginator(
-            collect($products)->forPage($page, 9),
+            collect($products)->forPage($page, 12),
             count($products),
-            9,
+            12,
             $page,
             [
                 'path' => url('/products/'. $id . '/'),
@@ -91,21 +91,36 @@ class PageController extends Controller
 
     public function getProductById($id)
     {
-        $product = $this->productRepository->find($id);
+        $product = $this->productRepository->getProductById($id);
+        $relatedProducts = $this->productRepository->getRelatedProduct($id, $product->category_id);
+        if (count($relatedProducts) > 10) {
+            $relatedProducts = $relatedProducts->random(10);
+        } else {
+            $relatedProducts = $relatedProducts->shuffle();
+        }
 
         return view('pages.product', [
+            'category' => $product->category,
             'product' => $product,
+            'relatedProducts' => $relatedProducts,
         ]);
     }
 
     public function getAllProducts()
     {
-        $products = $this->productRepository->getAllProductsPaginate();
+        $products = $this->productRepository->getAllProductsPaginate(12);
         $categories = $this->categoryRepository->getCategoryByParentId(0);
 
         return view('pages.products', [
             'products' => $products,
             'categories' => $categories,
         ]);
+    }
+
+    public function searchProducts(Request $request)
+    {
+        $products = $this->productRepository->getProductsByName($request->name, $request->category)->get();
+
+        return view('pages.products.search-product', compact('products'));
     }
 }

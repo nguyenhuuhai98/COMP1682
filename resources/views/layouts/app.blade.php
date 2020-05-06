@@ -5,6 +5,7 @@
     <base href="{{ asset('') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="client/images/icons/favicon.png"/>
     <!--===============================================================================================-->
@@ -35,6 +36,16 @@
     <link rel="stylesheet" type="text/css" href="client/css/util.css">
     <link rel="stylesheet" type="text/css" href="client/css/main.css">
     <!--===============================================================================================-->
+    <!-- Alertify JS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="animsition">
@@ -49,9 +60,13 @@
                 <a href="https://www.instagram.com/haing__/" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
             </div>
 
-            <span class="topbar-child1">
-					Free shipping for standard order over $100
-				</span>
+            <div class="search-product pos-relative bo4 of-hidden">
+                <input class="s-text7 size4 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
+
+                <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+                    <i class="fs-12 fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
 
             <div class="topbar-child2">
                 <span class="topbar-email">
@@ -111,68 +126,48 @@
 
                 <div class="header-wrapicon2">
                     <img src="client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-                    <span class="header-icons-noti">0</span>
-
+                    <span class="header-icons-noti" id="cart-quantity">{{ session('Cart') ? session('Cart')->totalQuantity : 0 }}</span>
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown">
-                        <ul class="header-cart-wrapitem">
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="client/images/item-cart-01.jpg" alt="IMG">
-                                </div>
+                        <div class="change-items-cart">
+                            <ul class="header-cart-wrapitem">
+                                @if (session('Cart'))
+                                    @foreach (session('Cart')->products as $product)
+                                        <li class="header-cart-item">
+                                            <div class="mini-cart-img">
+                                                <img src="upload/banh-gao.jpeg" alt="IMG">
+                                            </div>
 
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        White Shirt With Pleat Detail Back
-                                    </a>
+                                            <div class="header-cart-item-txt" style="width: calc(100% - 130px);">
+                                                <a href="#" class="header-cart-item-name">
+                                                    {{ $product['productInfo']->name }}
+                                                </a>
 
-                                    <span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-                                </div>
-                            </li>
+                                                <span class="header-cart-item-info">
+                                                    {{ $product['quantity'] }} x $ {{ $product['productInfo']->price }}
+                                                </span>
+                                            </div>
+                                            <div class="delete-cart" data-id="{{ $product['productInfo']->id }}">
+                                                <a href="javascript:void(0)">x</a>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                @else
+                                    <li class="header-cart-item">
+                                        Your cart is empty!
+                                    </li>
+                                @endif
+                            </ul>
 
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="client/images/item-cart-02.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Converse All Star Hi Black Canvas
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="client/images/item-cart-03.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Nixon Porter Leather Watch In Tan
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="header-cart-total">
-                            Total: $75.00
+                            <div class="header-cart-total">
+                                 {{ session('Cart') ? 'Total: $ ' . session('Cart')->totalPrice : '' }}
+                            </div>
                         </div>
 
                         <div class="header-cart-buttons">
                             <div class="header-cart-wrapbtn">
                                 <!-- Button -->
-                                <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                <a href="{{ route('get.cart') }}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                                     View Cart
                                 </a>
                             </div>
@@ -213,64 +208,44 @@
 
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown">
-                        <ul class="header-cart-wrapitem">
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="client/images/item-cart-01.jpg" alt="IMG">
-                                </div>
+                        <div class="change-items-cart">
+                            <ul class="header-cart-wrapitem">
+                                @if (session('Cart'))
+                                    @foreach (session('Cart')->products as $product)
+                                        <li class="header-cart-item">
+                                            <div class="mini-cart-img">
+                                                <img src="upload/banh-gao.jpeg" alt="IMG">
+                                            </div>
 
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        White Shirt With Pleat Detail Back
-                                    </a>
+                                            <div class="header-cart-item-txt" style="width: calc(100% - 130px);">
+                                                <a href="#" class="header-cart-item-name">
+                                                    {{ $product['productInfo']->name }}
+                                                </a>
 
-                                    <span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-                                </div>
-                            </li>
+                                                <span class="header-cart-item-info">
+                                                    {{ $product['quantity'] }} x $ {{ $product['productInfo']->price }}
+                                                </span>
+                                            </div>
+                                            <div class="delete-cart" data-id="{{ $product['productInfo']->id }}">
+                                                <a href="javascript:void(0)">x</a>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                @else
+                                    <li class="header-cart-item">
+                                        Your cart is empty!
+                                    </li>
+                                @endif
+                            </ul>
 
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="client/images/item-cart-02.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Converse All Star Hi Black Canvas
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="client/images/item-cart-03.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Nixon Porter Leather Watch In Tan
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="header-cart-total">
-                            Total: $75.00
+                            <div class="header-cart-total">
+                                {{ session('Cart') ? 'Total: $ ' . session('Cart')->totalPrice : '' }}
+                            </div>
                         </div>
-
                         <div class="header-cart-buttons">
                             <div class="header-cart-wrapbtn">
                                 <!-- Button -->
-                                <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                <a href="{{ route('get.cart') }}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                                     View Cart
                                 </a>
                             </div>
@@ -347,6 +322,13 @@
                     <a href="contact.html">Contact</a>
                 </li>
             </ul>
+            <div class="search-product pos-relative bo4 of-hidden">
+                <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
+
+                <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+                    <i class="fs-12 fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
         </nav>
     </div>
 </header>
@@ -541,6 +523,12 @@
 <script type="text/javascript" src="client/vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 <script src="client/js/main.js"></script>
+<script src="js/client/app.js"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
 
 @yield('script')
 
