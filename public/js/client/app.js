@@ -23,11 +23,9 @@ $('.change-items-cart').on('click', '.delete-cart', function() {
         url: 'cart/delete-cart-product/' + id,
 
     }).done( function(response) {
-<<<<<<< HEAD
         renderCart(response);
-=======
         renderMiniCart(response);
->>>>>>> f22c4dc4564b8cac7b0ea393fa111dd76ee388a6
+        renderMiniCart(response);
         alertify.success('Delete products successfully!');
     });
 });
