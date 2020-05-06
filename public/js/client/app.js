@@ -23,7 +23,11 @@ $('.change-items-cart').on('click', '.delete-cart', function() {
         url: 'cart/delete-cart-product/' + id,
 
     }).done( function(response) {
+<<<<<<< HEAD
         renderCart(response);
+=======
+        renderMiniCart(response);
+>>>>>>> f22c4dc4564b8cac7b0ea393fa111dd76ee388a6
         alertify.success('Delete products successfully!');
     });
 });
@@ -63,4 +67,53 @@ function renderListCart(response) {
     $('.body-cart').empty();
     $('.body-cart').html(response);
     $('#cart-quantity').text($('#new-cart-quantity').val());
+}
+
+$(document).on('change', '.search-products', function() {
+    let name = $(this).val();
+    let category = $('#category_id').val();
+    searchProducts(name, category);
+});
+
+function searchProducts(name, category) {
+    $.ajax({
+        type: 'get',
+        url: 'products-search',
+        data: {
+            name: name,
+            category: category,
+        },
+        success: function (response) {
+            $('.product-search').empty();
+            $('.product-search').html(response);
+        }
+    });
+}
+
+$(document).on('click', '.btn-num-product-down', function() {
+    let id = $(this).data('id');
+    updateCart(id);
+});
+
+$(document).on('click', '.btn-num-product-up', function() {
+    let id = $(this).data('id');
+    updateCart(id);
+});
+
+function updateCart(id) {
+    let quantity = $('#cart-product-quantity-' + id).val();
+    $.ajax({
+        type: 'get',
+        url: 'cart/update-cart/' + id,
+        data: {
+            quantity: quantity,
+        },
+        success: function (response) {
+            $('.sub-total-cart-price').text(response.totalPrice);
+            $('.total-cart-price').text(response.totalPrice);
+            $('#cart-quantity').text(response.totalQuantity);
+            $('#cart-product-quantity-' + id).val(quantity);
+            alertify.success('Update Cart successfully!');
+        }
+    });
 }

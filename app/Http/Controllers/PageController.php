@@ -91,10 +91,18 @@ class PageController extends Controller
 
     public function getProductById($id)
     {
-        $product = $this->productRepository->find($id);
+        $product = $this->productRepository->getProductById($id);
+        $relatedProducts = $this->productRepository->getRelatedProduct($id, $product->category_id);
+        if (count($relatedProducts) > 10) {
+            $relatedProducts = $relatedProducts->random(10);
+        } else {
+            $relatedProducts = $relatedProducts->shuffle();
+        }
 
         return view('pages.product', [
+            'category' => $product->category,
             'product' => $product,
+            'relatedProducts' => $relatedProducts,
         ]);
     }
 
@@ -107,5 +115,12 @@ class PageController extends Controller
             'products' => $products,
             'categories' => $categories,
         ]);
+    }
+
+    public function searchProducts(Request $request)
+    {
+        $products = $this->productRepository->getProductsByName($request->name, $request->category)->get();
+
+        return view('pages.products.search-product', compact('products'));
     }
 }

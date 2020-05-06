@@ -66,4 +66,20 @@ class ShoppingCartController extends Controller
             }
         }
     }
+
+    public function updateCart($id, Request $request)
+    {
+        $oldCart = Session('Cart') ? Session('Cart') : null;
+        $newCart = new Cart($oldCart);
+        $newCart->updateCart($id, $request->quantity);
+        $request->session()->put('Cart', $newCart);
+        $data = [
+            'quantity' => $newCart->products[$id]['quantity'],
+            'price' => $newCart->products[$id]['price'],
+            'totalPrice' => $newCart->totalPrice,
+            'totalQuantity' => $newCart->totalQuantity,
+        ];
+
+        return response()->json($data);
+    }
 }

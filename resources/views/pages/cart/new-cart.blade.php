@@ -1,6 +1,5 @@
 @if (session('Cart'))
     @foreach (session('Cart')->products as $product)
-        {{--                                {{ dd($product) }}--}}
         <tr class="table-row">
             <td class="column-1">
                 <div class="mini-cart-img b-rad-4 o-f-hidden">
@@ -10,14 +9,19 @@
             <td class="column-2">{{ $product['productInfo']->name }}</td>
             <td class="column-3">$ {{ $product['productInfo']->price }}</td>
             <td class="column-4">
-                <div class="flex-w bo5 of-hidden w-size17">
-                    <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+                <div class="flex-w bo5 of-hidden w-size17 product-cart-quantity">
+                    <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2"
+                            data-id="{{ $product['productInfo']->id }}">
                         <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
                     </button>
 
-                    <input class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="{{ $product['quantity'] }}">
+                    <input class="size8 m-text18 t-center num-product"
+                           id="cart-product-quantity-{{ $product['productInfo']->id }}" type="number"
+                           name="num-product" value="{{ $product['quantity'] }}"
+                           onchange="updateCart({{ $product['productInfo']->id }})">
 
-                    <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+                    <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2"
+                            data-id="{{ $product['productInfo']->id }}">
                         <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
                     </button>
                 </div>

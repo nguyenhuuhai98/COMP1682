@@ -39,7 +39,6 @@
                                                     <th scope="col" width="5%">(#) Id</th>
                                                     <th scope="col" width="30%">Name</th>
                                                     <th scope="col" width="20%">Description</th>
-                                                    <th scope="col" width="10%">Image</th>
                                                     <th scope="col" width="10%">Parent</th>
                                                     <th scope="col" style="padding: 0px; width: 1%"></th>
                                                     <th scope="col" style="padding: 0px; width: 1%"></th>
@@ -51,15 +50,11 @@
                                                     <th scope="row">{{ $category['id'] }}</th>
                                                     <td>
                                                         <div>
-                                                            <img src="{{ asset($decodeArray[$key]['logo'] == "null" ? "admin/images/users/user-2.jpg" : $decodeArray[$key]['logo']) }}" alt="" class="thumb-md rounded-circle mr-2"> {{ $category['name'] }}
+                                                            <img src="{{ asset($decodeArray[$key]['image'] == "null" ? "admin/images/users/user-2.jpg" : $decodeArray[$key]['image']) }}" alt="" class="thumb-md rounded-circle mr-2"> {{ $category['name'] }}
                                                         </div>
                                                     </td>
                                                     <td>{{ $category['description'] }}</td>
-                                                    <td>
-                                                        <img src={{ asset($decodeArray[$key]['image'] == "null" ? "admin/images/users/user-2.jpg" : $decodeArray[$key]['image']) }} alt=""
-                                                             class="thumb-md rounded-circle mr-2">
-                                                    </td>
-                                                    <td>{{ $category['parent_id'] }}</td>
+                                                    <td>{{ $category->category['name'] ? $category->category['name'] : 'Root'}}</td>
                                                     <td>
                                                         <div>
                                                             <button class="btn btn-outline-primary category-edit" data-id="{{ $category['id'] }}"><i class="far fa-edit"></i></button>

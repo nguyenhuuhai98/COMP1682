@@ -11,7 +11,13 @@
 @stop
 @section('content')
     <!-- Title Page -->
-    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(upload/food-banner.jpg);">
+    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(
+    @isset ($category)
+    {{ $category->banner }}
+    @else
+        upload/banners/1.jpg
+    @endif
+    );">
         <h2 class="l-text2 t-center">
             @isset ($category)
                 {{ $category->name }}
@@ -48,9 +54,10 @@
                         </ul>
 
                         <div class="search-product pos-relative bo4 of-hidden">
-                            <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
-
-                            <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+                            <input class="s-text7 size6 p-l-23 p-r-50 search-products" type="text" name="search-product" placeholder="Search Products...">
+                            <input type="hidden" name="" id="category_id"
+                                   value="@isset ($category) {{ $category->id }} @endif">
+                            <button type="submit" class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
                                 <i class="fs-12 fa fa-search" aria-hidden="true"></i>
                             </button>
                         </div>
@@ -72,62 +79,60 @@
                         </div>
 
                         <span class="s-text8 p-t-5 p-b-5">
-							Showing 1–12 of 16 results
+							Showing 1–12 results
 						</span>
                     </div>
+                    <div class="product-search">
+                        <!-- Product -->
+                        <div class="row">
+                            @foreach ($products as $key => $product)
+                                <div class="col-sm-12 col-md-6 col-lg-3 p-b-50">
+                                    <!-- Block2 -->
+                                    <div class="block2">
+                                        <div class="block2-img wrap-pic-w of-hidden pos-relative @if ($product['discount'] != 0) block2-labelsale @endif">
+                                            <img src="{{ json_decode($product['images'])->image1 == null ? '' : json_decode($product['images'])->image1 }}" alt="IMG-PRODUCT">
 
-                    <!-- Product -->
-                    <div class="row">
-                        @foreach ($products as $key => $product)
-                        <div class="col-sm-12 col-md-6 col-lg-3 p-b-50">
-                            <!-- Block2 -->
-                            <div class="block2">
-                                <div class="block2-img wrap-pic-w of-hidden pos-relative @if ($product['discount'] != 0) block2-labelsale @endif">
-                                    <img src="upload/banh-gao.jpeg" alt="IMG-PRODUCT">
+                                            <div class="block2-overlay trans-0-4">
+                                                <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                                    <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                                    <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                                </a>
 
-                                    <div class="block2-overlay trans-0-4">
-                                        <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                            <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                            <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                                        </a>
+                                                <div class="w-size1 trans-0-4" style="position: absolute;left: 50%;transform: translateX(-50%);bottom: 10px;">
+                                                    <!-- Button -->
+                                                    <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4 add-to-cart" data-quantity="1" data-id="{{ $product['id'] }}">
+                                                        Add to Cart
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                        <div class="w-size1 trans-0-4" style="position: absolute;left: 50%;transform: translateX(-50%);bottom: 10px;">
-                                            <!-- Button -->
-                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4 add-to-cart" data-quantity="1" data-id="{{ $product['id'] }}">
-                                                Add to Cart
-                                            </button>
+                                        <div class="block2-txt p-t-20">
+                                            <a href="{{ route('get.product.by.id', $product['id']) }}" class="block2-name dis-block s-text3 p-b-5">
+                                                {{ $product['name'] }}
+                                            </a>
+                                            @if ($product['discount'] == 0)
+                                                <span class="block2-price m-text6 p-r-5">
+                                            ${{ $product['price'] }}
+									    </span>
+                                            @else
+                                                <span class="block2-oldprice m-text7 p-r-5">
+                                            ${{ $product['price'] }}
+										</span>
+
+                                                <span class="block2-newprice m-text8 p-r-5">
+                                            ${{ $product['price'] - $product['price'] * $product['discount'] / 100 }}
+										</span>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="block2-txt p-t-20">
-                                    <a href="{{ route('get.product.by.id', $product['id']) }}" class="block2-name dis-block s-text3 p-b-5">
-                                        {{ $product['name'] }}
-                                    </a>
-                                    @if ($product['discount'] == 0)
-                                        <span class="block2-price m-text6 p-r-5">
-                                            ${{ $product['price'] }}
-									    </span>
-                                    @else
-                                        <span class="block2-oldprice m-text7 p-r-5">
-                                            ${{ $product['price'] }}
-										</span>
-
-                                        <span class="block2-newprice m-text8 p-r-5">
-                                            ${{ $product['price'] - $product['price'] * $product['discount'] / 100 }}
-										</span>
-                                    @endif
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
-                        @endforeach
-                    </div>
-                    <!-- Pagination -->
-                    <div class="text-center">
-                        {{ $products->links() }}
-                        {{--@for ($i = 1; $i <= count($prods); $i++)
-                            <a href="{{ route('get.products.by.category.paginate', [$category->id, $i]) }}" class="item-pagination flex-c-m trans-0-4 @if ($i == $page) active-pagination @endif">{{ $i }}</a>
-                        @endfor--}}
+                        <!-- Pagination -->
+                        <div class="text-center">
+                            {{ $products->links() }}
+                        </div>
                     </div>
                 </div>
             </div>

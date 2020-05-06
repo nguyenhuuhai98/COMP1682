@@ -46,3 +46,10 @@
     color: white;
 }
 
+tbody ul {
+    padding-left: 10px;
+}
+
+tbody li {
+    list-style: none;
+}
