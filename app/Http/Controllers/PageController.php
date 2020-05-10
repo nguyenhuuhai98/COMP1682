@@ -131,6 +131,7 @@ class PageController extends Controller
             foreach ($request->id as $key => $id) {
                 $products[$key] = $this->productRepository->getProductById($id);
             }
+            $products = array_slice($products, 0, 8);
             $html = view('pages.components.viewed-product', ['products' => $products])->render();
 
             return response()->json($html);
