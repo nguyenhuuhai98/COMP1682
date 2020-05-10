@@ -31,7 +31,7 @@
     </div>
 
     <!-- Product Detail -->
-    <div class="container bgwhite p-t-35 p-b-80">
+    <div class="container bgwhite p-t-35 p-b-80" id="product-details" data-id="{{ $product->id }}">
         <div class="flex-w flex-sb">
             <div class="w-size13 p-t-30 respon5">
                 <div class="wrap-slick3 flex-sb flex-w">
@@ -214,25 +214,29 @@
     <!--===============================================================================================-->
     <script type="text/javascript" src="client/vendor/sweetalert/sweetalert.min.js"></script>
     <script type="text/javascript">
-        $('.block2-btn-addcart').each(function(){
-            var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-            $(this).on('click', function(){
-                swal(nameProduct, "is added to cart !", "success");
-            });
-        });
+        let productId = $('#product-details').attr('data-id');
+        let products = localStorage.getItem('products');
 
-        $('.block2-btn-addwishlist').each(function(){
-            var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-            $(this).on('click', function(){
-                swal(nameProduct, "is added to wishlist !", "success");
-            });
-        });
+        if (!products) {
+            let product = new Array();
+            product.push(productId);
 
-        $('.btn-addcart-product-detail').each(function(){
-            var nameProduct = $('.product-detail-name').html();
-            $(this).on('click', function(){
-                swal(nameProduct, "is added to wishlist !", "success");
-            });
-        });
+            localStorage.setItem('products', JSON.stringify(product));
+        } else {
+            products = $.parseJSON(products);
+            if (products.indexOf(productId) == -1) {
+                products.unshift(productId);
+                localStorage.setItem('products', JSON.stringify(products));
+            } else {
+                products.forEach(function(product, index) {
+                    if (product == productId) {
+                        products.splice(index, 1);
+                        products.unshift(product);
+                    }
+                });
+                localStorage.setItem('products', JSON.stringify(products));
+            }
+        }
+        console.log(products);
     </script>
 @stop
