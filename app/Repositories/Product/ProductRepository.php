@@ -35,4 +35,9 @@ class ProductRepository extends EloquentRepository implements ProductRepositoryI
     {
         return $this->model->where('id', $id)->with('category')->first();
     }
+
+    public function getProductsByArrayId($id)
+    {
+        return $this->model->whereIn('id', $id)->get();
+    }
 }

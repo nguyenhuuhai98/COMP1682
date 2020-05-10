@@ -113,16 +113,16 @@
                                             </a>
                                             @if ($product['discount'] == 0)
                                                 <span class="block2-price m-text6 p-r-5">
-                                            ${{ $product['price'] }}
-									    </span>
-                                            @else
-                                                <span class="block2-oldprice m-text7 p-r-5">
-                                            ${{ $product['price'] }}
-										</span>
+                                                    ${{ $product['price'] }}
+                                                </span>
+                                                    @else
+                                                        <span class="block2-oldprice m-text7 p-r-5">
+                                                    ${{ $product['price'] }}
+                                                </span>
 
-                                                <span class="block2-newprice m-text8 p-r-5">
-                                            ${{ $product['price'] - $product['price'] * $product['discount'] / 100 }}
-										</span>
+                                                        <span class="block2-newprice m-text8 p-r-5">
+                                                    ${{ $product['price'] - $product['price'] * $product['discount'] / 100 }}
+                                                </span>
                                             @endif
                                         </div>
                                     </div>

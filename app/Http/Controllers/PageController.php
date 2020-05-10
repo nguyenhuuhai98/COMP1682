@@ -123,4 +123,21 @@ class PageController extends Controller
 
         return view('pages.products.search-product', compact('products'));
     }
+
+    public function recentlyViewProducts(Request $request)
+    {
+        try {
+            $products = [];
+            foreach ($request->id as $key => $id) {
+                $products[$key] = $this->productRepository->getProductById($id);
+            }
+            $html = view('pages.components.viewed-product', ['products' => $products])->render();
+
+            return response()->json($html);
+        } catch (\Exception $ex) {
+            report($ex);
+
+            return $ex;
+        }
+    }
 }

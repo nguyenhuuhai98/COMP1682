@@ -109,7 +109,7 @@
         </div>
     </section>
     <!-- Our product -->
-    <section class="bgwhite p-t-50">
+    <section class="bgwhite p-t-50" id="suggestion-product">
         <div class="container">
             <div class="sec-title p-b-22">
                 <h3 class="m-text5 t-center" id="shop-now">
@@ -164,6 +164,8 @@
         </div>
     </section>
 
+    <!-- Recent view products -->
+
     <!-- Shipping -->
     <section class="shipping bgwhite p-t-62 p-b-46">
         <div class="flex-w p-l-15 p-r-15">
@@ -216,20 +218,27 @@
 <script type="text/javascript" src="client/vendor/lightbox2/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="client/vendor/sweetalert/sweetalert.min.js"></script>
+
 <script type="text/javascript">
-    $('.block2-btn-addcart').each(function(){
-        var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-        $(this).on('click', function(){
-            swal(nameProduct, "is added to cart !", "success");
-        });
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
     });
 
-    $('.block2-btn-addwishlist').each(function(){
-        var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-        $(this).on('click', function(){
-            swal(nameProduct, "is added to wishlist !", "success");
+    let routeGetViewedProduct = '{{ route('get.recently.viewed.product') }}'
+    let products = localStorage.getItem('products');
+    products = $.parseJSON(products);
+    if (products.length > 0) {
+        $.ajax({
+            url: routeGetViewedProduct,
+            method: 'POST',
+            data: { id: products },
+            success: function(response) {
+                $('#suggestion-product').after(response);
+            }
         });
-    });
+    }
 </script>
 
 @stop

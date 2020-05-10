@@ -12,10 +12,15 @@
 */
 Route::prefix('/')->group(function() {
     Route::get('/', 'PageController@index')->name('pages.index');
-    Route::get('/products/{category}', 'PageController@getProductsByCategory')->name('get.products.by.category');
-    Route::get('/product/{product}', 'PageController@getProductById')->name('get.product.by.id');
-    Route::get('products', 'PageController@getAllProducts')->name('get.all.products');
-    Route::get('products-search', 'PageController@searchProducts')->name('search.product.by.name');
+    Route::get('/category/{category}', 'PageController@getProductsByCategory')->name('get.products.by.category');
+
+    Route::prefix('product/')->group(function () {
+        Route::get('{product}', 'PageController@getProductById')->name('get.product.by.id');
+        Route::get('all-products', 'PageController@getAllProducts')->name('get.all.products');
+        Route::get('products-search', 'PageController@searchProducts')->name('search.product.by.name');
+        Route::post('recently-view-products', 'PageController@recentlyViewProducts')->name('get.recently.viewed.product');
+    });
+
     Route::prefix('cart')->group(function () {
         Route::get('/', 'ShoppingCartController@index')->name('get.cart');
         Route::get('/add-cart/{product}', 'ShoppingCartController@addCart')->name('add.product.to.cart');
