@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::prefix('/')->group(function() {
     Route::get('/', 'PageController@index')->name('pages.index');
     Route::get('/category/{category}', 'PageController@getProductsByCategory')->name('get.products.by.category');
@@ -43,3 +44,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin'], fun
         Route::post('/update-status', 'OrderController@updateStatus')->name('update.status.delivery');
     });
 });
+
+Auth::routes();
+

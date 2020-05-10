@@ -30,15 +30,18 @@ class UsersTableSeeder extends Seeder
         }
 
         $roles = [
-            'admin',
-            'manager',
+            'customer',
             'staff',
-            'customer'
+            'admin',
         ];
         foreach ($roles as $role) {
             DB::table('roles')->insert([
                 'name' => $role,
             ]);
         }
+
+        $permissions = [
+            ''
+        ];
     }
 }

@@ -21,9 +21,9 @@ class CreateUsersTable extends Migration
             $table->date('birthday')->nullable();
             $table->tinyInteger('gender')->nullable();
             $table->string('address')->nullable();
-            $table->string('passwords')->default(encrypt('Aa@123456'));
+            $table->string('passwords')->default(bcrypt('Aa@123456'));
             $table->string('images')->nullable();
-            $table->integer('role_id')->default(0);
+            $table->integer('role_id')->default(1);
             $table->string('code')->unique();
             $table->rememberToken();
             $table->timestamps();
