@@ -109,6 +109,7 @@ function updateCart(id) {
             $('.total-cart-price').text(response.totalPrice);
             $('#cart-quantity').text(response.totalQuantity);
             $('#cart-product-quantity-' + id).val(quantity);
+            $('#prod-total-price-' + id).text('$ ' + response.price);
             alertify.success('Update Cart successfully!');
         }
     });

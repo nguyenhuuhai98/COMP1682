@@ -15,8 +15,8 @@ Route::prefix('/')->group(function() {
     Route::get('/category/{category}', 'PageController@getProductsByCategory')->name('get.products.by.category');
 
     Route::prefix('product/')->group(function () {
-        Route::get('{product}', 'PageController@getProductById')->name('get.product.by.id');
         Route::get('all-products', 'PageController@getAllProducts')->name('get.all.products');
+        Route::get('{product}', 'PageController@getProductById')->name('get.product.by.id');
         Route::get('products-search', 'PageController@searchProducts')->name('search.product.by.name');
         Route::post('recently-view-products', 'PageController@recentlyViewProducts')->name('get.recently.viewed.product');
     });
@@ -27,6 +27,9 @@ Route::prefix('/')->group(function() {
         Route::get('/delete-cart-product/{product}', 'ShoppingCartController@deleteCart')->name('delete.product.from.cart');
         Route::get('/delete-list-cart/{product}', 'ShoppingCartController@deleteListCart')->name('delete.product.from.list.cart');
         Route::get('/update-cart/{product}', 'ShoppingCartController@updateCart')->name('update.cart');
+        Route::get('checkout', 'ShoppingCartController@checkoutForm')->name('checkout');
+        Route::post('checkout', 'ShoppingCartController@checkout')->name('post.checkout');
+        Route::post('apply-voucher', 'ShoppingCartController@applyVoucher')->name('apply.voucher');
     });
 });
 
