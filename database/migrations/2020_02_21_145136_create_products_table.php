@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('barcode')->unique();
             $table->string('slug')->unique();
             $table->integer('stock')->default(0);
-            $table->integer('price')->default(0);
+            $table->float('price')->default(0);
             $table->integer('sale_price')->default(0);
             $table->tinyInteger('active')->default(0);
             $table->timestamps();

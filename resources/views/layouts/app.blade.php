@@ -77,7 +77,7 @@
 
         <div class="wrap_header">
             <!-- Logo -->
-            <a href="index.html" class="logo">
+            <a href="{{ route('pages.index') }}" class="logo">
                 <img src="client/images/icons/logo.png" alt="IMG-LOGO">
             </a>
 
@@ -118,7 +118,7 @@
 
             <!-- Header Icon -->
             <div class="header-icons">
-                <a href="#" class="header-wrapicon1 dis-block">
+                <a href="{{ route('pages.index') }}" class="header-wrapicon1 dis-block">
                     <img src="client/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
                 </a>
 

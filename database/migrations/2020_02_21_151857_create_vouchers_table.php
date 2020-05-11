@@ -15,10 +15,10 @@ class CreateVouchersTable extends Migration
     {
         Schema::create('vouchers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('customer_id');
             $table->string('voucher_code')->unique();
             $table->string('description');
             $table->integer('discount');
+            $table->string('unit')->default('%');
             $table->date('end_date');
             $table->timestamps();
         });

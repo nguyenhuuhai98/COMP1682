@@ -28,7 +28,7 @@ class ProductsTableSeeder extends Seeder
                 'barcode' => $faker->isbn13,
                 'slug' => Str::slug('name' . $i),
                 'stock' => 1,
-                'price' => 1000,
+                'price' => rand(0.1, 10),
                 'created_at' => Carbon::now(),
                 'images' => json_encode($images),
                 'status' => 'Active',
