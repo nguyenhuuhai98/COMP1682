@@ -58,6 +58,13 @@
             <div class="topbar-social">
                 <a href="https://www.facebook.com/huuhai.nguyen24" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
                 <a href="https://www.instagram.com/haing__/" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+                @if (Auth::check())
+                    @if (Auth::user()->role_id == '1')
+                        <a href="" class="">Admin Site</a>
+                    @elseif (Auth::user()->role_id == '2')
+                        <a href="" class="">Staff Site</a>
+                    @endif
+                @endif
             </div>
 
             <div class="search-product pos-relative bo4 of-hidden">
@@ -67,12 +74,21 @@
                     <i class="fs-12 fa fa-search" aria-hidden="true"></i>
                 </button>
             </div>
-
-            <div class="topbar-child2">
-                <span class="topbar-email">
-                    hainhgch16440@fpt.edu.vn
-                </span>
+            @if (Auth::check())
+                <div class="topbar-child2">
+                    <a href="#">Change Password</a>
+                    <span style="margin: 0px 10px">|</span>
+                    <a href="#">Order History</a>
+                    <span style="margin: 0px 10px">|</span>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" style="color: #666666">Log out</button>
+                    </form>
+                </div>
+            @else<div class="topbar-child2">
+                <a href="{{ route('login') }}">Login</a>
             </div>
+            @endif
         </div>
 
         <div class="wrap_header">
@@ -123,7 +139,6 @@
                 </a>
 
                 <span class="linedivide1"></span>
-
                 <div class="header-wrapicon2">
                     <img src="client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
                     <span class="header-icons-noti" id="cart-quantity">{{ session('Cart') ? session('Cart')->totalQuantity : 0 }}</span>
@@ -181,6 +196,8 @@
                         </div>
                     </div>
                 </div>
+                <span class="linedivide2"></span>
+                <span><i class="fas fa-user-shield"></i></span>
             </div>
         </div>
     </div>
@@ -188,20 +205,21 @@
     <!-- Header Mobile -->
     <div class="wrap_header_mobile">
         <!-- Logo moblie -->
-        <a href="index.html" class="logo-mobile">
-            <img src="client/images/icons/logo.png" alt="IMG-LOGO">
-        </a>
+        <div class="dropdown">
+            <button class="logo-mobile dropdown-toggle" data-toggle="dropdown">
+                <img src="client/images/icons/logo.png" alt="IMG-LOGO">
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+        </div>
 
         <!-- Button show menu -->
         <div class="btn-show-menu">
             <!-- Header Icon mobile -->
             <div class="header-icons-mobile">
-                <a href="#" class="header-wrapicon1 dis-block">
-                    <img src="client/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-                </a>
-
-                <span class="linedivide2"></span>
-
                 <div class="header-wrapicon2">
                     <img src="client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
                     <span class="header-icons-noti">0</span>
@@ -259,6 +277,8 @@
                         </div>
                     </div>
                 </div>
+                <span class="linedivide2"></span>
+                <span><i class="fas fa-user-shield"></i></span>
             </div>
 
             <div class="btn-show-menu-mobile hamburger hamburger--squeeze">

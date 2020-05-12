@@ -4,7 +4,7 @@
     <title>Supermarket | Index</title>
 @stop
 @section('content')
-{{--    {{ dd($f1Categories) }}--}}
+{{--    {{ dd(Auth::user()) }}--}}
     <!-- Slide1 -->
     <section class="slide1">
         <div class="wrap-slick1">
