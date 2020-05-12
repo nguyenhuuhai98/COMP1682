@@ -44,6 +44,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin'], fun
         Route::post('/update-status', 'OrderController@updateStatus')->name('update.status.delivery');
     });
 });
+Route::group(['prefix' => 'staff', 'namespace' => 'Staff'], function() {
+    Route::get('/', 'StaffController@index')->name('staff.index');
+    Route::post('/discount', 'StaffController@updateDiscountProducts')->name('update.discount.products');
+});
 
 Auth::routes();
 

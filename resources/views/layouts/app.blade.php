@@ -60,9 +60,9 @@
                 <a href="https://www.instagram.com/haing__/" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
                 @if (Auth::check())
                     @if (Auth::user()->role_id == '1')
-                        <a href="" class="">Admin Site</a>
+                        <a href="{{ route('admin.dashboard') }}" class="">Admin Site</a>
                     @elseif (Auth::user()->role_id == '2')
-                        <a href="" class="">Staff Site</a>
+                        <a href="{{ route('staff.index') }}" class="">Staff Site</a>
                     @endif
                 @endif
             </div>
