@@ -31,9 +31,10 @@
                                         </div>
                                     </div>
 
-                                    <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <table class="table table-bordered dt-responsive nowrap userTable">
                                         <thead>
                                         <tr>
+                                            <th></th>
                                             <th>Name</th>
                                             <th>Phone</th>
                                             <th>Email</th>
@@ -47,6 +48,7 @@
                                         <tbody>
                                         @foreach ($users as $key => $user)
                                         <tr>
+                                            <td>{{ $user->id }}</td>
                                             <td>
                                                 <span>{{ $user->name }}</span>
                                             </td>
@@ -54,7 +56,7 @@
                                             <td>{{ $user->email }}</td>
                                             <td>{{ $user->birthday }}</td>
                                             <td>{{ $user->address }}</td>
-                                            <td>{{ $user->role_id }}</td>
+                                            <td>{{ $user->role['name'] }}</td>
                                         </tr>
                                         @endforeach
                                         </tbody>
@@ -72,11 +74,12 @@
 
         <footer class="footer">
             © 2020 <span class="d-none d-sm-inline-block">- From HaiNH with Love <i class="mdi mdi-heart text-danger"></i></span>
-        </footer>
+        </footer
 
         <!-- modal content -->
         @include('admin.pages.user.form')
     </div>
+
 @stop
 
 @section('script')
@@ -110,4 +113,79 @@
 
     <!-- Datatable init js -->
     <script src="pages/datatables.init.js"></script>
+    <script>
+        $(document).on('ready', function () {
+        });
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $(document).on('click', '.user-add', function() {
+            $('.userModal').modal('show');
+            $('.formUser').attr('_method', 'post');
+        });
+        $(document).on('submit', '.formUser', function(e) {
+            e.preventDefault();
+            let routeCreateUser = '{{ route('adminusers.store') }}'
+            swal({
+                title: 'Save change?',
+                text: "All data will save!",
+                icon: 'warning',
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((save) => {
+                if (save) {
+                    let userName = $('#userName').val();
+                    let phone = $('#phone').val();
+                    let email = $('#email').val();
+                    let birthday = $('#birthday').val();
+                    let gender = $('input[name=gender]:checked').val();
+                    let address = $('#address').val();
+                    let role = $('select#role').children('option:selected').val();
+                    let method = $('.formUser').attr('method');
+                    let _method = $('.formUser').attr('_method');
+                    $.ajax({
+                        method: method,
+                        url: routeCreateUser,
+                        data: {
+                            userName: userName,
+                            phone: phone,
+                            email: email,
+                            birthday: birthday,
+                            gender: gender,
+                            address: address,
+                            role: role,
+                        },success: function(response) {
+                            let row = [
+                                response.id,
+                                userName,
+                                phone,
+                                email,
+                                birthday,
+                                address,
+                                response.role.name,
+                            ];
+                            if (_method == 'post') {
+                                swal({
+                                    title: "Added successfully!",
+                                    icon: "success"
+                                });
+                                $('.userTable').DataTable().row.add(row).draw();
+                            } else {
+
+                            }
+                            $('.userModal').modal('hide');
+                            clearUserData();
+                        }
+                    });
+                }
+            });
+        });
+
+        function clearUserData() {
+            $('.formUser').trigger('reset');
+        }
+    </script>
 @stop

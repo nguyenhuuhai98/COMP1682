@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
                 'gender' => rand(0, 1),
                 'address' => $faker->streetAddress,
                 'images' => $faker->imageUrl($width = 640, $height = 480, 'cats'),
-                'role_id' => rand(0, 3),
+                'role_id' => rand(1, 3),
                 'code' => $faker->ean13,
                 'created_at' => $faker->dateTimeBetween($startDate = '-3 years', $endDate = 'now', $timezone = null),
                 'updated_at' => $faker->dateTimeBetween($startDate = '-3 years', $endDate = 'now', $timezone = null),

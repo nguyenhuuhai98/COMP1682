@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\UserRequest;
 use App\Repositories\User\UserRepositoryInterface;
+use Faker\Factory;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -17,26 +19,30 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = $this->userRepository->getAllUserDesc();
+        $users = $this->userRepository->getUserNotAdmin();
 
         return view('admin.pages.user.users', [
             'users' => $users,
         ]);
     }
 
-    public function create()
+    public function store(UserRequest $request)
     {
-        //
-    }
+        $faker = Factory::create();
+        $user = [
+            'name' => $request->userName,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'birthday' => $request->birthday,
+            'gender' => $request->gender,
+            'address' => $request->address,
+            'role_id' => $request->role,
+            'code' => $faker->ean13,
+        ];
+        $user = $this->userRepository->create($user);
+        $user->role = $user->role->name;
 
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function show($id)
-    {
-        //
+        return response()->json($user);
     }
 
     public function edit($id)
