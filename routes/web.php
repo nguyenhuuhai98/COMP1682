@@ -38,4 +38,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin'], fun
     Route::resource('categories', 'CategoryController', ['except' => ['create', 'show']]);
     Route::resource('products', 'ProductController', ['except' => ['create', 'show']]);
     Route::resource('users', 'UserController');
+    Route::prefix('orders')->group(function () {
+        Route::get('/', 'OrderController@index')->name('get.all.orders');
+        Route::post('/update-status', 'OrderController@updateStatus')->name('update.status.delivery');
+    });
 });
