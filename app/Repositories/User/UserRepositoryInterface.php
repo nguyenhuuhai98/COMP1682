@@ -5,5 +5,5 @@ interface UserRepositoryInterface
 {
     public function getModel();
 
-    public function getAllUserDesc();
+    public function getUserNotAdmin();
 }

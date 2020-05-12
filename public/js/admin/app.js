@@ -6,6 +6,20 @@ $.ajaxSetup({
 });
 
 $(document).ready(function() {
+    $('.userTable').DataTable( {
+        "order": [[ 0, "desc" ]],
+        "stripeClasses": [],
+        dom: 'Bfrtip',
+        buttons: [
+            'excelHtml5',
+            'pdfHtml5',
+            {
+                extend: 'colvis',
+                columns: ':not(.noVis)'
+            }
+        ],
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+    });
     $('.categories-table').DataTable( {
         "order": [[ 0, "desc" ]],
         "columnDefs": [

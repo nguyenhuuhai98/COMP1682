@@ -12,8 +12,8 @@ class UserRepository extends EloquentRepository implements UserRepositoryInterfa
         return User::class;
     }
 
-    public function getAllUserDesc()
+    public function getUserNotAdmin()
     {
-        return $this->model->orderBy('id', 'DESC')->get();
+        return $this->model->whereNotIn('role_id', [1])->orderBy('id', 'DESC')->get();
     }
 }
