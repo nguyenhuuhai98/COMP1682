@@ -8,7 +8,6 @@
     @yield('title')
     <meta content="Admin Dashboard" name="description" />
     <meta content="Themesbrand" name="author" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <link rel="stylesheet" href="morris/morris.css">
@@ -178,29 +177,22 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/cotton/15/000000/bill--v1.png"/><span> Billing <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
+                        <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/cotton/15/000000/bill--v1.png"/><span> Orders <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
                         <ul class="submenu">
-                            <li><a href="{{ route('adminget.all.orders') }}"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Bills</a></li>
-                            <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
+                            <li><a href="{{ route('adminget.all.orders') }}"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Orders</a></li>
                         </ul>
                     </li>
                     <li class="menu-title">Extras</li>
                     <li>
                         <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/cotton/15/000000/report-file--v1.png"/><span> Reports <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
                         <ul class="submenu">
-                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Bills</a></li>
-                            <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
+                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  Daily report</a></li>
+                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  Weekly report</a></li>
+                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  Monthly report</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/ultraviolet/15/000000/starred-ticket.png"/><span> Vouchers <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
-                        <ul class="submenu">
-                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Bills</a></li>
-                            <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/nolan/15/event-accepted.png"/><span> Promotions <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
                         <ul class="submenu">
                             <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Bills</a></li>
                             <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>

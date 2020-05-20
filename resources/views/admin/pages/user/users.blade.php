@@ -56,7 +56,9 @@
                                             <td>{{ $user->email }}</td>
                                             <td>{{ $user->birthday }}</td>
                                             <td>{{ $user->address }}</td>
-                                            <td>{{ $user->role['name'] }}</td>
+                                            <td> <span class="badge badge-pill @if ($user->role['name'] === 'staff') badge-primary
+                                                             @elseif ($user->role['name'] === 'customer') badge-success
+                                                            @endif ">{{ $user->role['name'] }}</span></td>
                                         </tr>
                                         @endforeach
                                         </tbody>

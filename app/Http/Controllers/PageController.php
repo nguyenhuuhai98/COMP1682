@@ -28,11 +28,14 @@ class PageController extends Controller
             $f1Categories = $this->getAllCategories($parentId);
             $f0Categories = $this->getAllCategories([0]);
             $randomCategories = $f1Categories->random(5);
+            $products = $this->productRepository->getAll()->random(8);
+            
             return view('pages.index', [
                 'categories' => $categories,
                 'f0Categories' => $f0Categories,
                 'f1Categories' => $f1Categories,
                 'randomCategories' => $randomCategories,
+                'products' => $products,
             ]);
         } catch (\Exception $ex) {
             report($ex);

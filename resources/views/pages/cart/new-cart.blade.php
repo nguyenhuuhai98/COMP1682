@@ -3,7 +3,7 @@
         <tr class="table-row">
             <td class="column-1">
                 <div class="mini-cart-img b-rad-4 o-f-hidden">
-                    <img src="upload/banh-gao.jpeg" alt="IMG-PRODUCT">
+                    <img src="{{ json_decode($product['productInfo']['images'])->image1 == null ? '' : json_decode($product['productInfo']['images'])->image1 }}" alt="IMG-PRODUCT">
                 </div>
             </td>
             <td class="column-2">{{ $product['productInfo']->name }}</td>
