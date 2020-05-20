@@ -5,7 +5,7 @@
             <!-- Block2 -->
             <div class="block2">
                 <div class="block2-img wrap-pic-w of-hidden pos-relative @if ($product['discount'] != 0) block2-labelsale @endif">
-                    <img src="upload/banh-gao.jpeg" alt="IMG-PRODUCT">
+                    <img src="{{ json_decode($product['images'])->image1 == null ? '' : json_decode($product['images'])->image1 }}" alt="IMG-PRODUCT">
 
                     <div class="block2-overlay trans-0-4">
                         <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">

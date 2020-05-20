@@ -16,6 +16,7 @@ class StaffController extends Controller
         ProductRepositoryInterface $productRepository,
         CategoryRepositoryInterface $categoryRepository
     ) {
+        $this->middleware('auth');
         $this->productRepository = $productRepository;
         $this->categoryRepository = $categoryRepository;
     }

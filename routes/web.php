@@ -22,19 +22,19 @@ Route::prefix('/')->group(function() {
         Route::post('recently-view-products', 'PageController@recentlyViewProducts')->name('get.recently.viewed.product');
     });
 
-    Route::prefix('cart')->group(function () {
+    Route::group(['prefix' => 'cart', 'middleware' => 'roleCustomer'], function () {
         Route::get('/', 'ShoppingCartController@index')->name('get.cart');
         Route::get('/add-cart/{product}', 'ShoppingCartController@addCart')->name('add.product.to.cart');
         Route::get('/delete-cart-product/{product}', 'ShoppingCartController@deleteCart')->name('delete.product.from.cart');
         Route::get('/delete-list-cart/{product}', 'ShoppingCartController@deleteListCart')->name('delete.product.from.list.cart');
         Route::get('/update-cart/{product}', 'ShoppingCartController@updateCart')->name('update.cart');
-        Route::get('checkout', 'ShoppingCartController@checkoutForm')->name('checkout');
-        Route::post('checkout', 'ShoppingCartController@checkout')->name('post.checkout');
-        Route::post('apply-voucher', 'ShoppingCartController@applyVoucher')->name('apply.voucher');
+        Route::get('checkout', 'CheckoutController@checkoutForm')->name('checkout');
+        Route::post('checkout', 'CheckoutController@checkout')->name('post.checkout');
+        Route::post('apply-voucher', 'CheckoutController@applyVoucher')->name('apply.voucher');
     });
 });
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin'], function() {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin', 'middleware' => 'roleAdmin'], function() {
     Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
     Route::resource('categories', 'CategoryController', ['except' => ['create', 'show']]);
     Route::resource('products', 'ProductController', ['except' => ['create', 'show']]);
@@ -44,10 +44,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin'], fun
         Route::post('/update-status', 'OrderController@updateStatus')->name('update.status.delivery');
     });
 });
-Route::group(['prefix' => 'staff', 'namespace' => 'Staff'], function() {
+Route::group(['prefix' => 'staff', 'namespace' => 'Staff', 'middleware' => 'roleStaff'], function() {
     Route::get('/', 'StaffController@index')->name('staff.index');
     Route::post('/discount', 'StaffController@updateDiscountProducts')->name('update.discount.products');
 });
-
+Route::get('unauthorized', function () {
+    return view('layouts.unauthorized');
+})->name('unauthorized');
 Auth::routes();
 

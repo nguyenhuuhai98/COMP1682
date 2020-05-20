@@ -59,9 +59,9 @@
                 <a href="https://www.facebook.com/huuhai.nguyen24" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
                 <a href="https://www.instagram.com/haing__/" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
                 @if (Auth::check())
-                    @if (Auth::user()->role_id == '1')
-                        <a href="{{ route('admin.dashboard') }}" class="">Admin Site</a>
-                    @elseif (Auth::user()->role_id == '2')
+                    @if (Auth::user()->role->name == 'admin')
+                        <a href="{{ route('adminadmin.dashboard') }}" class="">Admin Site</a>
+                    @elseif (Auth::user()->role->name == 'staff')
                         <a href="{{ route('staff.index') }}" class="">Staff Site</a>
                     @endif
                 @endif
@@ -76,18 +76,22 @@
             </div>
             @if (Auth::check())
                 <div class="topbar-child2">
-                    <a href="#">Change Password</a>
-                    <span style="margin: 0px 10px">|</span>
-                    <a href="#">Order History</a>
-                    <span style="margin: 0px 10px">|</span>
+                    @if (Auth::user()->role->name == 'customer')
+                        <a href="#">Change Password</a>
+                        <span style="margin: 0px 10px">|</span>
+                        <a href="#">Order History</a>
+                        <span style="margin: 0px 10px">|</span>
+                    @endif
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
+                        <input type="hidden" name="url" value="{{ \Illuminate\Support\Facades\URL::current() }}">
                         <button type="submit" style="color: #666666">Log out</button>
                     </form>
                 </div>
-            @else<div class="topbar-child2">
-                <a href="{{ route('login') }}">Login</a>
-            </div>
+            @else
+                <div class="topbar-child2">
+                    <a href="{{ route('login') }}">Login</a>
+                </div>
             @endif
         </div>
 
@@ -114,14 +118,6 @@
                         </li>
 
                         <li>
-                            <a href="cart.html">Features</a>
-                        </li>
-
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
-
-                        <li>
                             <a href="about.html">About</a>
                         </li>
 
@@ -133,6 +129,8 @@
             </div>
 
             <!-- Header Icon -->
+
+            @if (Auth::user()->role->role == 'customer')
             <div class="header-icons">
                 <a href="{{ route('pages.index') }}" class="header-wrapicon1 dis-block">
                     <img src="client/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
@@ -150,7 +148,7 @@
                                     @foreach (session('Cart')->products as $product)
                                         <li class="header-cart-item">
                                             <div class="mini-cart-img">
-                                                <img src="upload/banh-gao.jpeg" alt="IMG">
+                                                <img src="{{ json_decode($product['productInfo']['images'])->image1 == null ? '' : json_decode($product['productInfo']['images'])->image1 }}" alt="IMG-PRODUCT">
                                             </div>
 
                                             <div class="header-cart-item-txt" style="width: calc(100% - 130px);">
@@ -199,6 +197,7 @@
                 <span class="linedivide2"></span>
                 <span><i class="fas fa-user-shield"></i></span>
             </div>
+                @endif
         </div>
     </div>
 
@@ -219,67 +218,71 @@
         <!-- Button show menu -->
         <div class="btn-show-menu">
             <!-- Header Icon mobile -->
-            <div class="header-icons-mobile">
-                <div class="header-wrapicon2">
-                    <img src="client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-                    <span class="header-icons-noti">0</span>
 
-                    <!-- Header cart noti -->
-                    <div class="header-cart header-dropdown">
-                        <div class="change-items-cart">
-                            <ul class="header-cart-wrapitem">
-                                @if (session('Cart'))
-                                    @foreach (session('Cart')->products as $product)
+            @if (Auth::user()->role->role == 'customer')
+                <div class="header-icons-mobile">
+                    <div class="header-wrapicon2">
+                        <img src="client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                        <span class="header-icons-noti">0</span>
+
+                        <!-- Header cart noti -->
+
+                        <div class="header-cart header-dropdown">
+                            <div class="change-items-cart">
+                                <ul class="header-cart-wrapitem">
+                                    @if (session('Cart'))
+                                        @foreach (session('Cart')->products as $product)
+                                            <li class="header-cart-item">
+                                                <div class="mini-cart-img">
+                                                    <img src="upload/banh-gao.jpeg" alt="IMG">
+                                                </div>
+
+                                                <div class="header-cart-item-txt" style="width: calc(100% - 130px);">
+                                                    <a href="#" class="header-cart-item-name">
+                                                        {{ $product['productInfo']->name }}
+                                                    </a>
+
+                                                    <span class="header-cart-item-info">
+                                                        {{ $product['quantity'] }} x $ {{ $product['productInfo']->price }}
+                                                    </span>
+                                                </div>
+                                                <div class="delete-cart" data-id="{{ $product['productInfo']->id }}">
+                                                    <a href="javascript:void(0)">x</a>
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                    @else
                                         <li class="header-cart-item">
-                                            <div class="mini-cart-img">
-                                                <img src="upload/banh-gao.jpeg" alt="IMG">
-                                            </div>
-
-                                            <div class="header-cart-item-txt" style="width: calc(100% - 130px);">
-                                                <a href="#" class="header-cart-item-name">
-                                                    {{ $product['productInfo']->name }}
-                                                </a>
-
-                                                <span class="header-cart-item-info">
-                                                    {{ $product['quantity'] }} x $ {{ $product['productInfo']->price }}
-                                                </span>
-                                            </div>
-                                            <div class="delete-cart" data-id="{{ $product['productInfo']->id }}">
-                                                <a href="javascript:void(0)">x</a>
-                                            </div>
+                                            Your cart is empty!
                                         </li>
-                                    @endforeach
-                                @else
-                                    <li class="header-cart-item">
-                                        Your cart is empty!
-                                    </li>
-                                @endif
-                            </ul>
+                                    @endif
+                                </ul>
 
-                            <div class="header-cart-total">
-                                {{ session('Cart') ? 'Total: $ ' . session('Cart')->totalPrice : '' }}
+                                <div class="header-cart-total">
+                                    {{ session('Cart') ? 'Total: $ ' . session('Cart')->totalPrice : '' }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="header-cart-buttons">
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="{{ route('get.cart') }}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    View Cart
-                                </a>
-                            </div>
+                            <div class="header-cart-buttons">
+                                <div class="header-cart-wrapbtn">
+                                    <!-- Button -->
+                                    <a href="{{ route('get.cart') }}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                        View Cart
+                                    </a>
+                                </div>
 
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    Check Out
-                                </a>
+                                <div class="header-cart-wrapbtn">
+                                    <!-- Button -->
+                                    <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                        Check Out
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <span class="linedivide2"></span>
+                    <span><i class="fas fa-user-shield"></i></span>
                 </div>
-                <span class="linedivide2"></span>
-                <span><i class="fas fa-user-shield"></i></span>
-            </div>
+            @endif
 
             <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
 					<span class="hamburger-box">
@@ -325,15 +328,6 @@
                 <li class="item-menu-mobile">
                     <a href="product.html">Sale</a>
                 </li>
-
-                <li class="item-menu-mobile">
-                    <a href="cart.html">Features</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="blog.html">Blog</a>
-                </li>
-
                 <li class="item-menu-mobile">
                     <a href="about.html">About</a>
                 </li>

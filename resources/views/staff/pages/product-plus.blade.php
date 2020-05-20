@@ -14,7 +14,7 @@
                             <div class="form-group row">
                                 <label class="control-label col-sm-4">Multiple Select</label>
                                 <div class="col-sm-8">
-                                    <select class="select2 form-control select2-multiple" multiple="multiple" data-placeholder="Choose ...">
+                                    <select class="select2 form-control select2-multiple" data-placeholder="Choose ...">
                                         @foreach($products as $key => $product)
                                             <option value="{{ $product['id'] }}">{{ $product['barcode'] }}: {{ $product['name'] }}</option>
                                         @endforeach

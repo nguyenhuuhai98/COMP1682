@@ -85,7 +85,10 @@
                         <a class="nav-link text-dark" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="btn btn-outline-primary"> Sign Up</a>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" style="color: #666666">Log out</button>
+                        </form>
                     </li>
                 </ul>
             </div>

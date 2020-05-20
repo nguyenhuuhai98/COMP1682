@@ -7,6 +7,7 @@
 
         <form class="form-horizontal m-t-30" method="POST" action="{{ route('login') }}">
             @csrf
+            <input type="hidden" value="{{ \Illuminate\Support\Facades\URL::previous() }}" name="url">
             <div class="form-group">
                 <label for="email" class="col-form-label text-md-right">Email</label>
 

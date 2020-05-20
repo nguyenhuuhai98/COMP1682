@@ -3,7 +3,7 @@
         @foreach (session('Cart')->products as $product)
             <li class="header-cart-item">
                 <div class="mini-cart-img">
-                    <img src="upload/banh-gao.jpeg" alt="IMG">
+                    <img src="{{ json_decode($product['productInfo']['images'])->image1 == null ? '' : json_decode($product['productInfo']['images'])->image1 }}" alt="IMG-PRODUCT">
                 </div>
 
                 <div class="header-cart-item-txt" style="width: calc(100% - 130px);">

@@ -14,6 +14,6 @@ class UserRepository extends EloquentRepository implements UserRepositoryInterfa
 
     public function getUserNotAdmin()
     {
-        return $this->model->whereNotIn('role_id', [1])->orderBy('id', 'DESC')->get();
+        return $this->model->whereNotIn('role_id', [3])->orderBy('id', 'DESC')->get();
     }
 }
