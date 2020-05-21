@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     @yield('title')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="Admin Dashboard" name="description" />
     <meta content="Themesbrand" name="author" />
     <link rel="shortcut icon" href="images/favicon.ico">
-
     <link rel="stylesheet" href="morris/morris.css">
     <link href="bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
 
@@ -186,15 +186,14 @@
                     <li>
                         <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/cotton/15/000000/report-file--v1.png"/><span> Reports <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
                         <ul class="submenu">
-                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  Daily report</a></li>
-                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  Weekly report</a></li>
-                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  Monthly report</a></li>
+                            <li><a href="{{ route('admindaily.report') }}"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  Daily report</a></li>
+                            <li><a href="{{ route('adminmonthly.report') }}"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  Monthly report</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/ultraviolet/15/000000/starred-ticket.png"/><span> Vouchers <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
                         <ul class="submenu">
-                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Bills</a></li>
+                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Vouchers</a></li>
                             <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
                         </ul>
                     </li>
@@ -224,7 +223,6 @@
 <!-- END wrapper -->
 
 <!-- jQuery  -->
-<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/metisMenu.min.js"></script>
 <script src="js/jquery.slimscroll.js"></script>

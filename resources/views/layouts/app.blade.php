@@ -130,7 +130,7 @@
 
             <!-- Header Icon -->
 
-            @if (Auth::user()->role->role == 'customer')
+            @if (Auth::Check() && Auth::user()->role->name == 'customer')
             <div class="header-icons">
                 <a href="{{ route('pages.index') }}" class="header-wrapicon1 dis-block">
                     <img src="client/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
@@ -219,7 +219,7 @@
         <div class="btn-show-menu">
             <!-- Header Icon mobile -->
 
-            @if (Auth::user()->role->role == 'customer')
+            @if (Auth::Check() && Auth::user()->role->name == 'customer')
                 <div class="header-icons-mobile">
                     <div class="header-wrapicon2">
                         <img src="client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">

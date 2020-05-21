@@ -43,6 +43,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin', 'mid
         Route::get('/', 'OrderController@index')->name('get.all.orders');
         Route::post('/update-status', 'OrderController@updateStatus')->name('update.status.delivery');
     });
+    Route::get('daily-report', 'ReportController@dailyReport')->name('daily.report');
+    Route::post('daily-report', 'ReportController@generateDailyReport')->name('generate.daily.report');
+    Route::get('monthly-report', 'ReportController@monthlyReport')->name('monthly.report');
+    Route::post('monthly-report', 'ReportController@generateMonthlyReport')->name('generate.monthly.report');
 });
 Route::group(['prefix' => 'staff', 'namespace' => 'Staff', 'middleware' => 'roleStaff'], function() {
     Route::get('/', 'StaffController@index')->name('staff.index');
