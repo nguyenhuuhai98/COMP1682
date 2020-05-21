@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Voucher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CheckoutController extends Controller
 {
@@ -25,12 +26,16 @@ class CheckoutController extends Controller
         if (!$request->paymentMethod) {
             $request->paymentMethod = 'cash on delivery';
         }
+        if (!$request->phone) {
+            $request->phone = Auth::user()->phone;
+        }
         $cart = Session('Cart') ? Session('Cart') : null;
         $order = Order::create([
             'phone' => $request->phone ? $request->phone : '',
             'address' => $request->address,
             'payment' => $request->paymentMethod,
             'total_price' => $cart->totalPrice,
+            'phone' => $request->phone,
         ]);
         foreach (Session('Cart')->products as $key => $product) {
             $orderDetail = OrderDetail::create([
