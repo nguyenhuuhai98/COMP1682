@@ -193,7 +193,7 @@
                     <li>
                         <a href="javascript:void(0);" class="waves-effect"><img src="https://img.icons8.com/ultraviolet/15/000000/starred-ticket.png"/><span> Vouchers <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
                         <ul class="submenu">
-                            <li><a href="email-inbox.html"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Vouchers</a></li>
+                            <li><a href="{{ route('adminvouchers.index') }}"><img src="https://img.icons8.com/cotton/15/000000/list--v2.png"/>  All Vouchers</a></li>
                             <li><a href="email-read.html"><img src="https://img.icons8.com/nolan/15/plus-math.png"/>  Add new</a></li>
                         </ul>
                     </li>
@@ -223,18 +223,19 @@
 <!-- END wrapper -->
 
 <!-- jQuery  -->
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/metisMenu.min.js"></script>
-<script src="js/jquery.slimscroll.js"></script>
-<script src="js/waves.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="js/metisMenu.min.js"></script>
+<script type="text/javascript" src="js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="js/waves.min.js"></script>
 
-<script src="jquery-sparkline/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="jquery-sparkline/jquery.sparkline.min.js"></script>
 <!-- App js -->
-<script src="js/app.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 
-<script src="{{ asset('js/admin/app.js') }}"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/admin/app.js') }}"></script>
+<script type="text/javascript" src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 @yield('script')
 </body>
 
