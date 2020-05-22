@@ -119,9 +119,7 @@
 
 @section('script')
     <!-- Peity JS -->
-    <script src="peity/jquery.peity.min.js"></script>
 
-    <script src="morris/morris.min.js"></script>
     <script src="raphael/raphael-min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>

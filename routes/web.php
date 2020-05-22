@@ -47,6 +47,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin', 'mid
     Route::post('daily-report', 'ReportController@generateDailyReport')->name('generate.daily.report');
     Route::get('monthly-report', 'ReportController@monthlyReport')->name('monthly.report');
     Route::post('monthly-report', 'ReportController@generateMonthlyReport')->name('generate.monthly.report');
+    Route::resource('vouchers', 'VoucherController', ['only' => ['index', 'store']]);
 });
 Route::group(['prefix' => 'staff', 'namespace' => 'Staff', 'middleware' => 'roleStaff'], function() {
     Route::get('/', 'StaffController@index')->name('staff.index');
