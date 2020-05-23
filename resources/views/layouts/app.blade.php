@@ -112,11 +112,11 @@
                         </li>
 
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="{{ route('about-us') }}">About</a>
                         </li>
 
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="{{ route('contact') }}">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -447,11 +447,11 @@
                     <a href="product.html">Sale</a>
                 </li>
                 <li class="item-menu-mobile">
-                    <a href="about.html">About</a>
+                    <a href="{{ route('about-us') }}">About</a>
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="contact.html">Contact</a>
+                    <a href="{{ route('contact') }}">Contact</a>
                 </li>
             </ul>
             <div class="search-product pos-relative bo4 of-hidden">
@@ -532,13 +532,13 @@
                 </li>
 
                 <li class="p-b-9">
-                    <a href="#" class="s-text7">
+                    <a href="{{ route('about-us') }}" class="s-text7">
                         About Us
                     </a>
                 </li>
 
                 <li class="p-b-9">
-                    <a href="#" class="s-text7">
+                    <a href="{{ route('contact') }}" class="s-text7">
                         Contact Us
                     </a>
                 </li>

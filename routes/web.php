@@ -58,5 +58,11 @@ Route::group(['prefix' => 'staff', 'namespace' => 'Staff', 'middleware' => 'role
 Route::get('unauthorized', function () {
     return view('layouts.unauthorized');
 })->name('unauthorized');
+Route::get('about-us', function (){
+    return view('pages.other.about');
+})->name('about-us');
+Route::get('contact', function () {
+    return view('pages.other.contact');
+})->name('contact');
 Auth::routes();
 

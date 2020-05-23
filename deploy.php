@@ -40,7 +40,7 @@ add('writable_dirs', [
 
 // Hosts
 
-host('18.139.163.155')
+host('3.21.185.108')
     ->user('deploy')
     ->stage('development')
     ->set('deploy_path', '~/{{application}}')
@@ -95,20 +95,4 @@ after('deploy:failed', 'deploy:unlock');
 
 before('deploy:symlink', 'artisan:migrate');
 
-// Reload PHP-FPM
-
-task('reload:php-fpm7.3', function () {
-    $stage = input()->hasArgument('stage') ? input()->getArgument('stage') : null;
-
-    switch ($stage) {
-        case 'staging':
-            run('sudo systemctl reload php-fpm7.3');
-            break;
-
-        default:
-            run('sudo /etc/init.d/php7.3-fpm reload');
-    }
-})->desc('PHP7 FPM reloaded');
-
-//after('cleanup', 'reload:php-fpm7.3');
 
