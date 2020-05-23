@@ -98,8 +98,17 @@
                                                     <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                                 </a>
 
-                                                @if (Auth::Check() && Auth::user()->role->name == 'customer')
-                                                    <div class="w-size1 trans-0-4" style="position: absolute;left: 50%;transform: translateX(-50%);bottom: 10px;">
+                                                @if (Auth::Check())
+                                                    @if (Auth::user()->role->name == 'customer')
+                                                        <div class="block2-btn-addcart w-size1 trans-0-4">
+                                                            <!-- Button -->
+                                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4 add-to-cart" data-quantity="1" data-id="{{ $product['id'] }}">
+                                                                Add to Cart
+                                                            </button>
+                                                        </div>
+                                                    @endif
+                                                @else
+                                                    <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4 add-to-cart" data-quantity="1" data-id="{{ $product['id'] }}">
                                                             Add to Cart

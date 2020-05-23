@@ -22,15 +22,17 @@ Route::prefix('/')->group(function() {
         Route::post('recently-view-products', 'PageController@recentlyViewProducts')->name('get.recently.viewed.product');
     });
 
-    Route::group(['prefix' => 'cart', 'middleware' => 'roleCustomer'], function () {
+    Route::group(['prefix' => 'cart'], function () {
         Route::get('/', 'ShoppingCartController@index')->name('get.cart');
         Route::get('/add-cart/{product}', 'ShoppingCartController@addCart')->name('add.product.to.cart');
         Route::get('/delete-cart-product/{product}', 'ShoppingCartController@deleteCart')->name('delete.product.from.cart');
         Route::get('/delete-list-cart/{product}', 'ShoppingCartController@deleteListCart')->name('delete.product.from.list.cart');
-        Route::get('/update-cart/{product}', 'ShoppingCartController@updateCart')->name('update.cart');
-        Route::get('checkout', 'CheckoutController@checkoutForm')->name('checkout');
-        Route::post('checkout', 'CheckoutController@checkout')->name('post.checkout');
-        Route::post('apply-voucher', 'CheckoutController@applyVoucher')->name('apply.voucher');
+        Route::get('/update-cart/{product}', 'ShoppingCartController@updateCart')->name('update.cart');\
+        Route::group(['middleware' => 'roleCustomer'], function (){
+                Route::get('checkout', 'CheckoutController@checkoutForm')->name('checkout');
+                Route::post('checkout', 'CheckoutController@checkout')->name('post.checkout');
+                Route::post('apply-voucher', 'CheckoutController@applyVoucher')->name('apply.voucher');
+        });
     });
 });
 
