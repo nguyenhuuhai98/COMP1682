@@ -66,31 +66,58 @@
                     Status: <b>In stock</b>
                 </p>
                 <!--  -->
-                @if (Auth::Check() && Auth::user()->role->name == 'customer')
-                <div class="p-t-33 p-b-30">
-                    <div class="">
-                        <div class="w-size16 flex-m flex-w">
-                            <div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
-                                <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
-                                    <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
-                                </button>
+                @if (Auth::Check())
+                    @if (Auth::user()->role->name == 'customer')
+                        <div class="p-t-33 p-b-30">
+                            <div class="">
+                                <div class="w-size16 flex-m flex-w">
+                                    <div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
+                                        <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+                                            <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+                                        </button>
 
-                                <input class="size8 m-text18 t-center num-product quantity-items" type="number" name="num-product" value="1">
+                                        <input class="size8 m-text18 t-center num-product quantity-items" type="number" name="num-product" value="1">
 
-                                <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
-                                    <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
-                                </button>
+                                        <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+                                            <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="size9 trans-0-4 m-t-10 m-b-10">
+                                        <!-- Button -->
+                                        <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 add-items-cart" data-id="{{ $product['id'] }}">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                    @endif
+                @else
+                    <div class="p-t-33 p-b-30">
+                        <div class="">
+                            <div class="w-size16 flex-m flex-w">
+                                <div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
+                                    <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+                                        <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+                                    </button>
 
-                            <div class="size9 trans-0-4 m-t-10 m-b-10">
-                                <!-- Button -->
-                                <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 add-items-cart" data-id="{{ $product['id'] }}">
-                                    Add to Cart
-                                </button>
+                                    <input class="size8 m-text18 t-center num-product quantity-items" type="number" name="num-product" value="1">
+
+                                    <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+                                        <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+
+                                <div class="size9 trans-0-4 m-t-10 m-b-10">
+                                    <!-- Button -->
+                                    <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 add-items-cart" data-id="{{ $product['id'] }}">
+                                        Add to Cart
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endif
                 <p class="m-b-10">
                     {!! $product->short_description !!}
@@ -158,7 +185,16 @@
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
 
-                                        @if (Auth::Check() && Auth::user()->role->name == 'customer')
+                                        @if (Auth::Check())
+                                            @if (Auth::user()->role->name == 'customer')
+                                            <div class="block2-btn-addcart w-size1 trans-0-4">
+                                                <!-- Button -->
+                                                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                                    Add to Cart
+                                                </button>
+                                            </div>
+                                            @endif
+                                        @else
                                             <div class="block2-btn-addcart w-size1 trans-0-4">
                                                 <!-- Button -->
                                                 <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
