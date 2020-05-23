@@ -66,7 +66,7 @@
                     Status: <b>In stock</b>
                 </p>
                 <!--  -->
-                @if (Auth::Check() && @if (Auth::Check() && Auth::user()->role->name == 'customer')
+                @if (Auth::Check() && Auth::user()->role->name == 'customer')
                 <div class="p-t-33 p-b-30">
                     <div class="">
                         <div class="w-size16 flex-m flex-w">
@@ -158,7 +158,7 @@
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
 
-                                        @if (Auth::Check() && @if (Auth::Check() && Auth::user()->role->name == 'customer')
+                                        @if (Auth::Check() && Auth::user()->role->name == 'customer')
                                             <div class="block2-btn-addcart w-size1 trans-0-4">
                                                 <!-- Button -->
                                                 <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
