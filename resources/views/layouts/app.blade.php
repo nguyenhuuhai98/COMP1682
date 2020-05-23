@@ -76,12 +76,6 @@
             </div>
             @if (Auth::check())
                 <div class="topbar-child2">
-                    @if (Auth::user()->role->name == 'customer')
-                        <a href="#">Change Password</a>
-                        <span style="margin: 0px 10px">|</span>
-                        <a href="#">Order History</a>
-                        <span style="margin: 0px 10px">|</span>
-                    @endif
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <input type="hidden" name="url" value="{{ \Illuminate\Support\Facades\URL::current() }}">
@@ -132,11 +126,6 @@
 
             @if (Auth::Check() && Auth::user()->role->name == 'customer')
             <div class="header-icons">
-                <a href="{{ route('pages.index') }}" class="header-wrapicon1 dis-block">
-                    <img src="client/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-                </a>
-
-                <span class="linedivide1"></span>
                 <div class="header-wrapicon2">
                     <img src="client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
                     <span class="header-icons-noti" id="cart-quantity">{{ session('Cart') ? session('Cart')->totalQuantity : 0 }}</span>

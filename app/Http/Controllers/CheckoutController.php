@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Jobs\SendEmail;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Voucher;
@@ -31,6 +32,7 @@ class CheckoutController extends Controller
         }
         $cart = Session('Cart') ? Session('Cart') : null;
         $order = Order::create([
+            'customer_id' => Auth::user()->id,
             'phone' => $request->phone ? $request->phone : '',
             'address' => $request->address,
             'payment' => $request->paymentMethod,
@@ -45,6 +47,10 @@ class CheckoutController extends Controller
                 'price' => $product['price'],
             ]);
         }
+        $user = Auth::user();
+        $message = $order;
+        SendEmail::dispatch($message, $user)->delay(now()->addMinute(1));
+
         $request->session()->forget('Cart', $cart);
 
         return redirect()->route('pages.index');
